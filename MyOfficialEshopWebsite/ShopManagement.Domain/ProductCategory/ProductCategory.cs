@@ -17,12 +17,12 @@ namespace ShopManagement.Domain.ProductCategory
         public bool IsShow { get; set; }
         public long? ParentId { get; set; }
 
-        // public List<Product.Product> Products { get; private set; }
+        public List<Product.Product> Products { get; private set; }
 
-        //public ProductCategory()
-        //{
-        //    Products = new List<Product.Product>();
-        //}
+        public ProductCategory()
+        {
+            Products = new List<Product.Product>();
+        }
 
         public ProductCategory(string name, string description, string primaryPicture, string secondaryPicture, string pictureTitle,
             string pictureAlt, string keywords, string metaDescription, string slug)

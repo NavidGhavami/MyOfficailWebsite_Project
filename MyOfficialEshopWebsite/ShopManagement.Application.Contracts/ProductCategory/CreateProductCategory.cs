@@ -30,5 +30,6 @@ namespace ShopManagement.Application.Contract.ProductCategory
         public string Slug { get; set; }
 
         public long ParentId { get; set; }
+        public bool IsShow { get; set; }
     }
 }
