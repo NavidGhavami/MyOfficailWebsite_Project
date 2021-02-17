@@ -1,0 +1,17 @@
+E:\Programming\Codes and projects\MyOfficialEshopWebsite\MyOfficialEshopWebsite\ShopManagement.Domain\obj\Debug\netcoreapp5.0\ShopManagement.Domain.csprojAssemblyReference.cache
+E:\Programming\Codes and projects\MyOfficialEshopWebsite\MyOfficialEshopWebsite\ShopManagement.Domain\obj\Debug\netcoreapp5.0\ShopManagement.Domain.GeneratedMSBuildEditorConfig.editorconfig
+E:\Programming\Codes and projects\MyOfficialEshopWebsite\MyOfficialEshopWebsite\ShopManagement.Domain\obj\Debug\netcoreapp5.0\ShopManagement.Domain.AssemblyInfoInputs.cache
+E:\Programming\Codes and projects\MyOfficialEshopWebsite\MyOfficialEshopWebsite\ShopManagement.Domain\obj\Debug\netcoreapp5.0\ShopManagement.Domain.AssemblyInfo.cs
+E:\Programming\Codes and projects\MyOfficialEshopWebsite\MyOfficialEshopWebsite\ShopManagement.Domain\obj\Debug\netcoreapp5.0\ShopManagement.Domain.csproj.CoreCompileInputs.cache
+E:\Programming\Codes and projects\MyOfficialEshopWebsite\MyOfficialEshopWebsite\ShopManagement.Domain\bin\Debug\netcoreapp5.0\ShopManagement.Domain.deps.json
+E:\Programming\Codes and projects\MyOfficialEshopWebsite\MyOfficialEshopWebsite\ShopManagement.Domain\bin\Debug\netcoreapp5.0\ShopManagement.Domain.dll
+E:\Programming\Codes and projects\MyOfficialEshopWebsite\MyOfficialEshopWebsite\ShopManagement.Domain\bin\Debug\netcoreapp5.0\ref\ShopManagement.Domain.dll
+E:\Programming\Codes and projects\MyOfficialEshopWebsite\MyOfficialEshopWebsite\ShopManagement.Domain\bin\Debug\netcoreapp5.0\ShopManagement.Domain.pdb
+E:\Programming\Codes and projects\MyOfficialEshopWebsite\MyOfficialEshopWebsite\ShopManagement.Domain\bin\Debug\netcoreapp5.0\0_Framework.dll
+E:\Programming\Codes and projects\MyOfficialEshopWebsite\MyOfficialEshopWebsite\ShopManagement.Domain\bin\Debug\netcoreapp5.0\ShopManagement.Application.Contract.dll
+E:\Programming\Codes and projects\MyOfficialEshopWebsite\MyOfficialEshopWebsite\ShopManagement.Domain\bin\Debug\netcoreapp5.0\ShopManagement.Application.Contract.pdb
+E:\Programming\Codes and projects\MyOfficialEshopWebsite\MyOfficialEshopWebsite\ShopManagement.Domain\bin\Debug\netcoreapp5.0\0_Framework.pdb
+E:\Programming\Codes and projects\MyOfficialEshopWebsite\MyOfficialEshopWebsite\ShopManagement.Domain\obj\Debug\netcoreapp5.0\ShopManagement.Domain.csproj.CopyComplete
+E:\Programming\Codes and projects\MyOfficialEshopWebsite\MyOfficialEshopWebsite\ShopManagement.Domain\obj\Debug\netcoreapp5.0\ShopManagement.Domain.dll
+E:\Programming\Codes and projects\MyOfficialEshopWebsite\MyOfficialEshopWebsite\ShopManagement.Domain\obj\Debug\netcoreapp5.0\ref\ShopManagement.Domain.dll
+E:\Programming\Codes and projects\MyOfficialEshopWebsite\MyOfficialEshopWebsite\ShopManagement.Domain\obj\Debug\netcoreapp5.0\ShopManagement.Domain.pdb

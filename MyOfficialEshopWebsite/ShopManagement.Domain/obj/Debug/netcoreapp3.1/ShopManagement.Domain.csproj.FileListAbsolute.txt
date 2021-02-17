@@ -1,0 +1,4 @@
+E:\Programming\Codes and projects\MyOfficialEshopWebsite\MyOfficialEshopWebsite\ShopManagement.Domain\obj\Debug\netcoreapp3.1\ShopManagement.Domain.csprojAssemblyReference.cache
+E:\Programming\Codes and projects\MyOfficialEshopWebsite\MyOfficialEshopWebsite\ShopManagement.Domain\obj\Debug\netcoreapp3.1\ShopManagement.Domain.AssemblyInfoInputs.cache
+E:\Programming\Codes and projects\MyOfficialEshopWebsite\MyOfficialEshopWebsite\ShopManagement.Domain\obj\Debug\netcoreapp3.1\ShopManagement.Domain.AssemblyInfo.cs
+E:\Programming\Codes and projects\MyOfficialEshopWebsite\MyOfficialEshopWebsite\ShopManagement.Domain\obj\Debug\netcoreapp3.1\ShopManagement.Domain.csproj.CoreCompileInputs.cache

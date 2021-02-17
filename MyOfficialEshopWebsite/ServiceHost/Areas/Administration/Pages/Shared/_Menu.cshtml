@@ -1,0 +1,79 @@
+﻿
+@{
+}
+
+<div class="left side-menu">
+    <div class="sidebar-inner slimscrollleft">
+        <div class="user-details">
+            <div class="pull-right">
+                @*<img src="~/ProductPicture/@AuthHelper.CurrentAccountInfo().Picture" alt="" class="thumb-md img-circle">*@
+            </div>
+            <div class="user-info">
+                <div class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">@*@AuthHelper.CurrentAccountInfo().FullName*@navid<span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="javascript:void(0)"><i class="md md-face-unlock"></i> پروفایل<div class="ripple-wrapper"></div></a></li>
+                        <li><a href="javascript:void(0)"><i class="md md-settings"></i> تنظیمات</a></li>
+                        <li><a asp-page="/Account" asp-page-handler="Logout"><i class="md md-settings-power"></i> خروج</a></li>
+                    </ul>
+                </div>
+
+                <p class="text-muted m-0">@*@AuthHelper.CurrentAccountInfo().Role*@</p>
+            </div>
+        </div>
+        <!--- Divider -->
+        <div id="sidebar-menu">
+            <ul>
+                <li>
+                    <a asp-page="/Index" class="waves-effect active"><i class="md md-home"></i><span> داشبورد </span></a>
+                </li>
+
+                @*@if (AuthHelper.CurrentAccountRole() == Roles.Administrator || AuthHelper.CurrentAccountRole() == Roles.AdminAssistant)
+                {*@
+                    <li class="has_sub">
+                        <a class="waves-effect"><i class="md md-shopping-basket"></i><span> فروشگاه </span><span class="pull-right"><i class="md md-add"></i></span></a>
+                        <ul class="list-unstyled">
+                            <li><a asp-page="/Shop/ProductCategories/Index">گروه محصولات</a></li>
+                            <li><a asp-page="/Shop/Products/Index">محصولات</a></li>
+                            <li><a asp-page="/Shop/ProductPicture/Index">عکس محصولات</a></li>
+                            <li><a asp-page="/Shop/Sliders/Index">اسلایدر</a></li>
+                        </ul>
+                    </li>
+                <li class="has_sub">
+                    <a class="waves-effect"><i class="md md-account-balance-wallet"></i><span> سیستم تخفیفات </span><span class="pull-right"><i class="md md-add"></i></span></a>
+                    <ul class="list-unstyled">
+                        <li><a asp-page="/Discount/CustomerDiscount/Index">تخفیف مشتریان</a></li>
+                        <li><a asp-page="/Discount/ColleagueDiscount/Index">تخفیف همکاران </a></li>
+                    </ul>
+                </li>
+                <li class="has_sub">
+                    <a class="waves-effect"><i class="md md-image"></i><span>سیستم بلاگینگ</span><span class="pull-right"><i class="md md-add"></i></span></a>
+                    <ul class="list-unstyled">
+                        <li><a asp-page="/Blog/ArticleCategories/Index">گروه مقالات</a></li>
+                        <li><a asp-page="/Blog/Articles/Index">مقالات </a></li>
+                    </ul>
+                </li>
+                    <li class="has_sub">
+                        <a class="waves-effect"><i class="md md-account-box"></i><span>مدیریت کاربران</span><span class="pull-right"><i class="md md-add"></i></span></a>
+                        <ul class="list-unstyled">
+                            <li><a asp-page="/Accounts/Users/Index">کاربران</a></li>
+                            <li><a asp-page="/Accounts/Roles/Index">نقش ها </a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a asp-page="/Inventory/Index" class="waves-effect"><i class="md md-store"></i><span>انبارداری</span></a>
+                    </li>
+                    
+                @*}*@
+                <li>
+                    <a asp-page="/Shop/Orders/Index" class="waves-effect"><i class="md md-shopping-cart"></i><span>مدیریت سفارشات</span></a>
+                </li>
+                <li>
+                    <a asp-page="/Comments/Index" class="waves-effect"><i class="md md-message"></i><span>کامنت ها</span></a>
+                </li>
+            </ul>
+            <div class="clearfix"></div>
+        </div>
+        <div class="clearfix"></div>
+    </div>
+</div>

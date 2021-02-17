@@ -1,0 +1,6 @@
+E:\Programming\Codes and projects\MyOfficialEshopWebsite\MyOfficialEshopWebsite\ShopManagement.Infrastructure.EFCore\bin\Debug\netcoreapp3.1\0_Framework.dll
+E:\Programming\Codes and projects\MyOfficialEshopWebsite\MyOfficialEshopWebsite\ShopManagement.Infrastructure.EFCore\bin\Debug\netcoreapp3.1\ShopManagement.Application.Contract.dll
+E:\Programming\Codes and projects\MyOfficialEshopWebsite\MyOfficialEshopWebsite\ShopManagement.Infrastructure.EFCore\bin\Debug\netcoreapp3.1\ShopManagement.Domain.dll
+E:\Programming\Codes and projects\MyOfficialEshopWebsite\MyOfficialEshopWebsite\ShopManagement.Infrastructure.EFCore\obj\Debug\netcoreapp3.1\ShopManagement.Infrastructure.EFCore.AssemblyInfoInputs.cache
+E:\Programming\Codes and projects\MyOfficialEshopWebsite\MyOfficialEshopWebsite\ShopManagement.Infrastructure.EFCore\obj\Debug\netcoreapp3.1\ShopManagement.Infrastructure.EFCore.AssemblyInfo.cs
+E:\Programming\Codes and projects\MyOfficialEshopWebsite\MyOfficialEshopWebsite\ShopManagement.Infrastructure.EFCore\obj\Debug\netcoreapp3.1\ShopManagement.Infrastructure.EFCore.csprojAssemblyReference.cache
