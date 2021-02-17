@@ -19,8 +19,7 @@ namespace ShopManagement.Domain.Product
         public string MetaDescription { get; private set; }
         public long CategoryId { get; private set; }
         public ProductCategory.ProductCategory Category { get; set; }
-
-        // public List<ProductPicture.ProductPicture> ProductPictures { get; private set; }
+        public List<ProductPicture.ProductPicture> ProductPictures { get; private set; }
 
 
         public Product(string name, string code, string shortDescription,

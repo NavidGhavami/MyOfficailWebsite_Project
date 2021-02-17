@@ -29,7 +29,7 @@ namespace ShopManagement.Application
             }
             var slug = command.Slug.Slugify();
             var categorySlug = _productCategoryRepository.GetSlugById(command.CategoryId);
-            var picturePath = $"{"Shop"}/{"Product"}//{slug}";
+            var picturePath = $"{"Shop"}/{"ProductCategory"}/{categorySlug}/{slug}";
 
             var primaryFilename = _fileUploader.Upload(command.PrimaryPicture, picturePath);
             var secondaryFilename = _fileUploader.Upload(command.SecondaryPicture, picturePath);

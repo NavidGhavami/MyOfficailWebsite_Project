@@ -67,13 +67,34 @@
                                             <img src="~/Pictures/@item.Picture" style="width: 70px; height: 70px" />
                                         </td>
                                         <td>@item.Name</td>
-                                        <td>@item.IsShow</td>
+                                        <td>
+                                            @if (item.IsShow == false)
+                                            {
+                                                <i class="fa fa-remove fa-3x text-danger"></i>
+                                            }
+                                            else
+                                            {
+                                                <i class="fa fa-check fa-3x text-success"></i>
+                                            }
+                                        </td>
                                         <td>@item.CreationDate</td>
                                         <td>
                                             <a class="btn btn-warning btn-rounded waves-effect waves-light m-b-5"
                                                href="#showmodal=@Url.Page("./Index", "Edit", new { id = item.Id})">
                                                 <i class="fa fa-edit"></i> ویرایش
                                             </a>
+                                            @if (item.IsShow == true)
+                                            {
+                                                <a class="btn btn-danger btn-rounded waves-effect waves-light m-b-5" asp-page="./Index" asp-page-handler="Remove" asp-route-id="@item.Id">
+                                                    عدم نمایش
+                                                </a>
+                                            }
+                                            else
+                                            {
+                                                <a class="btn btn-success btn-rounded waves-effect waves-light m-b-5" asp-page="./Index" asp-page-handler="Restore" asp-route-id="@item.Id">
+                                                    نمایش
+                                                </a>
+                                            }
                                         </td>
                                     </tr>
                                     }

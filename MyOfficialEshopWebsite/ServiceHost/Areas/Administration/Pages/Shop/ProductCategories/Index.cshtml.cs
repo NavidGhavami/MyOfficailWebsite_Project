@@ -11,7 +11,8 @@ namespace ServiceHost.Areas.Administration.Pages.Shop.ProductCategories
     public class IndexModel : PageModel
     {
 
-
+        [TempData]
+        public string Message { get; set; }
 
         public ProductCategorySearchModel SearchModel;
         public List<ProductCategoryViewModel> ProductCategories;
@@ -48,6 +49,29 @@ namespace ServiceHost.Areas.Administration.Pages.Shop.ProductCategories
         {
             var result = _productCategoryApplication.Edit(command);
             return new JsonResult(result);
+        }
+        public IActionResult OnGetRemove(long id)
+        {
+            var result = _productCategoryApplication.Remove(id);
+            if (result.IsSuccedded)
+            {
+                return RedirectToPage("./Index");
+            }
+
+            Message = result.Message;
+            return RedirectToPage("./Index");
+
+        }
+        public IActionResult OnGetRestore(long id)
+        {
+            var result = _productCategoryApplication.Restore(id);
+            if (result.IsSuccedded)
+            {
+                return RedirectToPage("./Index");
+            }
+
+            Message = result.Message;
+            return RedirectToPage("./Index");
         }
     }
 }

@@ -14,8 +14,8 @@ namespace ShopManagement.Domain.ProductCategory
         public string Keywords { get; private set; }
         public string MetaDescription { get; private set; }
         public string Slug { get; private set; }
-        public bool IsShow { get; set; }
-        public long? ParentId { get; set; }
+        public bool IsShow { get; private set; }
+        public long? ParentId { get; private set; }
 
         public List<Product.Product> Products { get; private set; }
 
@@ -60,6 +60,14 @@ namespace ShopManagement.Domain.ProductCategory
             Keywords = keywords;
             MetaDescription = metaDescription;
             Slug = slug;
+        }
+        public void Remove()
+        {
+            IsShow = false;
+        }
+        public void Restore()
+        {
+            IsShow = true;
         }
     }
 }

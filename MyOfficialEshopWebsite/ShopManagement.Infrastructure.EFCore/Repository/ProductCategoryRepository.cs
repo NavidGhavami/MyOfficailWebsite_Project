@@ -57,7 +57,8 @@ namespace ShopManagement.Infrastructure.EFCore.Repository
                     Id = x.Id,
                     Picture = x.PrimaryPicture,
                     Name = x.Name,
-                    CreationDate = x.CreationDate.ToFarsi()
+                    CreationDate = x.CreationDate.ToFarsi(),
+                    IsShow = x.IsShow
                 });
 
             if (!string.IsNullOrWhiteSpace(searchModel.Name))
