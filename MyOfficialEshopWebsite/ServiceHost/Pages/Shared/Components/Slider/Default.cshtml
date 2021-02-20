@@ -1,0 +1,25 @@
+﻿@model List<_01_Query.Contract.Slider.SliderQueryModel>
+
+
+<section class="slider_section slider_s_three mb-60 mt-20">
+    <div class="slider_area slider3_carousel owl-carousel">
+        @foreach (var item in Model)
+        {
+            <div class="single_slider d-flex align-items-center">
+                <div class="container">
+                    <div class="row">
+                        <img src="~/Pictures/@item.Picture" class="SliderIMG" alt="@item.PictureAlt" title="@item.PictureTitle" />
+                        <div class="col-lg-8 offset-lg-2">
+                            <div class="slider_content slider_c_three color_white SliderContent">
+                                <h3>@item.Heading</h3>
+                                <h1>@item.Title</h1>
+                                <p class="less-space">@item.Text</p>
+                                <a class="button" href="@item.UrlLink">@item.BtnText</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</section>

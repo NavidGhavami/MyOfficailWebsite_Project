@@ -1,0 +1,12 @@
+E:\Programming\Codes and projects\MyOfficialEshopWebsite\MyOfficialEshopWebsite\0_Framework\bin\Debug\net5.0\0_Framework.deps.json
+E:\Programming\Codes and projects\MyOfficialEshopWebsite\MyOfficialEshopWebsite\0_Framework\bin\Debug\net5.0\0_Framework.dll
+E:\Programming\Codes and projects\MyOfficialEshopWebsite\MyOfficialEshopWebsite\0_Framework\bin\Debug\net5.0\ref\0_Framework.dll
+E:\Programming\Codes and projects\MyOfficialEshopWebsite\MyOfficialEshopWebsite\0_Framework\bin\Debug\net5.0\0_Framework.pdb
+E:\Programming\Codes and projects\MyOfficialEshopWebsite\MyOfficialEshopWebsite\0_Framework\obj\Debug\net5.0\0_Framework.csprojAssemblyReference.cache
+E:\Programming\Codes and projects\MyOfficialEshopWebsite\MyOfficialEshopWebsite\0_Framework\obj\Debug\net5.0\0_Framework.GeneratedMSBuildEditorConfig.editorconfig
+E:\Programming\Codes and projects\MyOfficialEshopWebsite\MyOfficialEshopWebsite\0_Framework\obj\Debug\net5.0\0_Framework.AssemblyInfoInputs.cache
+E:\Programming\Codes and projects\MyOfficialEshopWebsite\MyOfficialEshopWebsite\0_Framework\obj\Debug\net5.0\0_Framework.AssemblyInfo.cs
+E:\Programming\Codes and projects\MyOfficialEshopWebsite\MyOfficialEshopWebsite\0_Framework\obj\Debug\net5.0\0_Framework.csproj.CoreCompileInputs.cache
+E:\Programming\Codes and projects\MyOfficialEshopWebsite\MyOfficialEshopWebsite\0_Framework\obj\Debug\net5.0\0_Framework.dll
+E:\Programming\Codes and projects\MyOfficialEshopWebsite\MyOfficialEshopWebsite\0_Framework\obj\Debug\net5.0\ref\0_Framework.dll
+E:\Programming\Codes and projects\MyOfficialEshopWebsite\MyOfficialEshopWebsite\0_Framework\obj\Debug\net5.0\0_Framework.pdb
