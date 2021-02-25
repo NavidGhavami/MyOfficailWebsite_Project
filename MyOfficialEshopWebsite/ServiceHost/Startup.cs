@@ -12,6 +12,7 @@ using System.Text.Unicode;
 using System.Threading.Tasks;
 using _0_Framework.Application;
 using DiscountManagement.Configuration;
+using InventoryManagement.Configuration;
 using Microsoft.EntityFrameworkCore;
 using ServiceHost.Services;
 using ShopManagement.Configuration;
@@ -35,6 +36,7 @@ namespace ServiceHost
 
             ShopManagementBootstrapper.Configure(services, connectionString);
             DiscountManagementBootStrapper.Configure(services, connectionString);
+            InventoryManagementBootstrapper.Configure(services, connectionString);
 
 
 

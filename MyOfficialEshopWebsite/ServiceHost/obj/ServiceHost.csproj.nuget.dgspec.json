@@ -469,6 +469,317 @@
         }
       }
     },
+    "E:\\Programming\\Codes and projects\\MyOfficialEshopWebsite\\MyOfficialEshopWebsite\\InventoryManagement.Application.Contract\\InventoryManagement.Application.Contract.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "E:\\Programming\\Codes and projects\\MyOfficialEshopWebsite\\MyOfficialEshopWebsite\\InventoryManagement.Application.Contract\\InventoryManagement.Application.Contract.csproj",
+        "projectName": "InventoryManagement.Application.Contract",
+        "projectPath": "E:\\Programming\\Codes and projects\\MyOfficialEshopWebsite\\MyOfficialEshopWebsite\\InventoryManagement.Application.Contract\\InventoryManagement.Application.Contract.csproj",
+        "packagesPath": "C:\\Users\\DELL\\.nuget\\packages\\",
+        "outputPath": "E:\\Programming\\Codes and projects\\MyOfficialEshopWebsite\\MyOfficialEshopWebsite\\InventoryManagement.Application.Contract\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\DELL\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "E:\\Programming\\Codes and projects\\MyOfficialEshopWebsite\\MyOfficialEshopWebsite\\0_Framework\\0_Framework.csproj": {
+                "projectPath": "E:\\Programming\\Codes and projects\\MyOfficialEshopWebsite\\MyOfficialEshopWebsite\\0_Framework\\0_Framework.csproj"
+              },
+              "E:\\Programming\\Codes and projects\\MyOfficialEshopWebsite\\MyOfficialEshopWebsite\\ShopManagement.Application.Contracts\\ShopManagement.Application.Contract.csproj": {
+                "projectPath": "E:\\Programming\\Codes and projects\\MyOfficialEshopWebsite\\MyOfficialEshopWebsite\\ShopManagement.Application.Contracts\\ShopManagement.Application.Contract.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.103\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "E:\\Programming\\Codes and projects\\MyOfficialEshopWebsite\\MyOfficialEshopWebsite\\InventoryManagement.Application\\InventoryManagement.Application.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "E:\\Programming\\Codes and projects\\MyOfficialEshopWebsite\\MyOfficialEshopWebsite\\InventoryManagement.Application\\InventoryManagement.Application.csproj",
+        "projectName": "InventoryManagement.Application",
+        "projectPath": "E:\\Programming\\Codes and projects\\MyOfficialEshopWebsite\\MyOfficialEshopWebsite\\InventoryManagement.Application\\InventoryManagement.Application.csproj",
+        "packagesPath": "C:\\Users\\DELL\\.nuget\\packages\\",
+        "outputPath": "E:\\Programming\\Codes and projects\\MyOfficialEshopWebsite\\MyOfficialEshopWebsite\\InventoryManagement.Application\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\DELL\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "E:\\Programming\\Codes and projects\\MyOfficialEshopWebsite\\MyOfficialEshopWebsite\\InventoryManagement.Application.Contract\\InventoryManagement.Application.Contract.csproj": {
+                "projectPath": "E:\\Programming\\Codes and projects\\MyOfficialEshopWebsite\\MyOfficialEshopWebsite\\InventoryManagement.Application.Contract\\InventoryManagement.Application.Contract.csproj"
+              },
+              "E:\\Programming\\Codes and projects\\MyOfficialEshopWebsite\\MyOfficialEshopWebsite\\InventoryManagement.Domain\\InventoryManagement.Domain.csproj": {
+                "projectPath": "E:\\Programming\\Codes and projects\\MyOfficialEshopWebsite\\MyOfficialEshopWebsite\\InventoryManagement.Domain\\InventoryManagement.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.103\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "E:\\Programming\\Codes and projects\\MyOfficialEshopWebsite\\MyOfficialEshopWebsite\\InventoryManagement.Configuration\\InventoryManagement.Configuration.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "E:\\Programming\\Codes and projects\\MyOfficialEshopWebsite\\MyOfficialEshopWebsite\\InventoryManagement.Configuration\\InventoryManagement.Configuration.csproj",
+        "projectName": "InventoryManagement.Configuration",
+        "projectPath": "E:\\Programming\\Codes and projects\\MyOfficialEshopWebsite\\MyOfficialEshopWebsite\\InventoryManagement.Configuration\\InventoryManagement.Configuration.csproj",
+        "packagesPath": "C:\\Users\\DELL\\.nuget\\packages\\",
+        "outputPath": "E:\\Programming\\Codes and projects\\MyOfficialEshopWebsite\\MyOfficialEshopWebsite\\InventoryManagement.Configuration\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\DELL\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "E:\\Programming\\Codes and projects\\MyOfficialEshopWebsite\\MyOfficialEshopWebsite\\InventoryManagement.Application\\InventoryManagement.Application.csproj": {
+                "projectPath": "E:\\Programming\\Codes and projects\\MyOfficialEshopWebsite\\MyOfficialEshopWebsite\\InventoryManagement.Application\\InventoryManagement.Application.csproj"
+              },
+              "E:\\Programming\\Codes and projects\\MyOfficialEshopWebsite\\MyOfficialEshopWebsite\\InventoryManagement.Domain\\InventoryManagement.Domain.csproj": {
+                "projectPath": "E:\\Programming\\Codes and projects\\MyOfficialEshopWebsite\\MyOfficialEshopWebsite\\InventoryManagement.Domain\\InventoryManagement.Domain.csproj"
+              },
+              "E:\\Programming\\Codes and projects\\MyOfficialEshopWebsite\\MyOfficialEshopWebsite\\InventoryManagement.Infrastructure.EFCore\\InventoryManagement.Infrastructure.EFCore.csproj": {
+                "projectPath": "E:\\Programming\\Codes and projects\\MyOfficialEshopWebsite\\MyOfficialEshopWebsite\\InventoryManagement.Infrastructure.EFCore\\InventoryManagement.Infrastructure.EFCore.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.103\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "E:\\Programming\\Codes and projects\\MyOfficialEshopWebsite\\MyOfficialEshopWebsite\\InventoryManagement.Domain\\InventoryManagement.Domain.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "E:\\Programming\\Codes and projects\\MyOfficialEshopWebsite\\MyOfficialEshopWebsite\\InventoryManagement.Domain\\InventoryManagement.Domain.csproj",
+        "projectName": "InventoryManagement.Domain",
+        "projectPath": "E:\\Programming\\Codes and projects\\MyOfficialEshopWebsite\\MyOfficialEshopWebsite\\InventoryManagement.Domain\\InventoryManagement.Domain.csproj",
+        "packagesPath": "C:\\Users\\DELL\\.nuget\\packages\\",
+        "outputPath": "E:\\Programming\\Codes and projects\\MyOfficialEshopWebsite\\MyOfficialEshopWebsite\\InventoryManagement.Domain\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\DELL\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "E:\\Programming\\Codes and projects\\MyOfficialEshopWebsite\\MyOfficialEshopWebsite\\0_Framework\\0_Framework.csproj": {
+                "projectPath": "E:\\Programming\\Codes and projects\\MyOfficialEshopWebsite\\MyOfficialEshopWebsite\\0_Framework\\0_Framework.csproj"
+              },
+              "E:\\Programming\\Codes and projects\\MyOfficialEshopWebsite\\MyOfficialEshopWebsite\\InventoryManagement.Application.Contract\\InventoryManagement.Application.Contract.csproj": {
+                "projectPath": "E:\\Programming\\Codes and projects\\MyOfficialEshopWebsite\\MyOfficialEshopWebsite\\InventoryManagement.Application.Contract\\InventoryManagement.Application.Contract.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.103\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "E:\\Programming\\Codes and projects\\MyOfficialEshopWebsite\\MyOfficialEshopWebsite\\InventoryManagement.Infrastructure.EFCore\\InventoryManagement.Infrastructure.EFCore.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "E:\\Programming\\Codes and projects\\MyOfficialEshopWebsite\\MyOfficialEshopWebsite\\InventoryManagement.Infrastructure.EFCore\\InventoryManagement.Infrastructure.EFCore.csproj",
+        "projectName": "InventoryManagement.Infrastructure.EFCore",
+        "projectPath": "E:\\Programming\\Codes and projects\\MyOfficialEshopWebsite\\MyOfficialEshopWebsite\\InventoryManagement.Infrastructure.EFCore\\InventoryManagement.Infrastructure.EFCore.csproj",
+        "packagesPath": "C:\\Users\\DELL\\.nuget\\packages\\",
+        "outputPath": "E:\\Programming\\Codes and projects\\MyOfficialEshopWebsite\\MyOfficialEshopWebsite\\InventoryManagement.Infrastructure.EFCore\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\DELL\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "E:\\Programming\\Codes and projects\\MyOfficialEshopWebsite\\MyOfficialEshopWebsite\\0_Framework\\0_Framework.csproj": {
+                "projectPath": "E:\\Programming\\Codes and projects\\MyOfficialEshopWebsite\\MyOfficialEshopWebsite\\0_Framework\\0_Framework.csproj"
+              },
+              "E:\\Programming\\Codes and projects\\MyOfficialEshopWebsite\\MyOfficialEshopWebsite\\InventoryManagement.Domain\\InventoryManagement.Domain.csproj": {
+                "projectPath": "E:\\Programming\\Codes and projects\\MyOfficialEshopWebsite\\MyOfficialEshopWebsite\\InventoryManagement.Domain\\InventoryManagement.Domain.csproj"
+              },
+              "E:\\Programming\\Codes and projects\\MyOfficialEshopWebsite\\MyOfficialEshopWebsite\\ShopManagement.Infrastructure.EFCore\\ShopManagement.Infrastructure.EFCore.csproj": {
+                "projectPath": "E:\\Programming\\Codes and projects\\MyOfficialEshopWebsite\\MyOfficialEshopWebsite\\ShopManagement.Infrastructure.EFCore\\ShopManagement.Infrastructure.EFCore.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.103\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
     "E:\\Programming\\Codes and projects\\MyOfficialEshopWebsite\\MyOfficialEshopWebsite\\ServiceHost\\ServiceHost.csproj": {
       "version": "1.0.0",
       "restore": {
@@ -495,6 +806,9 @@
             "projectReferences": {
               "E:\\Programming\\Codes and projects\\MyOfficialEshopWebsite\\MyOfficialEshopWebsite\\DiscountManagement.Configure\\DiscountManagement.Configuration.csproj": {
                 "projectPath": "E:\\Programming\\Codes and projects\\MyOfficialEshopWebsite\\MyOfficialEshopWebsite\\DiscountManagement.Configure\\DiscountManagement.Configuration.csproj"
+              },
+              "E:\\Programming\\Codes and projects\\MyOfficialEshopWebsite\\MyOfficialEshopWebsite\\InventoryManagement.Configuration\\InventoryManagement.Configuration.csproj": {
+                "projectPath": "E:\\Programming\\Codes and projects\\MyOfficialEshopWebsite\\MyOfficialEshopWebsite\\InventoryManagement.Configuration\\InventoryManagement.Configuration.csproj"
               },
               "E:\\Programming\\Codes and projects\\MyOfficialEshopWebsite\\MyOfficialEshopWebsite\\ShopManagement.Configuration\\ShopManagement.Configuration.csproj": {
                 "projectPath": "E:\\Programming\\Codes and projects\\MyOfficialEshopWebsite\\MyOfficialEshopWebsite\\ShopManagement.Configuration\\ShopManagement.Configuration.csproj"
