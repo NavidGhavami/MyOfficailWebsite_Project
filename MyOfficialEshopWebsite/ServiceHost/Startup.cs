@@ -11,6 +11,7 @@ using System.Text.Encodings.Web;
 using System.Text.Unicode;
 using System.Threading.Tasks;
 using _0_Framework.Application;
+using DiscountManagement.Configuration;
 using Microsoft.EntityFrameworkCore;
 using ServiceHost.Services;
 using ShopManagement.Configuration;
@@ -33,6 +34,7 @@ namespace ServiceHost
             var connectionString = Configuration.GetConnectionString("MyOfficialEshopWebsite");
 
             ShopManagementBootstrapper.Configure(services, connectionString);
+            DiscountManagementBootStrapper.Configure(services, connectionString);
 
 
 
