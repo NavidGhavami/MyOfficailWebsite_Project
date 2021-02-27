@@ -1,0 +1,20 @@
+﻿@model List<_01_Query.Contract.ProductCategory.ProductCategoryQueryModel>
+
+<div class="categories_product_area mb-55">
+    <div class="container">
+        <div class="categories_product_inner">
+            @foreach (var item in Model)
+            {
+                <div class="single_categories_product">
+                    <div class="categories_product_content">
+                        <h4><a href="shop.html">@item.Name</a></h4>
+                        <p>@item.Products.Count محصول</p>
+                    </div>
+                    <div class="categories_product_thumb">
+                        <a href="shop.html"><img src="~/Pictures/@item.SecondaryPicture" alt="@item.PictureAlt" title="@item.PictureTitle"></a>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</div>

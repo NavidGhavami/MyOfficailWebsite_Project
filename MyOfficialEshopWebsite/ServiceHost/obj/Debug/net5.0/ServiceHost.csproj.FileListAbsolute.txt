@@ -211,3 +211,6 @@ E:\Programming\Codes and projects\MyOfficialEshopWebsite\MyOfficialEshopWebsite\
 E:\Programming\Codes and projects\MyOfficialEshopWebsite\MyOfficialEshopWebsite\ServiceHost\obj\Debug\net5.0\Razor\Areas\Administration\Pages\Inventory\Increase.cshtml.g.cs
 E:\Programming\Codes and projects\MyOfficialEshopWebsite\MyOfficialEshopWebsite\ServiceHost\obj\Debug\net5.0\Razor\Areas\Administration\Pages\Inventory\Index.cshtml.g.cs
 E:\Programming\Codes and projects\MyOfficialEshopWebsite\MyOfficialEshopWebsite\ServiceHost\obj\Debug\net5.0\Razor\Areas\Administration\Pages\Inventory\OperationLog.cshtml.g.cs
+E:\Programming\Codes and projects\MyOfficialEshopWebsite\MyOfficialEshopWebsite\ServiceHost\obj\Debug\net5.0\Razor\Pages\Shared\Components\ProductCategoryWithProducts\Default.cshtml.g.cs
+E:\Programming\Codes and projects\MyOfficialEshopWebsite\MyOfficialEshopWebsite\ServiceHost\obj\Debug\net5.0\Razor\Pages\Shared\Components\ProductCategoryWithProductsCount\Default.cshtml.g.cs
+E:\Programming\Codes and projects\MyOfficialEshopWebsite\MyOfficialEshopWebsite\ServiceHost\obj\Debug\net5.0\Razor\Pages\Shared\Components\GetLatestArrivals\Default.cshtml.g.cs

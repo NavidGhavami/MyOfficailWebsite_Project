@@ -28,6 +28,12 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
+              "E:\\Programming\\Codes and projects\\MyOfficialEshopWebsite\\MyOfficialEshopWebsite\\DiscountManagement.Infrastructure.EFCore\\DiscountManagement.Infrastructure.EFCore.csproj": {
+                "projectPath": "E:\\Programming\\Codes and projects\\MyOfficialEshopWebsite\\MyOfficialEshopWebsite\\DiscountManagement.Infrastructure.EFCore\\DiscountManagement.Infrastructure.EFCore.csproj"
+              },
+              "E:\\Programming\\Codes and projects\\MyOfficialEshopWebsite\\MyOfficialEshopWebsite\\InventoryManagement.Infrastructure.EFCore\\InventoryManagement.Infrastructure.EFCore.csproj": {
+                "projectPath": "E:\\Programming\\Codes and projects\\MyOfficialEshopWebsite\\MyOfficialEshopWebsite\\InventoryManagement.Infrastructure.EFCore\\InventoryManagement.Infrastructure.EFCore.csproj"
+              },
               "E:\\Programming\\Codes and projects\\MyOfficialEshopWebsite\\MyOfficialEshopWebsite\\ShopManagement.Infrastructure.EFCore\\ShopManagement.Infrastructure.EFCore.csproj": {
                 "projectPath": "E:\\Programming\\Codes and projects\\MyOfficialEshopWebsite\\MyOfficialEshopWebsite\\ShopManagement.Infrastructure.EFCore\\ShopManagement.Infrastructure.EFCore.csproj"
               }
