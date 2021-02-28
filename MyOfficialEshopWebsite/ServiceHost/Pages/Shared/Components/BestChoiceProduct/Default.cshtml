@@ -1,0 +1,83 @@
+﻿@model List<_01_Query.Contract.ProductCategory.ProductCategoryQueryModel>
+
+<div class="product_area deals_product_style2">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="product_header">
+                    <div class="section_title">
+                        <h2>پیشنهاد های برتر ماه</h2>
+                    </div>
+                    <div class="product_tab_btn">
+                        <ul class="nav" role="tablist">
+                            @foreach (var category in Model)
+                            {
+                                <li>
+                                    <a class="@(Model.First() == category ? "active" : "")" data-toggle="tab" id="product-tab3-@category.Id"
+                                       href="#product-series3-@category.Id" role="tab" aria-controls="@category.Name" aria-selected="true">
+                                        @category.Name
+                                    </a>
+                                </li>
+                            }
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="tab-content">
+            @foreach (var category in Model)
+            {
+                <div class="tab-pane fade show @(Model.First() == category ? "active" : "")" id="product-series3-@category.Id" role="tabpanel">
+                    <div class="product_carousel product_style product_column2 owl-carousel">
+
+
+                        @foreach (var product in category.Products)
+                        {
+                            <div class="single_product">
+                                <figure>
+                                    <div class="product_thumb">
+                                        <a class="primary_img" href="product-countdown.html"><img src="~/Pictures/@product.PrimaryPicture" alt="@product.PictureAlt" title="@product.PictureTitle"></a>
+                                        <a class="secondary_img" href="product-countdown.html"><img src="Pictures/@product.SecondaryPicture" alt="@product.PictureAlt" title="@product.PictureTitle"></a>
+                                    </div>
+                                    <div class="product_content">
+                                        <div class="product_content_inner">
+                                            <h4 class="product_name"><a href="product-countdown.html">@product.Name</a></h4>
+                                            <div class="product_rating">
+                                                <ul>
+                                                    @product.ShortDescription
+                                                </ul>
+                                            </div>
+                                            @if (product.HasDiscount)
+                                            {
+                                                <div class="price_box">
+                                                    <span class="old_price">@product.Price تومان</span>
+                                                    <span class="current_price">@product.PriceWithDiscount تومان</span>
+                                                </div>
+                                            }
+                                            else
+                                            {
+                                                <div class="price_box">
+                                                    <span class="current_price">@product.Price تومان</span>
+                                                </div>
+                                            }
+                                            <div class="countdown_text">
+                                                <p><span>عجله کنید!</span> اتمام پیشنهاد در: </p>
+                                            </div>
+                                            <div class="product_timing">
+                                                <div data-countdown="2045/12/15"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </figure>
+                            </div>
+                        }
+
+
+                    </div>
+                </div>
+            }
+        </div>
+
+    </div>
+</div>
+

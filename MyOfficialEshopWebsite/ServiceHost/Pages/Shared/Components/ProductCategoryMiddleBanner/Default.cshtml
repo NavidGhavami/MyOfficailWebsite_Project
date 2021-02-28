@@ -1,0 +1,25 @@
+﻿
+@model List<_01_Query.Contract.ProductCategory.ProductCategoryQueryModel>
+
+<div class="banner_area banner_three_bottom mb-60">
+    <div class="container">
+        <div class="row">
+            @foreach (var item in Model)
+            {
+                <div class="col-lg-6 col-md-6">
+                    <figure class="single_banner">
+                        <div class="banner_thumb">
+
+                            <a asp-page="/ProductCategory" asp-route-id="@item.Slug">
+                                <img src="~/Pictures/@item.PrimaryPicture"
+                                     alt="@item.Name" title="@item.Description">
+                            </a>
+
+                        </div>
+                    </figure>
+                    <br />
+                </div>
+            }
+        </div>
+    </div>
+</div>

@@ -18,6 +18,8 @@ namespace ShopManagement.Domain.Product
         public string Keywords { get; private set; }
         public string MetaDescription { get; private set; }
         public long CategoryId { get; private set; }
+        public long View { get; private set; }
+        public bool BestChoice { get; private set; }
         public ProductCategory.ProductCategory Category { get; set; }
         public List<ProductPicture.ProductPicture> ProductPictures { get; private set; }
 
@@ -39,7 +41,8 @@ namespace ShopManagement.Domain.Product
             Keywords = keywords;
             MetaDescription = metaDescription;
             CategoryId = categoryId;
-
+            BestChoice = false;
+            View = 0;
         }
         public void Edit(string name, string code, string shortDescription,
             string description, string seller, string primaryPicture, string secondaryPicture, string pictureAlt, string pictureTitle,
@@ -68,6 +71,14 @@ namespace ShopManagement.Domain.Product
             CategoryId = categoryId;
 
 
+        }
+        public void IsBestChoice()
+        {
+            BestChoice = true;
+        }
+        public void IsNotBestChoice()
+        {
+            BestChoice = false;
         }
     }
 }

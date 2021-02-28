@@ -1,0 +1,73 @@
+﻿@model List<_01_Query.Contract.ProductCategory.ProductCategoryQueryModel>
+
+<div class="small_product_area mb-55">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="product_header">
+                    <div class="section_title">
+                        <h2>محصولات پرفروش</h2>
+
+                    </div>
+                    <div class="product_tab_btn">
+                        <ul class="nav" role="tablist">
+                            @foreach (var category in Model)
+                            {
+                                <li>
+                                    <a class="@(Model.First() == category ? "active" : "")" data-toggle="tab" id="product-tab2-@category.Id"
+                                       href="#product-series2-@category.Id" role="tab" aria-controls="@category.Name" aria-selected="true">
+                                        @category.Name
+                                    </a>
+                                </li>
+                            }
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="tab-content">
+            @foreach (var category in Model)
+            {
+                <div class="tab-pane fade show @(Model.First() == category ? "active" : "")" id="product-series2-@category.Id" role="tabpanel">
+                    <div class="product_carousel small_p_container  small_product_column3 owl-carousel">
+                        @foreach (var product in category.Products)
+                        {
+                            <div class="product_items">
+                                <figure class="single_product">
+                                    <div class="product_thumb">
+                                        <a class="primary_img" href="product-details.html"><img src="~/Pictures/@product.PrimaryPicture" alt="@product.PictureAlt" title="@product.PictureTitle"></a>
+                                        <a class="secondary_img" href="product-details.html"><img src="~/Pictures/@product.SecondaryPicture"  alt="@product.PictureAlt" title="@product.PictureTitle"></a>
+                                    </div>
+                                    <div class="product_content">
+                                        <h4 class="product_name"><a href="product-details.html">@product.Name</a></h4>
+                                        <div class="product_rating">
+                                            <ul>
+                                                @product.ShortDescription
+                                            </ul>
+                                        </div>
+                                       @if (product.HasDiscount)
+                                       {
+                                           <div class="price_box">
+                                               <span class="old_price">@product.Price تومان</span>
+                                               <span class="current_price">@product.PriceWithDiscount تومان</span>
+                                           </div>
+                                       }
+                                       else
+                                       {
+                                           <div class="price_box">
+                                               <span class="current_price">@product.Price تومان</span>
+                                           </div>
+                                       }
+                                       <div class="product_cart_button">
+                                           <a href="cart.html" title="افزودن به سبد"><i class="fa fa-shopping-bag"></i></a>
+                                       </div>
+                                    </div>
+                                </figure>
+                            </div>
+                        }
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</div>

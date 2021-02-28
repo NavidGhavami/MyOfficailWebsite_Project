@@ -73,6 +73,7 @@
                                         <th>نام فروشنده</th>
                                         <th>گروه محصول</th>
                                         <th>تاریخ تولید</th>
+                                        <th>بهترین پیشنهاد</th>
                                         <th>عملیات</th>
                                     </tr>
                                 </thead>
@@ -90,10 +91,32 @@
                                         <td>@item.Category</td>
                                         <td>@item.CreationDate</td>
                                         <td>
+                                            @if (item.BestChoice == false)
+                                            {
+                                                <i class="fa fa-remove fa-3x text-danger"></i>
+                                            }
+                                            else
+                                            {
+                                                <i class="fa fa-check fa-3x text-success"></i>
+                                            }
+                                        </td>
+                                        <td>
                                             <a class="btn btn-warning btn-rounded waves-effect waves-light text-dark m-b-5"
                                                href="#showmodal=@Url.Page("./Index", "Edit", new { id = item.Id})">
                                                 <i class="fa fa-edit"></i> ویرایش
                                             </a>
+                                            @if (item.BestChoice == true)
+                                            {
+                                                <a class="btn btn-danger btn-rounded waves-effect waves-light m-b-5" asp-page="./Index" asp-page-handler="IsNotBestChoice" asp-route-id="@item.Id">
+                                                    عدم اعمال پیشنهاد ویژه
+                                                </a>
+                                            }
+                                            else
+                                            {
+                                                <a class="btn btn-success btn-rounded waves-effect waves-light m-b-5" asp-page="./Index" asp-page-handler="IsBestChoice" asp-route-id="@item.Id">
+                                                    اعمال پیشنهاد ویژه
+                                                </a>
+                                            }
                                         </td>
                                     </tr>
                                     }

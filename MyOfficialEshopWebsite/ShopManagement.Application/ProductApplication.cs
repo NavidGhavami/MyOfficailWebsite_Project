@@ -87,6 +87,46 @@ namespace ShopManagement.Application
             return _productRepository.GetProducts();
         }
 
+        public OperationResult ISBestChoice(long id)
+        {
+            var operation = new OperationResult();
+            var product = _productRepository.Get(id);
+
+            if (product == null)
+            {
+                return operation.Failed(ApplicationMessages.RecordNotFound);
+            }
+
+
+
+            product.IsBestChoice();
+            _productRepository.SaveChanges();
+
+            return operation.Succedded();
+        }
+
+        public OperationResult ISNotBestChoice(long id)
+        {
+            var operation = new OperationResult();
+            var product = _productRepository.Get(id);
+
+            if (product == null)
+            {
+                return operation.Failed(ApplicationMessages.RecordNotFound);
+            }
+
+
+
+            product.IsNotBestChoice();
+            _productRepository.SaveChanges();
+
+            return operation.Succedded();
+        }
+
+
+
+
+
 
     }
 }

@@ -44,6 +44,7 @@ namespace _01_Query.Query
                     PictureTitle = product.PictureTitle,
                     Slug = product.Slug,
                     Name = product.Name,
+                    ShortDescription = product.ShortDescription
                 }).AsNoTracking().ToList();
 
             foreach (var product in products)

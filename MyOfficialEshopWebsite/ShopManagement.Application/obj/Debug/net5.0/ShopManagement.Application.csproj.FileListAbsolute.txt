@@ -1,8 +1,3 @@
-E:\Programming\Codes and projects\MyOfficialEshopWebsite\MyOfficialEshopWebsite\ShopManagement.Application\obj\Debug\net5.0\ShopManagement.Application.csprojAssemblyReference.cache
-E:\Programming\Codes and projects\MyOfficialEshopWebsite\MyOfficialEshopWebsite\ShopManagement.Application\obj\Debug\net5.0\ShopManagement.Application.GeneratedMSBuildEditorConfig.editorconfig
-E:\Programming\Codes and projects\MyOfficialEshopWebsite\MyOfficialEshopWebsite\ShopManagement.Application\obj\Debug\net5.0\ShopManagement.Application.AssemblyInfoInputs.cache
-E:\Programming\Codes and projects\MyOfficialEshopWebsite\MyOfficialEshopWebsite\ShopManagement.Application\obj\Debug\net5.0\ShopManagement.Application.AssemblyInfo.cs
-E:\Programming\Codes and projects\MyOfficialEshopWebsite\MyOfficialEshopWebsite\ShopManagement.Application\obj\Debug\net5.0\ShopManagement.Application.csproj.CoreCompileInputs.cache
 E:\Programming\Codes and projects\MyOfficialEshopWebsite\MyOfficialEshopWebsite\ShopManagement.Application\bin\Debug\net5.0\ShopManagement.Application.deps.json
 E:\Programming\Codes and projects\MyOfficialEshopWebsite\MyOfficialEshopWebsite\ShopManagement.Application\bin\Debug\net5.0\ShopManagement.Application.dll
 E:\Programming\Codes and projects\MyOfficialEshopWebsite\MyOfficialEshopWebsite\ShopManagement.Application\bin\Debug\net5.0\ref\ShopManagement.Application.dll
@@ -13,6 +8,11 @@ E:\Programming\Codes and projects\MyOfficialEshopWebsite\MyOfficialEshopWebsite\
 E:\Programming\Codes and projects\MyOfficialEshopWebsite\MyOfficialEshopWebsite\ShopManagement.Application\bin\Debug\net5.0\0_Framework.pdb
 E:\Programming\Codes and projects\MyOfficialEshopWebsite\MyOfficialEshopWebsite\ShopManagement.Application\bin\Debug\net5.0\ShopManagement.Application.Contract.pdb
 E:\Programming\Codes and projects\MyOfficialEshopWebsite\MyOfficialEshopWebsite\ShopManagement.Application\bin\Debug\net5.0\ShopManagement.Domain.pdb
+E:\Programming\Codes and projects\MyOfficialEshopWebsite\MyOfficialEshopWebsite\ShopManagement.Application\obj\Debug\net5.0\ShopManagement.Application.csprojAssemblyReference.cache
+E:\Programming\Codes and projects\MyOfficialEshopWebsite\MyOfficialEshopWebsite\ShopManagement.Application\obj\Debug\net5.0\ShopManagement.Application.GeneratedMSBuildEditorConfig.editorconfig
+E:\Programming\Codes and projects\MyOfficialEshopWebsite\MyOfficialEshopWebsite\ShopManagement.Application\obj\Debug\net5.0\ShopManagement.Application.AssemblyInfoInputs.cache
+E:\Programming\Codes and projects\MyOfficialEshopWebsite\MyOfficialEshopWebsite\ShopManagement.Application\obj\Debug\net5.0\ShopManagement.Application.AssemblyInfo.cs
+E:\Programming\Codes and projects\MyOfficialEshopWebsite\MyOfficialEshopWebsite\ShopManagement.Application\obj\Debug\net5.0\ShopManagement.Application.csproj.CoreCompileInputs.cache
 E:\Programming\Codes and projects\MyOfficialEshopWebsite\MyOfficialEshopWebsite\ShopManagement.Application\obj\Debug\net5.0\ShopManagement.Application.csproj.CopyComplete
 E:\Programming\Codes and projects\MyOfficialEshopWebsite\MyOfficialEshopWebsite\ShopManagement.Application\obj\Debug\net5.0\ShopManagement.Application.dll
 E:\Programming\Codes and projects\MyOfficialEshopWebsite\MyOfficialEshopWebsite\ShopManagement.Application\obj\Debug\net5.0\ref\ShopManagement.Application.dll

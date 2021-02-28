@@ -11,7 +11,7 @@
                         <p>@item.Products.Count محصول</p>
                     </div>
                     <div class="categories_product_thumb">
-                        <a href="shop.html"><img src="~/Pictures/@item.SecondaryPicture" alt="@item.PictureAlt" title="@item.PictureTitle"></a>
+                        <a asp-page="/ProductCategory" asp-route-id="@item.Slug"><img src="~/Pictures/@item.SecondaryPicture" alt="@item.PictureAlt" title="@item.PictureTitle"></a>
                     </div>
                 </div>
             }

@@ -1,8 +1,3 @@
-E:\Programming\Codes and projects\MyOfficialEshopWebsite\MyOfficialEshopWebsite\ShopManagement.Infrastructure.EFCore\obj\Debug\net5.0\ShopManagement.Infrastructure.EFCore.csprojAssemblyReference.cache
-E:\Programming\Codes and projects\MyOfficialEshopWebsite\MyOfficialEshopWebsite\ShopManagement.Infrastructure.EFCore\obj\Debug\net5.0\ShopManagement.Infrastructure.EFCore.GeneratedMSBuildEditorConfig.editorconfig
-E:\Programming\Codes and projects\MyOfficialEshopWebsite\MyOfficialEshopWebsite\ShopManagement.Infrastructure.EFCore\obj\Debug\net5.0\ShopManagement.Infrastructure.EFCore.AssemblyInfoInputs.cache
-E:\Programming\Codes and projects\MyOfficialEshopWebsite\MyOfficialEshopWebsite\ShopManagement.Infrastructure.EFCore\obj\Debug\net5.0\ShopManagement.Infrastructure.EFCore.AssemblyInfo.cs
-E:\Programming\Codes and projects\MyOfficialEshopWebsite\MyOfficialEshopWebsite\ShopManagement.Infrastructure.EFCore\obj\Debug\net5.0\ShopManagement.Infrastructure.EFCore.csproj.CoreCompileInputs.cache
 E:\Programming\Codes and projects\MyOfficialEshopWebsite\MyOfficialEshopWebsite\ShopManagement.Infrastructure.EFCore\bin\Debug\net5.0\ShopManagement.Infrastructure.EFCore.deps.json
 E:\Programming\Codes and projects\MyOfficialEshopWebsite\MyOfficialEshopWebsite\ShopManagement.Infrastructure.EFCore\bin\Debug\net5.0\ShopManagement.Infrastructure.EFCore.runtimeconfig.json
 E:\Programming\Codes and projects\MyOfficialEshopWebsite\MyOfficialEshopWebsite\ShopManagement.Infrastructure.EFCore\bin\Debug\net5.0\ShopManagement.Infrastructure.EFCore.runtimeconfig.dev.json
@@ -15,6 +10,11 @@ E:\Programming\Codes and projects\MyOfficialEshopWebsite\MyOfficialEshopWebsite\
 E:\Programming\Codes and projects\MyOfficialEshopWebsite\MyOfficialEshopWebsite\ShopManagement.Infrastructure.EFCore\bin\Debug\net5.0\ShopManagement.Domain.pdb
 E:\Programming\Codes and projects\MyOfficialEshopWebsite\MyOfficialEshopWebsite\ShopManagement.Infrastructure.EFCore\bin\Debug\net5.0\0_Framework.pdb
 E:\Programming\Codes and projects\MyOfficialEshopWebsite\MyOfficialEshopWebsite\ShopManagement.Infrastructure.EFCore\bin\Debug\net5.0\ShopManagement.Application.Contract.pdb
+E:\Programming\Codes and projects\MyOfficialEshopWebsite\MyOfficialEshopWebsite\ShopManagement.Infrastructure.EFCore\obj\Debug\net5.0\ShopManagement.Infrastructure.EFCore.csprojAssemblyReference.cache
+E:\Programming\Codes and projects\MyOfficialEshopWebsite\MyOfficialEshopWebsite\ShopManagement.Infrastructure.EFCore\obj\Debug\net5.0\ShopManagement.Infrastructure.EFCore.GeneratedMSBuildEditorConfig.editorconfig
+E:\Programming\Codes and projects\MyOfficialEshopWebsite\MyOfficialEshopWebsite\ShopManagement.Infrastructure.EFCore\obj\Debug\net5.0\ShopManagement.Infrastructure.EFCore.AssemblyInfoInputs.cache
+E:\Programming\Codes and projects\MyOfficialEshopWebsite\MyOfficialEshopWebsite\ShopManagement.Infrastructure.EFCore\obj\Debug\net5.0\ShopManagement.Infrastructure.EFCore.AssemblyInfo.cs
+E:\Programming\Codes and projects\MyOfficialEshopWebsite\MyOfficialEshopWebsite\ShopManagement.Infrastructure.EFCore\obj\Debug\net5.0\ShopManagement.Infrastructure.EFCore.csproj.CoreCompileInputs.cache
 E:\Programming\Codes and projects\MyOfficialEshopWebsite\MyOfficialEshopWebsite\ShopManagement.Infrastructure.EFCore\obj\Debug\net5.0\ShopManagement.Infrastructure.EFCore.csproj.CopyComplete
 E:\Programming\Codes and projects\MyOfficialEshopWebsite\MyOfficialEshopWebsite\ShopManagement.Infrastructure.EFCore\obj\Debug\net5.0\ShopManagement.Infrastructure.EFCore.dll
 E:\Programming\Codes and projects\MyOfficialEshopWebsite\MyOfficialEshopWebsite\ShopManagement.Infrastructure.EFCore\obj\Debug\net5.0\ref\ShopManagement.Infrastructure.EFCore.dll

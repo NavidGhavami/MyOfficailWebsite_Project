@@ -2,14 +2,6 @@ E:\Programming\Codes and projects\MyOfficialEshopWebsite\MyOfficialEshopWebsite\
 E:\Programming\Codes and projects\MyOfficialEshopWebsite\MyOfficialEshopWebsite\DiscountManagement.Configure\bin\Debug\net5.0\DiscountManagement.Configuration.dll
 E:\Programming\Codes and projects\MyOfficialEshopWebsite\MyOfficialEshopWebsite\DiscountManagement.Configure\bin\Debug\net5.0\ref\DiscountManagement.Configuration.dll
 E:\Programming\Codes and projects\MyOfficialEshopWebsite\MyOfficialEshopWebsite\DiscountManagement.Configure\bin\Debug\net5.0\DiscountManagement.Configuration.pdb
-E:\Programming\Codes and projects\MyOfficialEshopWebsite\MyOfficialEshopWebsite\DiscountManagement.Configure\obj\Debug\net5.0\DiscountManagement.Configuration.csprojAssemblyReference.cache
-E:\Programming\Codes and projects\MyOfficialEshopWebsite\MyOfficialEshopWebsite\DiscountManagement.Configure\obj\Debug\net5.0\DiscountManagement.Configuration.GeneratedMSBuildEditorConfig.editorconfig
-E:\Programming\Codes and projects\MyOfficialEshopWebsite\MyOfficialEshopWebsite\DiscountManagement.Configure\obj\Debug\net5.0\DiscountManagement.Configuration.AssemblyInfoInputs.cache
-E:\Programming\Codes and projects\MyOfficialEshopWebsite\MyOfficialEshopWebsite\DiscountManagement.Configure\obj\Debug\net5.0\DiscountManagement.Configuration.AssemblyInfo.cs
-E:\Programming\Codes and projects\MyOfficialEshopWebsite\MyOfficialEshopWebsite\DiscountManagement.Configure\obj\Debug\net5.0\DiscountManagement.Configuration.csproj.CoreCompileInputs.cache
-E:\Programming\Codes and projects\MyOfficialEshopWebsite\MyOfficialEshopWebsite\DiscountManagement.Configure\obj\Debug\net5.0\DiscountManagement.Configuration.dll
-E:\Programming\Codes and projects\MyOfficialEshopWebsite\MyOfficialEshopWebsite\DiscountManagement.Configure\obj\Debug\net5.0\ref\DiscountManagement.Configuration.dll
-E:\Programming\Codes and projects\MyOfficialEshopWebsite\MyOfficialEshopWebsite\DiscountManagement.Configure\obj\Debug\net5.0\DiscountManagement.Configuration.pdb
 E:\Programming\Codes and projects\MyOfficialEshopWebsite\MyOfficialEshopWebsite\DiscountManagement.Configure\bin\Debug\net5.0\0_Framework.dll
 E:\Programming\Codes and projects\MyOfficialEshopWebsite\MyOfficialEshopWebsite\DiscountManagement.Configure\bin\Debug\net5.0\DiscountManagement.Application.Contract.dll
 E:\Programming\Codes and projects\MyOfficialEshopWebsite\MyOfficialEshopWebsite\DiscountManagement.Configure\bin\Debug\net5.0\DiscountManagement.Application.dll
@@ -26,4 +18,12 @@ E:\Programming\Codes and projects\MyOfficialEshopWebsite\MyOfficialEshopWebsite\
 E:\Programming\Codes and projects\MyOfficialEshopWebsite\MyOfficialEshopWebsite\DiscountManagement.Configure\bin\Debug\net5.0\ShopManagement.Application.Contract.pdb
 E:\Programming\Codes and projects\MyOfficialEshopWebsite\MyOfficialEshopWebsite\DiscountManagement.Configure\bin\Debug\net5.0\ShopManagement.Domain.pdb
 E:\Programming\Codes and projects\MyOfficialEshopWebsite\MyOfficialEshopWebsite\DiscountManagement.Configure\bin\Debug\net5.0\ShopManagement.Infrastructure.EFCore.pdb
+E:\Programming\Codes and projects\MyOfficialEshopWebsite\MyOfficialEshopWebsite\DiscountManagement.Configure\obj\Debug\net5.0\DiscountManagement.Configuration.csprojAssemblyReference.cache
+E:\Programming\Codes and projects\MyOfficialEshopWebsite\MyOfficialEshopWebsite\DiscountManagement.Configure\obj\Debug\net5.0\DiscountManagement.Configuration.GeneratedMSBuildEditorConfig.editorconfig
+E:\Programming\Codes and projects\MyOfficialEshopWebsite\MyOfficialEshopWebsite\DiscountManagement.Configure\obj\Debug\net5.0\DiscountManagement.Configuration.AssemblyInfoInputs.cache
+E:\Programming\Codes and projects\MyOfficialEshopWebsite\MyOfficialEshopWebsite\DiscountManagement.Configure\obj\Debug\net5.0\DiscountManagement.Configuration.AssemblyInfo.cs
+E:\Programming\Codes and projects\MyOfficialEshopWebsite\MyOfficialEshopWebsite\DiscountManagement.Configure\obj\Debug\net5.0\DiscountManagement.Configuration.csproj.CoreCompileInputs.cache
 E:\Programming\Codes and projects\MyOfficialEshopWebsite\MyOfficialEshopWebsite\DiscountManagement.Configure\obj\Debug\net5.0\DiscountManagement.Configuration.csproj.CopyComplete
+E:\Programming\Codes and projects\MyOfficialEshopWebsite\MyOfficialEshopWebsite\DiscountManagement.Configure\obj\Debug\net5.0\DiscountManagement.Configuration.dll
+E:\Programming\Codes and projects\MyOfficialEshopWebsite\MyOfficialEshopWebsite\DiscountManagement.Configure\obj\Debug\net5.0\ref\DiscountManagement.Configuration.dll
+E:\Programming\Codes and projects\MyOfficialEshopWebsite\MyOfficialEshopWebsite\DiscountManagement.Configure\obj\Debug\net5.0\DiscountManagement.Configuration.pdb

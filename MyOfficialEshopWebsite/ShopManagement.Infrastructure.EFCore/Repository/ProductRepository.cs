@@ -30,7 +30,9 @@ namespace ShopManagement.Infrastructure.EFCore.Repository
                     CategoryId = x.CategoryId,
                     PrimaryPicture = x.PrimaryPicture,
                     CreationDate = x.CreationDate.ToFarsi(),
-                    Seller = x.Seller
+                    Seller = x.Seller,
+                    BestChoice = x.BestChoice
+                    
 
                 });
 

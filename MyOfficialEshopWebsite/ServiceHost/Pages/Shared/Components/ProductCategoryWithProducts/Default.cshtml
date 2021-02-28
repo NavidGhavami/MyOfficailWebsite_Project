@@ -14,8 +14,8 @@
                             @foreach (var category in Model)
                             {
                                 <li>
-                                    <a class="@(Model.First() == category ? "active" : "")" data-toggle="tab" id="product-tab-@category.Id" 
-                                       href="#product-series-@category.Id" role="tab" aria-controls="@category.Name" area-selected ="true">
+                                    <a class="@(Model.First() == category ? "active" : "")" data-toggle="tab" id="product-tab-@category.Id"
+                                       href="#product-series-@category.Id" role="tab" aria-controls="@category.Name" area-selected="true">
 
                                         @category.Name
                                     </a>
@@ -50,7 +50,7 @@
                                         else
                                         {
                                             <div class="label_product">
-                                              
+
                                             </div>
                                         }
                                         <div class="action_links">
@@ -91,7 +91,6 @@
                                     </div>
                                 </figure>
                             </article>
-
                         }
                     </div>
                 </div>

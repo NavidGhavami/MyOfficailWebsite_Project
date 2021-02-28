@@ -26,6 +26,9 @@ namespace ShopManagement.Infrastructure.EFCore.Migrations
                         .HasColumnType("bigint")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
+                    b.Property<bool>("BestChoice")
+                        .HasColumnType("bit");
+
                     b.Property<long>("CategoryId")
                         .HasColumnType("bigint");
 
@@ -72,7 +75,9 @@ namespace ShopManagement.Infrastructure.EFCore.Migrations
                         .HasColumnType("nvarchar(1000)");
 
                     b.Property<string>("Seller")
-                        .HasColumnType("nvarchar(max)");
+                        .IsRequired()
+                        .HasMaxLength(500)
+                        .HasColumnType("nvarchar(500)");
 
                     b.Property<string>("ShortDescription")
                         .IsRequired()
@@ -83,6 +88,9 @@ namespace ShopManagement.Infrastructure.EFCore.Migrations
                         .IsRequired()
                         .HasMaxLength(500)
                         .HasColumnType("nvarchar(500)");
+
+                    b.Property<long>("View")
+                        .HasColumnType("bigint");
 
                     b.HasKey("Id");
 

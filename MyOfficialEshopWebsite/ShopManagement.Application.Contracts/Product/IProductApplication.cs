@@ -10,5 +10,7 @@ namespace ShopManagement.Application.Contract.Product
         EditProduct GetDetails(long id);
         List<ProductViewModel> Search(ProductSearchModel searchModel);
         List<ProductViewModel> GetProducts();
+        OperationResult ISBestChoice(long id);
+        OperationResult ISNotBestChoice(long id);
     }
 }
