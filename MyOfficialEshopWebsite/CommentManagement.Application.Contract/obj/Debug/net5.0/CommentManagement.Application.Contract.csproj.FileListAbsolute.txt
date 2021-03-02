@@ -1,0 +1,15 @@
+E:\Programming\Codes and projects\MyOfficialEshopWebsite\MyOfficialEshopWebsite\CommentManagement.Application.Contract\bin\Debug\net5.0\CommentManagement.Application.Contract.deps.json
+E:\Programming\Codes and projects\MyOfficialEshopWebsite\MyOfficialEshopWebsite\CommentManagement.Application.Contract\bin\Debug\net5.0\CommentManagement.Application.Contract.dll
+E:\Programming\Codes and projects\MyOfficialEshopWebsite\MyOfficialEshopWebsite\CommentManagement.Application.Contract\bin\Debug\net5.0\ref\CommentManagement.Application.Contract.dll
+E:\Programming\Codes and projects\MyOfficialEshopWebsite\MyOfficialEshopWebsite\CommentManagement.Application.Contract\bin\Debug\net5.0\CommentManagement.Application.Contract.pdb
+E:\Programming\Codes and projects\MyOfficialEshopWebsite\MyOfficialEshopWebsite\CommentManagement.Application.Contract\bin\Debug\net5.0\0_Framework.dll
+E:\Programming\Codes and projects\MyOfficialEshopWebsite\MyOfficialEshopWebsite\CommentManagement.Application.Contract\bin\Debug\net5.0\0_Framework.pdb
+E:\Programming\Codes and projects\MyOfficialEshopWebsite\MyOfficialEshopWebsite\CommentManagement.Application.Contract\obj\Debug\net5.0\CommentManagement.Application.Contract.csprojAssemblyReference.cache
+E:\Programming\Codes and projects\MyOfficialEshopWebsite\MyOfficialEshopWebsite\CommentManagement.Application.Contract\obj\Debug\net5.0\CommentManagement.Application.Contract.GeneratedMSBuildEditorConfig.editorconfig
+E:\Programming\Codes and projects\MyOfficialEshopWebsite\MyOfficialEshopWebsite\CommentManagement.Application.Contract\obj\Debug\net5.0\CommentManagement.Application.Contract.AssemblyInfoInputs.cache
+E:\Programming\Codes and projects\MyOfficialEshopWebsite\MyOfficialEshopWebsite\CommentManagement.Application.Contract\obj\Debug\net5.0\CommentManagement.Application.Contract.AssemblyInfo.cs
+E:\Programming\Codes and projects\MyOfficialEshopWebsite\MyOfficialEshopWebsite\CommentManagement.Application.Contract\obj\Debug\net5.0\CommentManagement.Application.Contract.csproj.CoreCompileInputs.cache
+E:\Programming\Codes and projects\MyOfficialEshopWebsite\MyOfficialEshopWebsite\CommentManagement.Application.Contract\obj\Debug\net5.0\CommentManagement.Application.Contract.csproj.CopyComplete
+E:\Programming\Codes and projects\MyOfficialEshopWebsite\MyOfficialEshopWebsite\CommentManagement.Application.Contract\obj\Debug\net5.0\CommentManagement.Application.Contract.dll
+E:\Programming\Codes and projects\MyOfficialEshopWebsite\MyOfficialEshopWebsite\CommentManagement.Application.Contract\obj\Debug\net5.0\ref\CommentManagement.Application.Contract.dll
+E:\Programming\Codes and projects\MyOfficialEshopWebsite\MyOfficialEshopWebsite\CommentManagement.Application.Contract\obj\Debug\net5.0\CommentManagement.Application.Contract.pdb

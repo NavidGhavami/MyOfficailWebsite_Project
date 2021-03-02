@@ -1,0 +1,17 @@
+E:\Programming\Codes and projects\MyOfficialEshopWebsite\MyOfficialEshopWebsite\Comment.Management.Domain\bin\Debug\net5.0\Comment.Management.Domain.deps.json
+E:\Programming\Codes and projects\MyOfficialEshopWebsite\MyOfficialEshopWebsite\Comment.Management.Domain\bin\Debug\net5.0\Comment.Management.Domain.dll
+E:\Programming\Codes and projects\MyOfficialEshopWebsite\MyOfficialEshopWebsite\Comment.Management.Domain\bin\Debug\net5.0\ref\Comment.Management.Domain.dll
+E:\Programming\Codes and projects\MyOfficialEshopWebsite\MyOfficialEshopWebsite\Comment.Management.Domain\bin\Debug\net5.0\Comment.Management.Domain.pdb
+E:\Programming\Codes and projects\MyOfficialEshopWebsite\MyOfficialEshopWebsite\Comment.Management.Domain\bin\Debug\net5.0\0_Framework.dll
+E:\Programming\Codes and projects\MyOfficialEshopWebsite\MyOfficialEshopWebsite\Comment.Management.Domain\bin\Debug\net5.0\CommentManagement.Application.Contract.dll
+E:\Programming\Codes and projects\MyOfficialEshopWebsite\MyOfficialEshopWebsite\Comment.Management.Domain\bin\Debug\net5.0\0_Framework.pdb
+E:\Programming\Codes and projects\MyOfficialEshopWebsite\MyOfficialEshopWebsite\Comment.Management.Domain\bin\Debug\net5.0\CommentManagement.Application.Contract.pdb
+E:\Programming\Codes and projects\MyOfficialEshopWebsite\MyOfficialEshopWebsite\Comment.Management.Domain\obj\Debug\net5.0\Comment.Management.Domain.csprojAssemblyReference.cache
+E:\Programming\Codes and projects\MyOfficialEshopWebsite\MyOfficialEshopWebsite\Comment.Management.Domain\obj\Debug\net5.0\Comment.Management.Domain.GeneratedMSBuildEditorConfig.editorconfig
+E:\Programming\Codes and projects\MyOfficialEshopWebsite\MyOfficialEshopWebsite\Comment.Management.Domain\obj\Debug\net5.0\Comment.Management.Domain.AssemblyInfoInputs.cache
+E:\Programming\Codes and projects\MyOfficialEshopWebsite\MyOfficialEshopWebsite\Comment.Management.Domain\obj\Debug\net5.0\Comment.Management.Domain.AssemblyInfo.cs
+E:\Programming\Codes and projects\MyOfficialEshopWebsite\MyOfficialEshopWebsite\Comment.Management.Domain\obj\Debug\net5.0\Comment.Management.Domain.csproj.CoreCompileInputs.cache
+E:\Programming\Codes and projects\MyOfficialEshopWebsite\MyOfficialEshopWebsite\Comment.Management.Domain\obj\Debug\net5.0\Comment.Management.Domain.csproj.CopyComplete
+E:\Programming\Codes and projects\MyOfficialEshopWebsite\MyOfficialEshopWebsite\Comment.Management.Domain\obj\Debug\net5.0\Comment.Management.Domain.dll
+E:\Programming\Codes and projects\MyOfficialEshopWebsite\MyOfficialEshopWebsite\Comment.Management.Domain\obj\Debug\net5.0\ref\Comment.Management.Domain.dll
+E:\Programming\Codes and projects\MyOfficialEshopWebsite\MyOfficialEshopWebsite\Comment.Management.Domain\obj\Debug\net5.0\Comment.Management.Domain.pdb
