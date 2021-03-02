@@ -16,5 +16,7 @@
         public string Slug { get; set; }
         public bool HasDiscount { get; set; }
         public bool BestChoice { get; set; }
+        public string DiscountExpireDate { get; set; }
+        public long View { get; set; }
     }
 }

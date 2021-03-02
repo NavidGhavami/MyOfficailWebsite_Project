@@ -69,7 +69,7 @@ namespace _01_Query.Query
             var dateTime = DateTime.Now;
             var discounts = _discountContext.CustomerDiscounts
                 .Where(x => x.StartDate < dateTime && dateTime < x.EndDate)
-                .Select(x => new { x.ProductId, x.DiscountRate });
+                .Select(x => new { x.ProductId, x.DiscountRate,x.EndDate });
 
             var categories = _shopContext.ProductCategories
                 .Where(x => x.IsShow)
@@ -98,6 +98,7 @@ namespace _01_Query.Query
                     {
                         var discountRate = discount.DiscountRate;
                         product.DiscountRate = discountRate;
+                        product.DiscountExpireDate = discount.EndDate.ToDiscountFormat();
                         product.HasDiscount = discountRate > 0;
 
                         var discountAmount = Math.Round((price * discountRate) / 100);
@@ -112,6 +113,61 @@ namespace _01_Query.Query
             return categories;
         }
 
+        public ProductCategoryQueryModel GetProductCategoriesWithProductsBy(string slug)
+        {
+            var inventory = _inventoryContext.Inventories
+               .Select(x => new { x.ProductId, x.UnitPrice });
+
+            var dateTime = DateTime.Now;
+            var discounts = _discountContext.CustomerDiscounts
+                .Where(x => x.StartDate < dateTime && dateTime < x.EndDate)
+                .Select(x => new { x.ProductId, x.DiscountRate });
+
+            var category = _shopContext.ProductCategories
+                .Include(a => a.Products)
+                .ThenInclude(x => x.Category)
+                .Select(x => new ProductCategoryQueryModel
+                {
+                    Id = x.Id,
+                    Name = x.Name,
+                    PrimaryPicture = x.PrimaryPicture,
+                    Description = x.Description,
+                    MetaDescription = x.MetaDescription,
+                    Keywords = x.Keywords,
+                    Slug = x.Slug,
+                    Products = MapProducts(x.Products)
+
+                }).AsNoTracking().FirstOrDefault(x => x.Slug == slug);
+
+
+            if (category != null)
+            {
+                foreach (var product in category.Products)
+                {
+                    var productInventory = inventory.FirstOrDefault(x => x.ProductId == product.Id);
+                    if (productInventory != null)
+                    {
+                        var price = productInventory.UnitPrice;
+                        product.Price = price.ToMoney();
+                        var discount = discounts.FirstOrDefault(x => x.ProductId == product.Id);
+                        if (discount != null)
+                        {
+                            var discountRate = discount.DiscountRate;
+                            product.DiscountRate = discountRate;
+                            //product.DiscountExpireDate = discount.EndDate.ToDiscountFormat();
+                            product.HasDiscount = discountRate > 0;
+                            var discountAmount = Math.Round((price * discountRate) / 100);
+                            product.PriceWithDiscount = (price - discountAmount).ToMoney();
+                        }
+                    }
+                }
+
+
+
+            }
+            return category;
+        }
+
         public List<ProductCategoryQueryModel> GetProductCategoriesWithProductsCount()
         {
             var categories = _shopContext.ProductCategories
@@ -122,6 +178,7 @@ namespace _01_Query.Query
                     Id = x.Id,
                     Name = x.Name,
                     SecondaryPicture = x.SecondaryPicture,
+                    Slug = x.Slug,
                     Products = MapProducts(x.Products)
 
                 }).OrderByDescending(x => x.Id).Take(10).ToList();
@@ -187,7 +244,7 @@ namespace _01_Query.Query
             var dateTime = DateTime.Now;
             var discounts = _discountContext.CustomerDiscounts
                 .Where(x => x.StartDate < dateTime && dateTime < x.EndDate)
-                .Select(x => new { x.ProductId, x.DiscountRate });
+                .Select(x => new { x.ProductId, x.DiscountRate,x.EndDate });
 
             var categories = _shopContext.ProductCategories
                 .Include(x => x.Products)
@@ -215,6 +272,7 @@ namespace _01_Query.Query
                     {
                         var discountRate = discount.DiscountRate;
                         product.DiscountRate = discountRate;
+                        product.DiscountExpireDate = discount.EndDate.ToDiscountFormat();
                         product.HasDiscount = discountRate > 0;
 
                         var discountAmount = Math.Round((price * discountRate) / 100);
@@ -244,7 +302,7 @@ namespace _01_Query.Query
                 Name = product.Name,
                 ShortDescription = product.ShortDescription,
                 BestChoice = product.BestChoice
-            }).OrderByDescending(x => x.Id).Take(30).ToList();
+            }).OrderByDescending(x => x.Id).Take(32).ToList();
 
 
         }

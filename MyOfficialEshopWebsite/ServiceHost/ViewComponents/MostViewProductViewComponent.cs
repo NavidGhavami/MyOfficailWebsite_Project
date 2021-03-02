@@ -1,12 +1,21 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using _01_Query.Contract.Product;
+using Microsoft.AspNetCore.Mvc;
 
 namespace ServiceHost.ViewComponents
 {
     public class MostViewProductViewComponent : ViewComponent
     {
+        private readonly IProductQuery _productQuery;
+
+        public MostViewProductViewComponent(IProductQuery productQuery)
+        {
+            _productQuery = productQuery;
+        }
+
         public IViewComponentResult Invoke()
         {
-            return View();
+            var product = _productQuery.getProductsByMaximumViewList();
+            return View(product);
         }
     }
 }

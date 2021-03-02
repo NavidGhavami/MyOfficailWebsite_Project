@@ -1,0 +1,347 @@
+﻿@model List<_01_Query.Contract.ProductCategory.ProductCategoryQueryModel>
+
+<div class="off_canvars_overlay"></div>
+<div class="Offcanvas_menu">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="canvas_open">
+                    <a href="javascript:void(0)"><i class="ion-navicon"></i></a>
+                </div>
+                <div class="Offcanvas_menu_wrapper">
+                    <div class="canvas_close">
+                        <a href="javascript:void(0)"><i class="ion-android-close"></i></a>
+                    </div>
+                    <div class="antomi_message">
+                        <p>ارسال رایگان - ضمانت بازگشت کالا تا 7 روز</p>
+                    </div>
+                    <div class="header_top_settings text-right">
+                        <ul>
+                            <li><a href="#">آدرس‌های فروشگاه</a></li>
+                            <li><a href="#">پیگیری سفارش</a></li>
+                            <li>تلفن تماس: <a class="ltr-text" href="tel:+(+98)9337878585">(+98) 933 787 8585 </a></li>
+                            <li>ضمانت کیفیت محصولات</li>
+                        </ul>
+                    </div>
+                    <div class="header_configure_area">
+                        <div class="header_wishlist">
+                            <a href="wishlist.html">
+                                <i class="ion-android-favorite-outline"></i>
+                                <span class="wishlist_count">3</span>
+                            </a>
+                        </div>
+                        <div class="mini_cart_wrapper">
+                            <a href="javascript:void(0)">
+                                <i class="fa fa-shopping-bag"></i>
+                                <span class="cart_price"><i class="ion-ios-arrow-down"></i></span>
+                                <span class="cart_count">2</span>
+                            </a>
+                            <!--mini cart-->
+                            <div class="mini_cart">
+                                <div class="mini_cart_inner">
+                                    <div class="cart_item">
+                                        <div class="cart_img">
+                                            <a href="#"><img src="~/SiteTheme/assets/img/s-product/product.jpg" alt=""></a>
+                                        </div>
+                                        <div class="cart_info">
+                                            <a href="#">گوشی هوشمند سامسونگ A50</a>
+                                            <p>تعداد: 1 × <span> 60,000 تومان </span></p>
+                                        </div>
+                                        <div class="cart_remove">
+                                            <a href="#"><i class="ion-android-close"></i></a>
+                                        </div>
+                                    </div>
+                                    <div class="cart_item">
+                                        <div class="cart_img">
+                                            <a href="#"><img src="~/SiteTheme/assets/img/s-product/product2.jpg" alt=""></a>
+                                        </div>
+                                        <div class="cart_info">
+                                            <a href="#">صندلی آشپزخانه پلاستیکی Nilper</a>
+                                            <p>تعداد: 1 × <span> 60,000 تومان </span></p>
+                                        </div>
+                                        <div class="cart_remove">
+                                            <a href="#"><i class="ion-android-close"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="mini_cart_table">
+                                    <div class="cart_total">
+                                        <span>جمع اجزا:</span>
+                                        <span class="price">138,000 تومان</span>
+                                    </div>
+                                    <div class="cart_total mt-10">
+                                        <span>جمع کل:</span>
+                                        <span class="price">138,000 تومان</span>
+                                    </div>
+                                </div>
+                                <div class="mini_cart_footer">
+                                    <div class="cart_button">
+                                        <a href="cart.html">مشاهده سبد</a>
+                                    </div>
+                                    <div class="cart_button">
+                                        <a href="checkout.html">پرداخت</a>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <!--mini cart end-->
+                        </div>
+                    </div>
+                    <div class="search_container">
+                        <form method="get" asp-page="/Search">
+                            <div class="hover_category">
+                                <select class="select_option" name="select" id="categori1">
+                                    <option selected value="1">همه دسته ها</option>
+                                    @foreach (var item in Model)
+                                    {
+                                        <option value="@item.Id">@item.Name</option>
+                                    }
+                                </select>
+                            </div>
+                            <div class="search_box">
+                                <input placeholder="جستجوی محصول ..." name="value" id="value" type="text">
+                                <button type="submit">جستجو</button>
+                            </div>
+                        </form>
+                    </div>
+                    <div id="menu" class="text-left ">
+                        <ul class="offcanvas_main_menu">
+                            <li class="menu-item-has-children active">
+                                <a asp-page="/Index">صفحه اصلی</a>
+                            </li>
+                            <li class="menu-item-has-children">
+                                <a href="#">محصولات</a>
+                                <ul class="sub-menu">
+                                    @foreach (var item in Model)
+                                    {
+                                        <li><a asp-page="/ProductCategory" asp-route-id="@item.Slug">@item.Name</a></li>
+                                    }
+                                </ul>
+
+                            </li>
+                            <li class="menu-item-has-children">
+                                <a href="#">مقالات</a>
+                                <ul class="sub-menu">
+                                    <li><a href="blog.html">بلاگ</a></li>
+                                </ul>
+                            </li>
+                            <li class="menu-item-has-children">
+                                <a asp-page="/AboutUs">درباره ما</a>
+                            </li>
+                            <li class="menu-item-has-children">
+                                <a asp-page="/ContactUs"> تماس با ما</a>
+                            </li>
+                            <li class="menu-item-has-children">
+                                <a asp-page="/FrequentQuestion">سوالات متداول</a>
+                            </li>
+                            <li class="menu-item-has-children">
+                                <a asp-page="/Login">ورود | ثبت نام</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="Offcanvas_footer">
+                        <span><a href="#"><i class="fa fa-envelope-o"></i>navid_ghavami@outlook.com</a></span>
+                        <ul>
+                            <li class="facebook"><a href="#"><i class="fa fa-facebook"></i></a></li>
+                            <li class="twitter"><a href="#"><i class="fa fa-twitter"></i></a></li>
+                            <li class="pinterest"><a href="#"><i class="fa fa-pinterest"></i></a></li>
+                            <li class="google-plus"><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                            <li class="linkedin"><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<header>
+    <div class="main_header">
+        <div class="container">
+            <!--header top start-->
+            <div class="header_top">
+                <div class="row align-items-center">
+                    <div class="col-lg-4 col-md-5">
+                        <div class="antomi_message">
+                            <p>ارسال رایگان - ضمانت بازگشت کالا تا 7 روز</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-8 col-md-7">
+                        <div class="header_top_settings text-right">
+                            <ul>
+                                <li><a href="#">آدرس‌های فروشگاه</a></li>
+                                <li><a href="#">پیگیری سفارش</a></li>
+                                <li>تلفن تماس: <a class="ltr-text" href="tel:+(+98)9337878585">(+98) 933 787 8585 </a></li>
+                                <li>ضمانت کیفیت محصولات</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--header top start-->
+            <!--header middel start-->
+            <div class="header_middle sticky-header">
+                <div class="row align-items-center">
+                    <div class="col-lg-2 col-md-6">
+                        <div class="logo">
+                            <a asp-page="/Index"><img src="~/SiteTheme/assets/img/logo/logo.png" alt="سایت فروشگاهی هنری" title="سایت فروشگاهی هنری"></a>
+                        </div>
+                    </div>
+                    <div class="col-lg-7 col-md-12">
+                        <div class="main_menu menu_position text-center">
+                            <nav>
+                                <ul>
+                                    <li>
+                                        <a class="" asp-page="/Index">صفحه اصلی<i class=""></i></a>
+                                    </li>
+                                    <li>
+                                        <a href="blog.html">محصولات<i class="fa fa-angle-down"></i></a>
+                                        <ul class="sub_menu pages">
+                                            @foreach (var item in Model)
+                                            {
+                                                <li><a asp-page="/ProductCategory" asp-route-id="@item.Slug">@item.Name</a></li>
+                                            }
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="blog.html">مقالات<i class="fa fa-angle-down"></i></a>
+                                        <ul class="sub_menu pages">
+                                            <li><a href="blog-details.html">جزئیات مطلب بلاگ</a></li>
+                                        </ul>
+                                    </li>
+
+                                    <li><a asp-page="/AboutUs">درباره ما</a></li>
+                                    <li><a asp-page="/ContactUs"> تماس با ما</a></li>
+                                    <li><a asp-page="/FrequentQuestion">سوالات متداول</a></li>
+                                    <li><a asp-page="/Login">ورود | ثبت نام</a></li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                    <div class="col-lg-3">
+                        <div class="header_configure_area">
+                            <div class="header_wishlist">
+                                <a href="wishlist.html">
+                                    <i class="ion-android-favorite-outline"></i>
+                                    <span class="wishlist_count">3</span>
+                                </a>
+                            </div>
+                            <div class="mini_cart_wrapper">
+                                <a href="javascript:void(0)">
+                                    <i class="fa fa-shopping-bag"></i>
+                                    <span class="cart_price"><span>152,000 تومان</span> <i class="ion-ios-arrow-down"></i></span>
+                                    <span class="cart_count">2</span>
+
+                                </a>
+                                <!--mini cart-->
+                                <div class="mini_cart">
+                                    <div class="mini_cart_inner">
+                                        <div class="cart_item">
+                                            <div class="cart_img">
+                                                <a href="#"><img src="~/SiteTheme/assets/img/s-product/product.jpg" alt=""></a>
+                                            </div>
+                                            <div class="cart_info">
+                                                <a href="#">گوشی هوشمند سامسونگ A50</a>
+                                                <p>تعداد: 1 × <span> 60,000 تومان </span></p>
+                                            </div>
+                                            <div class="cart_remove">
+                                                <a href="#"><i class="ion-android-close"></i></a>
+                                            </div>
+                                        </div>
+                                        <div class="cart_item">
+                                            <div class="cart_img">
+                                                <a href="#"><img src="~/SiteTheme/assets/img/s-product/product2.jpg" alt=""></a>
+                                            </div>
+                                            <div class="cart_info">
+                                                <a href="#">صندلی آشپزخانه پلاستیکی Nilper</a>
+                                                <p>تعداد: 1 × <span> 60,000 تومان </span></p>
+                                            </div>
+                                            <div class="cart_remove">
+                                                <a href="#"><i class="ion-android-close"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="mini_cart_table">
+                                        <div class="cart_total">
+                                            <span>جمع اجزا:</span>
+                                            <span class="price">138,000 تومان</span>
+                                        </div>
+                                        <div class="cart_total mt-10">
+                                            <span>جمع کل:</span>
+                                            <span class="price">138,000 تومان</span>
+                                        </div>
+                                    </div>
+                                    <div class="mini_cart_footer">
+                                        <div class="cart_button">
+                                            <a href="cart.html">مشاهده سبد</a>
+                                        </div>
+                                        <div class="cart_button">
+                                            <a href="checkout.html">پرداخت</a>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <!--mini cart end-->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--header middel end-->
+            <!--header bottom start-->
+            <div class="header_bottom">
+                <div class="row align-items-center">
+                    <div class="column1 col-lg-3 col-md-6">
+                        <div class="categories_menu categories_three">
+                            <div class="categories_title">
+                                <h2 class="categori_toggle">دسته بندی ها</h2>
+                            </div>
+                            <div class="categories_menu_toggle">
+                                <ul>
+                                    @foreach (var item in Model)
+                                    {
+                                        <li class="menu_item_children">
+                                            <a href="#">@item.Name <i class="fa fa-angle-left"></i></a>
+                                            <ul class="categories_mega_menu">
+                                                <li class="menu_item_children">
+                                                    <ul class="categorie_sub_menu">
+                                                        <li><a href="">زیر پیراهن</a></li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    }
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="column2 col-lg-6 ">
+                        <div class="search_container">
+                            <form method="get" asp-page="/Search">
+                                <div class="hover_category">
+                                    <select class="select_option" name="select" id="categori2">
+                                        <option selected value="1">همه دسته ها</option>
+                                        @foreach (var item in Model)
+                                        {
+                                            <option value="@item.Name">@item.Name</option>
+                                        }
+                                    </select>
+                                </div>
+                                <div class="search_box">
+                                    <input placeholder="جستجوی محصول ..." name="value" id="value" type="text">
+                                    <button type="submit">جستجو</button>
+                                </div>
+                            </form>
+                        </div>
+
+                    </div>
+                    <div class="column3 col-lg-3 col-md-6">
+                        <div class="header_bigsale">
+                            <a href="#">فروش بزرگ جمعه سیاه</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--header bottom end-->
+        </div>
+    </div>
+</header>

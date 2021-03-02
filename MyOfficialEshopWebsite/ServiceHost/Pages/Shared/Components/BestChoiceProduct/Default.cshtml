@@ -60,12 +60,22 @@
                                                     <span class="current_price">@product.Price تومان</span>
                                                 </div>
                                             }
-                                            <div class="countdown_text">
-                                                <p><span>عجله کنید!</span> اتمام پیشنهاد در: </p>
-                                            </div>
-                                            <div class="product_timing">
-                                                <div data-countdown="2045/12/15"></div>
-                                            </div>
+                                            @if (product.HasDiscount)
+                                            {
+                                                <div class="countdown_text">
+                                                    <p><span>عجله کنید!</span> اتمام پیشنهاد در: </p>
+                                                </div>
+
+                                                <div class="product_timing">
+                                                    <div data-countdown="@product.DiscountExpireDate"></div>
+                                                </div>
+                                            }
+                                            else
+                                            {
+                                                <div class="countdown_text">
+                                                    <p><span>عجله کنید!</span> همین الان سفارش بده! </p>
+                                                </div>
+                                            }
                                         </div>
                                     </div>
                                 </figure>

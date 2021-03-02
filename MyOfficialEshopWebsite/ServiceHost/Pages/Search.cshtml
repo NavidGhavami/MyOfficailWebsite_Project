@@ -1,0 +1,160 @@
+﻿@page
+@model ServiceHost.Pages.SearchModel
+@{
+    ViewData["Title"] = "نتیجه جستجو";
+}
+<div class="breadcrumbs_area">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="breadcrumb_content">
+                    <ul>
+                        <li><a href="index.html">صفحه اصلی</a></li>
+                        <li>نتیجه جستجو برای : @Model.Value</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="shop_area shop_fullwidth">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+
+                <!--shop banner area start-->
+                <div class="shop_banner_area mb-30">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="shop_banner_thumb">
+                                <img src="assets/img/bg/banner16.jpg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--shop banner area end-->
+                <!--shop toolbar start-->
+                <div class="shop_toolbar_wrapper">
+                    <div class="shop_toolbar_btn">
+                        <button data-role="grid_4" type="button" class="btn-grid-4 active" data-toggle="tooltip" title="4"></button>
+                        <button data-role="grid_list" type="button" class="btn-list" data-toggle="tooltip" title="List"></button>
+                    </div>
+                    <div class="page_amount">
+                        <p>نمایش : @Model.Products.Count محصول</p>
+                    </div>
+                </div>
+                <!--shop toolbar end-->
+                <!--shop wrapper start-->
+                <div class="row no-gutters shop_wrapper grid_4">
+                    @foreach (var product in Model.Products)
+                    {
+                        <div class="col-lg-3 col-md-4 col-sm-6">
+                            <article class="single_product">
+                                <figure>
+                                    <div class="product_thumb">
+                                        <a class="primary_img" href="product-details.html">
+                                            <img src="~/Pictures/@product.PrimaryPicture"
+                                                 alt="@product.PictureAlt" title="@product.PictureTitle">
+                                        </a>
+                                        <a class="secondary_img" href="product-details.html">
+                                            <img src="~/Pictures/@product.SecondaryPicture"
+                                                 alt="@product.PictureAlt" title="@product.PictureTitle">
+                                        </a>
+                                        @if (product.HasDiscount)
+                                        {
+                                            <div class="label_product">
+                                                <span class="label_sale">@product.DiscountRate%</span>
+                                            </div>
+                                        }
+                                    </div>
+                                    <div class="product_content grid_content">
+                                        <div class="product_content_inner">
+                                            <h4 class="product_name"><a href="product-details.html">@product.Name</a></h4>
+                                            <div class="product_rating">
+                                                <ul>
+                                                    <li><a href="#"><i class="ion-android-star-outline"></i></a></li>
+                                                    <li><a href="#"><i class="ion-android-star-outline"></i></a></li>
+                                                    <li><a href="#"><i class="ion-android-star-outline"></i></a></li>
+                                                    <li><a href="#"><i class="ion-android-star-outline"></i></a></li>
+                                                    <li><a href="#"><i class="ion-android-star-outline"></i></a></li>
+                                                </ul>
+                                            </div>
+                                            @if (product.HasDiscount)
+                                            {
+                                                <div class="price_box">
+                                                    <span class="old_price">@product.Price تومان</span>
+                                                    <span class="current_price">@product.PriceWithDiscount تومان</span>
+                                                </div>
+                                            }
+                                            else
+                                            {
+                                                <div class="price_box">
+                                                    <span class="current_price">@product.Price تومان</span>
+                                                </div>
+                                            }
+                                        </div>
+                                        <div class="add_to_cart">
+                                            <a href="cart.html" title="" data-original-title="افزودن به سبد">افزودن به سبد</a>
+                                        </div>
+                                    </div>
+                                    <div class="product_content list_content">
+                                        <h4 class="product_name"><a href="product-details.html">@product.Name</a></h4>
+                                        <div class="product_rating">
+                                            <ul>
+                                                <li><a href="#"><i class="ion-android-star-outline"></i></a></li>
+                                                <li><a href="#"><i class="ion-android-star-outline"></i></a></li>
+                                                <li><a href="#"><i class="ion-android-star-outline"></i></a></li>
+                                                <li><a href="#"><i class="ion-android-star-outline"></i></a></li>
+                                                <li><a href="#"><i class="ion-android-star-outline"></i></a></li>
+                                            </ul>
+                                        </div>
+                                        @if (product.HasDiscount)
+                                        {
+                                            <div class="price_box">
+                                                <span class="old_price">@product.Price تومان</span>
+                                                <span class="current_price">@product.PriceWithDiscount تومان</span>
+                                            </div>
+                                        }
+                                        else
+                                        {
+                                            <div class="price_box">
+                                                <span class="current_price">@product.Price تومان</span>
+                                            </div>
+                                        }
+                                        <div class="product_desc">
+                                            <p>
+                                                @product.ShortDescription
+                                            </p>
+                                        </div>
+                                        <div class="add_to_cart">
+                                            <a href="cart.html" title="" data-original-title="افزودن به سبد">افزودن به سبد</a>
+                                        </div>
+                                        <div class="action_links">
+                                            <ul>
+                                                <li class="wishlist"><a href="wishlist.html" title="" data-original-title="افزودن به علاقه‌مندی‌ها"><i class="ion-android-favorite-outline"></i> افزودن به علاقه‌مندی‌ها</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </figure>
+                            </article>
+                        </div>
+                    }
+                </div>
+
+                <div class="shop_toolbar t_bottom">
+                    <div class="pagination">
+                        <ul>
+                            <li class="current">1</li>
+                            <li><a href="#">2</a></li>
+                            <li><a href="#">3</a></li>
+                            <li class="next"><a href="#">بعدی</a></li>
+                            <li><a href="#"><i class="fa fa-angle-double-left"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <!--shop toolbar end-->
+                <!--shop wrapper end-->
+            </div>
+        </div>
+    </div>
+</div>
