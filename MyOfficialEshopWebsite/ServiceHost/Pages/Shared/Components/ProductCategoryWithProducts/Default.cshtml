@@ -39,8 +39,8 @@
                                 <figure>
 
                                     <div class="product_thumb">
-                                        <a class="primary_img" href="product-countdown.html"><img src="~/Pictures/@product.PrimaryPicture" alt="@product.PictureAlt" title="@product.PictureTitle"></a>
-                                        <a class="secondary_img" href="product-countdown.html"><img src="~/Pictures/@product.SecondaryPicture" alt="@product.PictureAlt" title="@product.PictureTitle"></a>
+                                        <a class="primary_img" asp-page="/ProductDetails" asp-route-id="@product.Slug"><img src="~/Pictures/@product.PrimaryPicture" alt="@product.PictureAlt" title="@product.PictureTitle"></a>
+                                        <a class="secondary_img" asp-page="/ProductDetails" asp-route-id="@product.Slug"><img src="~/Pictures/@product.SecondaryPicture" alt="@product.PictureAlt" title="@product.PictureTitle"></a>
                                         @if (product.HasDiscount)
                                         {
                                             <div class="label_product">
@@ -61,7 +61,7 @@
                                     </div>
                                     <div class="product_content">
                                         <div class="product_content_inner">
-                                            <h4 class="product_name"><a href="product-countdown.html">@product.Name</a></h4>
+                                            <h4 class="product_name"><a asp-page="/ProductDetails" asp-route-id="@product.Slug">@product.Name</a></h4>
                                             @if (product.HasDiscount)
                                             {
                                                 <div class="price_box">

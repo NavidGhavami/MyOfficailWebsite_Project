@@ -20,8 +20,8 @@
                             <figure>
 
                                 <div class="product_thumb">
-                                    <a class="primary_img" href="product-details.html"><img src="~/Pictures/@item.PrimaryPicture" alt=""></a>
-                                    <a class="secondary_img" href="product-details.html"><img src="~/Pictures/@item.SecondaryPicture" alt=""></a>
+                                    <a class="primary_img" asp-page="/ProductDetails" asp-route-id="@item.Slug" ><img src="~/Pictures/@item.PrimaryPicture" alt=""></a>
+                                    <a class="secondary_img" asp-page="/ProductDetails" asp-route-id="@item.Slug"><img src="~/Pictures/@item.SecondaryPicture" alt=""></a>
                                     @if (item.HasDiscount)
                                     {
                                         <div class="label_product">
@@ -36,7 +36,7 @@
                                 </div>
                                 <div class="product_content">
                                     <div class="product_content_inner">
-                                        <h4 class="product_name"><a href="product-details.html">@item.Name</a></h4>
+                                        <h4 class="product_name"><a asp-page="/ProductDetails" asp-route-id="@item.Slug">@item.Name</a></h4>
                                         @if (item.HasDiscount)
                                         {
                                             <div class="price_box">

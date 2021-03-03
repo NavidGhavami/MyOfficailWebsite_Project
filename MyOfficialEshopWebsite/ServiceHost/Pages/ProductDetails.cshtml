@@ -1,0 +1,254 @@
+﻿@page "{id}"
+@model ServiceHost.Pages.ProductDetailsModel
+@{
+    ViewData["Title"] = "جزییات محصول";
+}
+
+<div class="breadcrumbs_area mt-45">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="breadcrumb_content">
+                    <ul>
+                        <li><a asp-page="/Index">خانه</a></li>
+                        <li><a asp-page="/ProductCategory" asp-route-id="@Model.Product.CategorySlug">@Model.Product.Category</a></li>
+                        <li>@Model.Product.Name</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="product_page_bg">
+    <div class="container">
+        <div class="product_details_wrapper mb-55">
+            <!--product details start-->
+            <div class="product_details">
+                <div class="row">
+                    <div class="col-lg-5 col-md-6">
+                        <div class="product-details-tab">
+                            <div id="img-1" class="zoomWrapper single-zoom">
+                                <a href="#">
+                                    <img id="zoom1" src="~/Pictures/@Model.Product.PrimaryPicture" data-zoom-image="~/Pictures/@Model.Product.PrimaryPicture"
+                                         alt="@Model.Product.PictureAlt" title="@Model.Product.PictureTitle">
+                                </a>
+                            </div>
+                            <div class="single-zoom-thumb">
+                                <ul class="s-tab-zoom owl-carousel single-product-active" id="gallery_01">
+                                    @foreach (var picture in Model.Product.Pictures)
+                                    {
+                                        <li>
+                                            <a href="#" class="elevatezoom-gallery active" data-update="" data-image="~/Pictures/@picture.Picture" data-zoom-image="~/Pictures/@picture.Picture">
+                                                <img src="~/Pictures/@picture.Picture" alt="@picture.PictureAlt" title="@picture.PictureTitle">
+                                            </a>
+
+                                        </li>
+                                    }
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-7 col-md-6">
+                        <div class="product_d_right">
+                            <form action="#">
+
+                                <h3><a href="#">@Model.Product.Name</a></h3>
+                                <div class="product_rating">
+                                    <ul>
+                                        <li><a href="#"><i class="ion-android-star-outline"></i></a></li>
+                                        <li><a href="#"><i class="ion-android-star-outline"></i></a></li>
+                                        <li><a href="#"><i class="ion-android-star-outline"></i></a></li>
+                                        <li><a href="#"><i class="ion-android-star-outline"></i></a></li>
+                                        <li><a href="#"><i class="ion-android-star-outline"></i></a></li>
+                                        <li class="review"><a href="#">( @Model.Product.Comments.Count نقد و بررسی )</a></li>
+                                    </ul>
+                                </div>
+                                @if (Model.Product.HasDiscount)
+                                {
+                                    <div class="price_box">
+                                        <span class="old_price">@Model.Product.Price تومان</span>
+                                        <span class="current_price">@Model.Product.PriceWithDiscount تومان</span>
+                                    </div>
+                                }
+                                else
+                                {
+                                    <div class="price_box">
+                                        <span class="current_price">@Model.Product.Price تومان</span>
+                                    </div>
+                                }
+                                <div class="product_desc">
+                                    <p>@Model.Product.ShortDescription</p>
+                                </div>
+                                <div class="product_variant quantity">
+                                    <label>تعداد</label>
+                                    <input min="1" max="100" value="1" type="number">
+                                    <button class="button" type="submit">افزودن به سبد خرید</button>
+                                </div>
+                                @if (Model.Product.HasDiscount)
+                                {
+                                    <div class="product_timing">
+                                        <div data-countdown="@Model.Product.DiscountExpireDate">
+
+                                            <div class="countdown_area">
+                                                <div class="single_countdown">
+                                                    <div class="countdown_number"></div>
+                                                    <div class="countdown_title">روز</div>
+                                                </div>
+                                                <div class="single_countdown">
+                                                    <div class="countdown_number"></div>
+                                                    <div class="countdown_title">ساعت</div>
+                                                </div>
+                                                <div class="single_countdown">
+                                                    <div class="countdown_number"></div>
+                                                    <div class="countdown_title">دقیقه</div>
+                                                </div>
+                                                <div class="single_countdown">
+                                                    <div class="countdown_number"></div>
+                                                    <div class="countdown_title">ثانیه</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                }
+                                <div class=" product_d_action">
+                                    <ul>
+                                        <li><a href="#" title="افزودن به علاقه‌مندی‌ها">+ افزودن به علاقه‌مندی‌ها</a></li>
+                                    </ul>
+                                </div>
+                                <div class="product_meta">
+                                    <span>
+                                        گروه محصول: <a asp-page="/ProductCategory" asp-route-id="@Model.Product.CategorySlug">
+                                            @Model.Product.Category
+                                        </a>
+                                    </span>
+                                    <br />
+                                    <span>کد محصول: <a href="#">@Model.Product.Code</a></span>
+                                    <br />
+                                    <br />
+                                    @if (Model.Product.InStock)
+                                    {
+                                        <span class="text-success">موجودی انبار: <a href="#">در انبار موجود می باشد</a></span>
+                                    }
+                                    else
+                                    {
+                                        <span class="text-danger">موجودی انبار: <a href="#">در انبار موجود نمی باشد</a></span>
+
+                                    }
+                                    <br />
+                                    <br />
+                                    <span class="text-primary">اشتراک گذاری در: <a href="#"></a></span>
+                                </div>
+                            </form>
+                            <div class="priduct_social">
+                                <ul>
+                                    <li><a class="facebook" href="#" title="facebook"><i class="fa fa-facebook"></i> فیسبوک</a></li>
+                                    <li><a class="twitter" href="#" title="twitter"><i class="fa fa-twitter"></i> توییتر</a></li>
+                                    <li><a class="linkedin" href="#" title="linkedin"><i class="fa fa-linkedin"></i> لینکدین</a></li>
+                                    <li><a class="pinterest" href="#" title="linkedin"><i class="fa fa-instagram"></i> اینستاگرام</a></li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--product details end-->
+            <!--product info start-->
+            <div class="product_d_info">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="product_d_inner">
+                            <div class="product_info_button">
+                                <ul class="nav" role="tablist">
+                                    <li>
+                                        <a class="active" data-toggle="tab" href="#info" role="tab" aria-controls="info" aria-selected="false">توضیحات کامل محصول</a>
+                                    </li>
+                                    <li>
+                                        <a data-toggle="tab" href="#reviews" role="tab" aria-controls="reviews" aria-selected="false">نقد و برررسی (@Model.Product.Comments.Count)</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="tab-content">
+                                <div class="tab-pane fade show active" id="info" role="tabpanel">
+                                    <div class="product_info_content">
+                                        <p>
+                                            @Model.Product.Description
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="tab-pane fade" id="reviews" role="tabpanel">
+                                    <div class="reviews_wrapper">
+                                        <h2>@Model.Product.Comments.Count نقد و بررسی برای این محصول</h2>
+                                        @foreach (var comment in Model.Product.Comments)
+                                        {
+                                            <div class="reviews_comment_box">
+                                                <div class="comment_thmb">
+                                                    <img src="~/SiteTheme/assets/img/blog/comment2.jpg" alt="">
+                                                </div>
+                                                <div class="comment_text">
+                                                    <div class="reviews_meta">
+                                                        <div class="product_rating">
+                                                            <ul>
+                                                                <li><a href="#"><i class="ion-android-star-outline"></i></a></li>
+                                                                <li><a href="#"><i class="ion-android-star-outline"></i></a></li>
+                                                                <li><a href="#"><i class="ion-android-star-outline"></i></a></li>
+                                                                <li><a href="#"><i class="ion-android-star-outline"></i></a></li>
+                                                                <li><a href="#"><i class="ion-android-star-outline"></i></a></li>
+                                                            </ul>
+                                                        </div>
+                                                        <p><strong>@comment.Name </strong>@comment.CreationDate</p>
+                                                    </div>
+                                                    <p>@comment.Message</p>
+                                                </div>
+
+                                            </div>
+                                        }
+                                        <div class="comment_title">
+                                            <h2>نظر ارزشمند خود را با ما در میان بگذارید </h2>
+                                            <p>ایمیل شما منتشر نخواهد شد. فیلد های الزامی مشخص شده اند</p>
+                                        </div>
+                                        <div class="product_review_form">
+                                            <form method="post">
+                                                <div class="row">
+                                                    <div class="col-12">
+                                                        <label for="message">نقد و بررسی شما </label>
+                                                        <textarea name="message" id="message" placeholder="نظر خود را بنویسید..."></textarea>
+                                                    </div>
+                                                    <div class="col-lg-6 col-md-6">
+                                                        <label for="name">نام</label>
+                                                        <input name="name" id="name" type="text" placeholder="نام و نام خانوادگی">
+
+                                                    </div>
+                                                    <div class="col-lg-6 col-md-6">
+                                                        <label for="email">ایمیل </label>
+                                                        <input name="email" id="email" type="email" dir="ltr" placeholder="info@gmail.com">
+                                                    </div>
+                                                    <input name="ownerRecordId" value="@Model.Product.Id" type="hidden">
+                                                    <input name="productSlug" value="@Model.Product.Slug" type="hidden">
+                                                </div>
+                                                <button type="submit">ارسال نظر ارزشمندتان</button>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--product info end-->
+        </div>
+
+        <!--product area start-->
+        <section class="product_area related_products">
+            @await Component.InvokeAsync("MostViewProduct")
+        </section>
+        <!--product area end-->
+        <!--product area start-->
+        <section class="product_area related_products">
+            @await Component.InvokeAsync("GetLatestArrivals")
+        </section>
+        <!--product area end-->
+
+    </div>
+</div>

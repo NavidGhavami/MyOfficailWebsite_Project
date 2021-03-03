@@ -35,11 +35,11 @@
                             <div class="product_items">
                                 <figure class="single_product">
                                     <div class="product_thumb">
-                                        <a class="primary_img" href="product-details.html"><img src="~/Pictures/@product.PrimaryPicture" alt="@product.PictureAlt" title="@product.PictureTitle"></a>
-                                        <a class="secondary_img" href="product-details.html"><img src="~/Pictures/@product.SecondaryPicture"  alt="@product.PictureAlt" title="@product.PictureTitle"></a>
+                                        <a class="primary_img" asp-page="/ProductDetails" asp-route-id="@product.Slug"><img src="~/Pictures/@product.PrimaryPicture" alt="@product.PictureAlt" title="@product.PictureTitle"></a>
+                                        <a class="secondary_img" asp-page="/ProductDetails" asp-route-id="@product.Slug"><img src="~/Pictures/@product.SecondaryPicture"  alt="@product.PictureAlt" title="@product.PictureTitle"></a>
                                     </div>
                                     <div class="product_content">
-                                        <h4 class="product_name"><a href="product-details.html">@product.Name</a></h4>
+                                        <h4 class="product_name"><a asp-page="/ProductDetails" asp-route-id="@product.Slug">@product.Name</a></h4>
                                         <div class="product_rating">
                                             <ul>
                                                 @product.ShortDescription

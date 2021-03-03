@@ -8,5 +8,6 @@ namespace _01_Query.Contract.Product
         List<ProductQueryModel> getProductsByMaximumViewList();
         List<ProductQueryModel> RightSidebarGetLatestArrivals();
         List<ProductQueryModel> Search(string value);
+        ProductQueryModel GetProductDetails(string slug);
     }
 }
