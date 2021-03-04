@@ -11,6 +11,7 @@
         public string CreationDate { get; set; }
         public string Category { get; set; }
         public bool BestChoice { get; set; }
+        public long View { get; set; }
 
     }
 }

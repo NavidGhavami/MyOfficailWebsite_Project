@@ -13,6 +13,7 @@ namespace _01_Query.Contract.Product
         public string Name { get; set; }
         public string Code { get; set; }
         public string Price { get; set; }
+        public string Seller { get; set; }
         public double DoublePrice { get; set; }
         public string PriceWithDiscount { get; set; }
         public int DiscountRate { get; set; }

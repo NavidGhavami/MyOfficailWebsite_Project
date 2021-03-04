@@ -46,5 +46,6 @@ namespace ShopManagement.Application.Contract.Product
         [Range(1, 100000, ErrorMessage = ValidationMessages.IsRequired)]
         public long CategoryId { get; set; }
         public List<ProductCategoryViewModel> Category { get; set; }
+        public long View { get; set; }
     }
 }

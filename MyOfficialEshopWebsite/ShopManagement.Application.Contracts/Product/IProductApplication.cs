@@ -7,6 +7,7 @@ namespace ShopManagement.Application.Contract.Product
     {
         OperationResult Create(CreateProduct command);
         OperationResult Edit(EditProduct command);
+        OperationResult EditProductView(EditProductView command);
         EditProduct GetDetails(long id);
         List<ProductViewModel> Search(ProductSearchModel searchModel);
         List<ProductViewModel> GetProducts();

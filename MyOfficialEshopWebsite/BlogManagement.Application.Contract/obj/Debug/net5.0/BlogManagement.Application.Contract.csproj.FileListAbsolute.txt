@@ -1,0 +1,15 @@
+E:\Programming\Codes and projects\MyOfficialEshopWebsite\MyOfficialEshopWebsite\BlogManagement.Application.Contract\bin\Debug\net5.0\BlogManagement.Application.Contract.deps.json
+E:\Programming\Codes and projects\MyOfficialEshopWebsite\MyOfficialEshopWebsite\BlogManagement.Application.Contract\bin\Debug\net5.0\BlogManagement.Application.Contract.dll
+E:\Programming\Codes and projects\MyOfficialEshopWebsite\MyOfficialEshopWebsite\BlogManagement.Application.Contract\bin\Debug\net5.0\ref\BlogManagement.Application.Contract.dll
+E:\Programming\Codes and projects\MyOfficialEshopWebsite\MyOfficialEshopWebsite\BlogManagement.Application.Contract\bin\Debug\net5.0\BlogManagement.Application.Contract.pdb
+E:\Programming\Codes and projects\MyOfficialEshopWebsite\MyOfficialEshopWebsite\BlogManagement.Application.Contract\bin\Debug\net5.0\0_Framework.dll
+E:\Programming\Codes and projects\MyOfficialEshopWebsite\MyOfficialEshopWebsite\BlogManagement.Application.Contract\bin\Debug\net5.0\0_Framework.pdb
+E:\Programming\Codes and projects\MyOfficialEshopWebsite\MyOfficialEshopWebsite\BlogManagement.Application.Contract\obj\Debug\net5.0\BlogManagement.Application.Contract.csprojAssemblyReference.cache
+E:\Programming\Codes and projects\MyOfficialEshopWebsite\MyOfficialEshopWebsite\BlogManagement.Application.Contract\obj\Debug\net5.0\BlogManagement.Application.Contract.GeneratedMSBuildEditorConfig.editorconfig
+E:\Programming\Codes and projects\MyOfficialEshopWebsite\MyOfficialEshopWebsite\BlogManagement.Application.Contract\obj\Debug\net5.0\BlogManagement.Application.Contract.AssemblyInfoInputs.cache
+E:\Programming\Codes and projects\MyOfficialEshopWebsite\MyOfficialEshopWebsite\BlogManagement.Application.Contract\obj\Debug\net5.0\BlogManagement.Application.Contract.AssemblyInfo.cs
+E:\Programming\Codes and projects\MyOfficialEshopWebsite\MyOfficialEshopWebsite\BlogManagement.Application.Contract\obj\Debug\net5.0\BlogManagement.Application.Contract.csproj.CoreCompileInputs.cache
+E:\Programming\Codes and projects\MyOfficialEshopWebsite\MyOfficialEshopWebsite\BlogManagement.Application.Contract\obj\Debug\net5.0\BlogManagement.Application.Contract.csproj.CopyComplete
+E:\Programming\Codes and projects\MyOfficialEshopWebsite\MyOfficialEshopWebsite\BlogManagement.Application.Contract\obj\Debug\net5.0\BlogManagement.Application.Contract.dll
+E:\Programming\Codes and projects\MyOfficialEshopWebsite\MyOfficialEshopWebsite\BlogManagement.Application.Contract\obj\Debug\net5.0\ref\BlogManagement.Application.Contract.dll
+E:\Programming\Codes and projects\MyOfficialEshopWebsite\MyOfficialEshopWebsite\BlogManagement.Application.Contract\obj\Debug\net5.0\BlogManagement.Application.Contract.pdb

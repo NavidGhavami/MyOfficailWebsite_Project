@@ -51,7 +51,6 @@
                     <div class="col-lg-7 col-md-6">
                         <div class="product_d_right">
                             <form action="#">
-
                                 <h3><a href="#">@Model.Product.Name</a></h3>
                                 <div class="product_rating">
                                     <ul>
@@ -60,7 +59,7 @@
                                         <li><a href="#"><i class="ion-android-star-outline"></i></a></li>
                                         <li><a href="#"><i class="ion-android-star-outline"></i></a></li>
                                         <li><a href="#"><i class="ion-android-star-outline"></i></a></li>
-                                        <li class="review"><a href="#">( @Model.Product.Comments.Count نقد و بررسی )</a></li>
+                                        <li class="review"><a href="#">تعداد بازدید این محصول : (@Model.Product.View)</a></li>
                                     </ul>
                                 </div>
                                 @if (Model.Product.HasDiscount)
@@ -117,10 +116,13 @@
                                 </div>
                                 <div class="product_meta">
                                     <span>
-                                        گروه محصول: <a asp-page="/ProductCategory" asp-route-id="@Model.Product.CategorySlug">
+                                        گروه محصول:
+                                        <a asp-page="/ProductCategory" asp-route-id="@Model.Product.CategorySlug">
                                             @Model.Product.Category
                                         </a>
                                     </span>
+                                    <br />
+                                    <span>نام فروشنده: <a href="#">@Model.Product.Seller</a></span>
                                     <br />
                                     <span>کد محصول: <a href="#">@Model.Product.Code</a></span>
                                     <br />
@@ -183,7 +185,7 @@
                                         {
                                             <div class="reviews_comment_box">
                                                 <div class="comment_thmb">
-                                                    <img src="~/SiteTheme/assets/img/blog/comment2.jpg" alt="">
+                                                    <img src="~/SiteTheme/assets/img/blog/comment2.jpg" alt="@comment.Message" title="@comment.Message">
                                                 </div>
                                                 <div class="comment_text">
                                                     <div class="reviews_meta">
@@ -198,7 +200,7 @@
                                                         </div>
                                                         <p><strong>@comment.Name </strong>@comment.CreationDate</p>
                                                     </div>
-                                                    <p>@comment.Message</p>
+                                                    <p>@Html.Raw(comment.Message)</p>
                                                 </div>
 
                                             </div>
@@ -212,16 +214,16 @@
                                                 <div class="row">
                                                     <div class="col-12">
                                                         <label for="message">نقد و بررسی شما </label>
-                                                        <textarea name="message" id="message" placeholder="نظر خود را بنویسید..."></textarea>
+                                                        <textarea name="message" id="message" placeholder="نظر خود را بنویسید..." required="این فیلد الزامی است"></textarea>
                                                     </div>
                                                     <div class="col-lg-6 col-md-6">
                                                         <label for="name">نام</label>
-                                                        <input name="name" id="name" type="text" placeholder="نام و نام خانوادگی">
+                                                        <input name="name" id="name" type="text" placeholder="نام و نام خانوادگی" required="این فیلد الزامی است">
 
                                                     </div>
                                                     <div class="col-lg-6 col-md-6">
                                                         <label for="email">ایمیل </label>
-                                                        <input name="email" id="email" type="email" dir="ltr" placeholder="info@gmail.com">
+                                                        <input name="email" id="email" type="email" dir="ltr" placeholder="info@gmail.com" required="این فیلد الزامی است">
                                                     </div>
                                                     <input name="ownerRecordId" value="@Model.Product.Id" type="hidden">
                                                     <input name="productSlug" value="@Model.Product.Slug" type="hidden">

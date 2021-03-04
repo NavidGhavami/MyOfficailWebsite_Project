@@ -72,6 +72,11 @@ namespace ShopManagement.Domain.Product
 
 
         }
+
+        public void EditProductView(long view)
+        {
+            View = view;
+        }
         public void IsBestChoice()
         {
             BestChoice = true;

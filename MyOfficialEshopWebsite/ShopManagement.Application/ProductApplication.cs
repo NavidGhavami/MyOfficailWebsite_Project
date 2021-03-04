@@ -72,6 +72,25 @@ namespace ShopManagement.Application
             return operation.Succedded();
         }
 
+        public OperationResult EditProductView(EditProductView command)
+        {
+            var operation = new OperationResult();
+            var product = _productRepository.Get(command.Id);
+            if (product == null)
+            {
+                return operation.Failed(ApplicationMessages.RecordNotFound);
+            }
+
+
+
+            product.EditProductView(command.View);
+
+            _productRepository.SaveChanges();
+
+            return operation.Succedded();
+        }
+
+
         public EditProduct GetDetails(long id)
         {
             return _productRepository.GetDetails(id);

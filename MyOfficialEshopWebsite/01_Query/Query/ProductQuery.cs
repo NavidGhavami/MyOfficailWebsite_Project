@@ -263,14 +263,15 @@ namespace _01_Query.Query
                     PictureTitle = product.PictureTitle,
                     Slug = product.Slug,
                     Name = product.Name,
+                    Seller = product.Seller,
                     CategorySlug = product.Category.Slug,
                     Code = product.Code,
+                    View = product.View,
                     Description = product.Description,
                     Keywords = product.Keywords,
                     MetaDescription = product.MetaDescription,
                     ShortDescription = product.ShortDescription,
                     Pictures = MapProductPictures(product.ProductPictures),
-
 
                 }).FirstOrDefault(x => x.Slug == slug);
 
@@ -316,6 +317,8 @@ namespace _01_Query.Query
 
             return products;
         }
+
+
         private static List<ProductPictureQueryModel> MapProductPictures(List<ProductPicture> pictures)
         {
             return pictures.Select(x => new ProductPictureQueryModel
