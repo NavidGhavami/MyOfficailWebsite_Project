@@ -1,4 +1,4 @@
-﻿@model List<_01_Query.Contract.ProductCategory.ProductCategoryQueryModel>
+﻿@model _01_Query.MenuModel
 
 <div class="off_canvars_overlay"></div>
 <div class="Offcanvas_menu">
@@ -92,7 +92,7 @@
                             <div class="hover_category">
                                 <select class="select_option" name="select" id="categori1">
                                     <option selected value="1">همه دسته ها</option>
-                                    @foreach (var item in Model)
+                                    @foreach (var item in Model.ProductCategories)
                                     {
                                         <option value="@item.Id">@item.Name</option>
                                     }
@@ -112,7 +112,7 @@
                             <li class="menu-item-has-children">
                                 <a href="#">محصولات</a>
                                 <ul class="sub-menu">
-                                    @foreach (var item in Model)
+                                    @foreach (var item in Model.ProductCategories)
                                     {
                                         <li><a asp-page="/ProductCategory" asp-route-id="@item.Slug">@item.Name</a></li>
                                     }
@@ -122,7 +122,10 @@
                             <li class="menu-item-has-children">
                                 <a href="#">مقالات</a>
                                 <ul class="sub-menu">
-                                    <li><a href="blog.html">بلاگ</a></li>
+                                    @foreach (var item in Model.ArticleCategories)
+                                    {
+                                        <li><a asp-page="/ArticleCategory" asp-route-id="@item.Slug">@item.Name</a></li>
+                                    }
                                 </ul>
                             </li>
                             <li class="menu-item-has-children">
@@ -194,18 +197,21 @@
                                         <a class="" asp-page="/Index">صفحه اصلی<i class=""></i></a>
                                     </li>
                                     <li>
-                                        <a href="blog.html">محصولات<i class="fa fa-angle-down"></i></a>
+                                        <a href="#">محصولات<i class="fa fa-angle-down"></i></a>
                                         <ul class="sub_menu pages">
-                                            @foreach (var item in Model)
+                                            @foreach (var item in Model.ProductCategories)
                                             {
                                                 <li><a asp-page="/ProductCategory" asp-route-id="@item.Slug">@item.Name</a></li>
                                             }
                                         </ul>
                                     </li>
                                     <li>
-                                        <a href="blog.html">مقالات<i class="fa fa-angle-down"></i></a>
+                                        <a href="#">مقالات<i class="fa fa-angle-down"></i></a>
                                         <ul class="sub_menu pages">
-                                            <li><a href="blog-details.html">جزئیات مطلب بلاگ</a></li>
+                                            @foreach (var item in Model.ArticleCategories)
+                                            {
+                                                <li><a asp-page="/ArticleCategory" asp-route-id="@item.Slug">@item.Name</a></li>
+                                            }
                                         </ul>
                                     </li>
 
@@ -297,7 +303,7 @@
                             </div>
                             <div class="categories_menu_toggle">
                                 <ul>
-                                    @foreach (var item in Model)
+                                    @foreach (var item in Model.ProductCategories)
                                     {
                                         <li class="menu_item_children">
                                             <a href="#">@item.Name <i class="fa fa-angle-left"></i></a>
@@ -320,7 +326,7 @@
                                 <div class="hover_category">
                                     <select class="select_option" name="select" id="categori2">
                                         <option selected value="1">همه دسته ها</option>
-                                        @foreach (var item in Model)
+                                        @foreach (var item in Model.ProductCategories)
                                         {
                                             <option value="@item.Name">@item.Name</option>
                                         }

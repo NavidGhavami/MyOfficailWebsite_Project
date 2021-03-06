@@ -1,0 +1,75 @@
+﻿@page "{id}"
+@model ServiceHost.Pages.ArticleCategoryModel
+@{
+    ViewData["Title"] = "گروه مقالات";
+}
+<div class="breadcrumbs_area">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="breadcrumb_content">
+                    <ul>
+                        <li><a asp-page="/Index">صفحه اصلی</a></li>
+                        <li>@Model.ArticleCategory.Name</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="blog_bg_area">
+    <div class="container">
+        <!--blog area start-->
+        <div class="row">
+            <div class="col-12">
+                <div class="blog_wrapper blog_nosidebar mb-60">
+                    <div class="blog_header">
+                        <h1>@Model.ArticleCategory.Name</h1>
+                    </div>
+                    <div class="blog_wrapper_inner">
+                        @foreach (var article in Model.ArticleCategory.Articles)
+                        {
+                            <article class="single_blog">
+                                <figure>
+                                    <div class="blog_thumb">
+                                        <a asp-page="/ArticleDetails" asp-route-id="@article.Slug">
+                                            <img src="~/Pictures/@article.Picture"
+                                                 alt="@article.PictureAlt" title="@article.PictureTitle">
+                                        </a>
+                                    </div>
+                                    <figcaption class="blog_content">
+                                        <h4 class="post_title"><a asp-page="/ArticleDetails" asp-route-id="@article.Slug">@article.Title</a></h4>
+                                        <div class="blog_meta">
+                                            <span class="author">ارسال توسط : <a href="#">مدیر وب سایت</a> / </span>
+                                            <span class="meta_date">ارسال شده در تاریخ :  <a href="#">@article.PublishDate</a></span>
+                                        </div>
+                                        <div class="blog_desc">
+                                            <p>@article.ShortDescription</p>
+                                        </div>
+                                        <footer class="btn_more">
+                                            <a asp-page="/ArticleDetails" asp-route-id="@article.Slug"> بیشتر بخوانید</a>
+                                        </footer>
+                                    </figcaption>
+                                </figure>
+                            </article>
+                        }
+                    </div>
+                </div>
+                <!--blog pagination area start-->
+                <div class="blog_pagination">
+                    <div class="pagination">
+                        <ul>
+                            <li class="current">1</li>
+                            <li><a href="#">2</a></li>
+                            <li><a href="#">3</a></li>
+                            <li class="next"><a href="#">بعدی</a></li>
+                            <li><a href="#"><i class="fa fa-angle-double-left"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <!--blog pagination area end-->
+            </div>
+        </div>
+        <!--blog area end-->
+    </div>
+</div>

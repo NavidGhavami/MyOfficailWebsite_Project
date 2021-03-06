@@ -1966,6 +1966,7 @@
       },
       "01_Query/1.0.0": {
         "dependencies": {
+          "BlogManagement.Infrastructure.EFCore": "1.0.0",
           "CommentManagement.Infrastructure.EFCore": "1.0.0",
           "DiscountManagement.Infrastructure.EFCore": "1.0.0",
           "InventoryManagement.Infrastructure.EFCore": "1.0.0",
@@ -2019,6 +2020,7 @@
       },
       "BlogManagement.Configuration/1.0.0": {
         "dependencies": {
+          "01_Query": "1.0.0",
           "BlogManagement.Application": "1.0.0",
           "BlogManagement.Application.Contract": "1.0.0",
           "BlogManagement.Domain": "1.0.0",

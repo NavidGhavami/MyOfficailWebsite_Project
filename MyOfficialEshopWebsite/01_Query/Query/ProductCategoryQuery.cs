@@ -181,7 +181,7 @@ namespace _01_Query.Query
                     Slug = x.Slug,
                     Products = MapProducts(x.Products)
 
-                }).OrderByDescending(x => x.Id).Take(10).ToList();
+                }).ToList();
 
             return categories;
         }

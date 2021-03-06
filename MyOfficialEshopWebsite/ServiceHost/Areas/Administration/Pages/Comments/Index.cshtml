@@ -76,7 +76,7 @@
                                             <td>@item.Id</td>
                                             <td>@item.Name</td>
                                             <td>@item.Email</td>
-                                            <td>(@item.OwnerRecordId)-@item.Message</td>
+                                            <td>(@item.OwnerRecordId)-@Html.Raw(item.Message)</td>
                                             <td>@item.CreationDate</td>
                                             <td class="text-center">
                                                 @if (item.IsCanceled)
