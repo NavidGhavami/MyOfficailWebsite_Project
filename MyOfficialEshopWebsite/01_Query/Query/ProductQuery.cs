@@ -7,6 +7,7 @@ using CommentManagement.Infrastructure.EFCore;
 using DiscountManagement.Infrastructure.EFCore;
 using InventoryManagement.Infrastructure.EfCore;
 using Microsoft.EntityFrameworkCore;
+using ShopManagement.Application.Contract.Product;
 using ShopManagement.Domain.ProductPicture;
 using ShopManagement.Infrastructure.EFCore;
 
@@ -18,14 +19,16 @@ namespace _01_Query.Query
         private readonly InventoryContext _inventoryContext;
         private readonly DiscountContext _discountContext;
         private readonly CommentContext _commentContext;
+        private readonly IProductApplication _productApplication;
 
         public ProductQuery(ShopContext shopContext, InventoryContext inventoryContext,
-            DiscountContext discountContext, CommentContext commentContext)
+            DiscountContext discountContext, CommentContext commentContext, IProductApplication productApplication)
         {
             _shopContext = shopContext;
             _inventoryContext = inventoryContext;
             _discountContext = discountContext;
             _commentContext = commentContext;
+            _productApplication = productApplication;
         }
 
         public List<ProductQueryModel> GetLatestArrivals()
@@ -314,6 +317,16 @@ namespace _01_Query.Query
 
 
                 }).OrderByDescending(x => x.Id).ToList();
+
+
+
+            var productView = new EditProductView
+            {
+                Id = products.Id,
+                View = products.View + 1
+            };
+            _productApplication.EditProductView(productView);
+
 
             return products;
         }

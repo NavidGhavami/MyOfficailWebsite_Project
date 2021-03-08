@@ -99,7 +99,9 @@ namespace ShopManagement.Infrastructure.EFCore.Repository
 
         public Product GetProductWithCategory(long id)
         {
-            return _shopContext.Products.Include(x => x.Category).FirstOrDefault(x => x.Id == id);
+            return _shopContext.Products
+                .Include(x => x.Category)
+                .FirstOrDefault(x => x.Id == id);
         }
     }
 }

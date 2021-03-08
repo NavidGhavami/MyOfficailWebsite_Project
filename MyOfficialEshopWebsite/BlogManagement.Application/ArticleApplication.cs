@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using _0_Framework.Application;
 using BlogManagement.Application.Contract.Article;
 using BlogManagement.Domain.Article;
@@ -49,13 +48,13 @@ namespace BlogManagement.Application
         public OperationResult Edit(EditArticle command)
         {
             var operation = new OperationResult();
-            var article = _articleRepository.GetWithCategory(command.CategoryId);
+            var article = _articleRepository.GetWithCategory(command.Id);
 
             if (_articleRepository == null)
             {
                 return operation.Failed(ApplicationMessages.RecordNotFound);
             }
-            //if (_articleRepository.Exist(x => x.Id != command.Id))
+            //if (_articleRepository.Exist(x => x.Title == command.Title && x.Id != command.Id))
             //{
             //    return operation.Failed(ApplicationMessages.DuplicatedRecord);
             //}

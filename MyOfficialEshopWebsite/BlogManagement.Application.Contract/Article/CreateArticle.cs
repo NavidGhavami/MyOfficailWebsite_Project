@@ -1,5 +1,7 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using _0_Framework.Application;
+using BlogManagement.Application.Contract.ArticleCategory;
 using Microsoft.AspNetCore.Http;
 
 namespace BlogManagement.Application.Contract.Article
@@ -39,5 +41,7 @@ namespace BlogManagement.Application.Contract.Article
 
         [Range(1, long.MaxValue, ErrorMessage = ValidationMessages.IsRequired)]
         public long CategoryId { get; set; }
+
+        public List<ArticleCategoryViewModel> ArticleCategory { get; set; }
     }
 }

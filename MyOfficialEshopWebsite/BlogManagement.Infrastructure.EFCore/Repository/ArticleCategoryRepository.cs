@@ -2,12 +2,10 @@
 using System.Collections.Generic;
 using System.Linq;
 using _0_Framework.Application;
-using _0_Framework.Domain;
 using _0_Framework.Infrastructure;
 using BlogManagement.Application.Contract.ArticleCategory;
 using BlogManagement.Domain.ArticleCategory;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.IdentityModel.Tokens;
 
 namespace BlogManagement.Infrastructure.EFCore.Repository
 {

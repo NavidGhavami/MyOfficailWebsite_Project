@@ -3,9 +3,7 @@ using CommentManagement.Application.Contract.Comment;
 using CommentManagement.Infrastructure.EFCore;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
-using Microsoft.Extensions.Logging.Abstractions;
 using ShopManagement.Application.Contract.Product;
-using ShopManagement.Domain.Product;
 
 namespace ServiceHost.Pages
 {
@@ -25,13 +23,9 @@ namespace ServiceHost.Pages
         }
 
 
-        public void OnGet(string id, EditProductView edit)
+        public void OnGet(string id)
         {
             Product = _productQuery.GetProductDetails(id);
-            edit.View = Product.View += 1;
-            edit.Id = Product.Id;
-            var result = _productApplication.EditProductView(edit);
-
         }
 
         public IActionResult OnPost(AddComment command, string productSlug)

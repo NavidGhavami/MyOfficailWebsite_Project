@@ -58,7 +58,7 @@ namespace ShopManagement.Application
                 return operation.Failed(ApplicationMessages.DuplicatedRecord);
             }
             var slug = command.Slug.Slugify();
-            var picturePath = $"{"Shop"}/{"Product"}/{slug}";
+            var picturePath = $"{"Shop"}/{"ProductCategory"}/{product.Category.Slug}/{slug}";
 
             var primaryFilename = _fileUploader.Upload(command.PrimaryPicture, picturePath);
             var secondaryFilename = _fileUploader.Upload(command.SecondaryPicture, picturePath);

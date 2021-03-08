@@ -1,4 +1,6 @@
 ﻿@page
+
+@using Microsoft.EntityFrameworkCore
 @model ServiceHost.Areas.Administration.Pages.Blog.Article.EditModel
 
 
@@ -113,15 +115,16 @@
                             <div class="col-md-12">
                                 <div class="form-group no-margin">
                                     <label asp-for="Command.Description" class="control-label">توضیحات</label>
-                                    <textarea id="BodyContent"  class="form-control" asp-for="Command.Description"></textarea>
+                                    <textarea id="BodyContent" class="form-control" asp-for="Command.Description"></textarea>
                                     <span asp-validation-for="Command.Description" class="error"></span>
                                 </div>
                             </div>
                         </div>
-                        <input type="hidden" asp-for="Command.Id" value="Command.Id" />
+                        <input type="hidden" class="form-control" asp-for="Command.Id" />
                         <button class="btn btn-warning" type="submit">ویرایش</button>
                         <a class="btn btn-default" asp-page="./Index"> بازگشت</a>
                     </form>
+                    
                 </div>
             </div>
         </div>

@@ -209,7 +209,7 @@ jQuery.validator.addMethod("fileExtensionLimit",
 
         var fileEx = ext;
         var validFile = ["jpg", "jpeg", "png"];
-        debugger;
+
         if (fileEx !== validFile[0])
             return false;
         else {
