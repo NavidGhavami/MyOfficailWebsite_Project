@@ -1,0 +1,93 @@
+﻿@page
+@model ServiceHost.Pages.AccountModel
+@{
+    ViewData["Title"] = "ورود و ثبت نام";
+}
+<div class="breadcrumbs_area">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="breadcrumb_content">
+                    <ul>
+                        <li><a asp-page="/Index">صفحه اصلی</a></li>
+                        <li>حساب کاربری</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="login_page_bg">
+    <div class="container">
+        <div class="customer_login">
+            <div class="row">
+                <!--login area start-->
+                <div class="col-lg-6 col-md-6">
+                    <div class="account_form login">
+                        <h2>ورود</h2>
+                        @if (Model.LoginMessage != null)
+                        {
+                            <div class="alert alert-danger">@Model.LoginMessage</div>
+                        }
+                        <form method="post" asp-page-handler="Login">
+                            <p>
+                                <label>نام کاربری <span>*</span></label>
+                                <input type="text" name="username" dir="ltr">
+                            </p>
+                            <p>
+                                <label>رمز عبور <span>*</span></label>
+                                <input type="password" name="password" dir="ltr">
+                            </p>
+                            <div class="login_submit">
+                                <a href="#">رمز عبور خود را فراموش کرده اید؟</a>
+                                <label for="remember">
+                                    <input id="remember" type="checkbox">
+                                    به خاطر سپاری
+                                </label>
+                                <button type="submit">ورود</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <!--login area start-->
+                <!--register area start-->
+                <div class="col-lg-6 col-md-6">
+                    <div class="account_form register">
+                        <h2>ثبت نام</h2>
+                        <form action="#">
+                            <p>
+                                <label>نام و نام خانوادگی<span>*</span></label>
+                                <input type="text" name="fullname" dir="ltr">
+                            </p>
+                            <p>
+                                <label>نام کاربری<span>*</span></label>
+                                <input type="text" name="username" dir="ltr">
+                            </p>
+                            <p>
+                                <label>موبایل<span>*</span></label>
+                                <input type="text" name="mobile" dir="ltr">
+                            </p>
+                            <p>
+                                <label>آدرس ایمیل <span>*</span></label>
+                                <input type="email" name="email" dir="ltr">
+                            </p>
+                            <p>
+                                <label>رمز عبور <span>*</span></label>
+                                <input type="password"  name="password" dir="ltr">
+                            </p>
+                            <p>
+                                <label>تکرار رمز عبور<span>*</span></label>
+                                <input type="password" name="repassword" dir="ltr">
+                            </p>
+                            <div class="login_submit">
+                                <button type="submit">ثبت نام</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <!--register area end-->
+            </div>
+        </div>
+    </div>
+</div>

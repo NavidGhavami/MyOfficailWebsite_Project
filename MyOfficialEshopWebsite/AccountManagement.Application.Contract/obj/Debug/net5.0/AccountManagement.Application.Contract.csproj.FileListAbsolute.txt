@@ -1,0 +1,15 @@
+E:\Programming\Codes and projects\MyOfficialEshopWebsite\MyOfficialEshopWebsite\AccountManagement.Application.Contract\bin\Debug\net5.0\AccountManagement.Application.Contract.deps.json
+E:\Programming\Codes and projects\MyOfficialEshopWebsite\MyOfficialEshopWebsite\AccountManagement.Application.Contract\bin\Debug\net5.0\AccountManagement.Application.Contract.dll
+E:\Programming\Codes and projects\MyOfficialEshopWebsite\MyOfficialEshopWebsite\AccountManagement.Application.Contract\bin\Debug\net5.0\ref\AccountManagement.Application.Contract.dll
+E:\Programming\Codes and projects\MyOfficialEshopWebsite\MyOfficialEshopWebsite\AccountManagement.Application.Contract\bin\Debug\net5.0\AccountManagement.Application.Contract.pdb
+E:\Programming\Codes and projects\MyOfficialEshopWebsite\MyOfficialEshopWebsite\AccountManagement.Application.Contract\bin\Debug\net5.0\0_Framework.dll
+E:\Programming\Codes and projects\MyOfficialEshopWebsite\MyOfficialEshopWebsite\AccountManagement.Application.Contract\bin\Debug\net5.0\0_Framework.pdb
+E:\Programming\Codes and projects\MyOfficialEshopWebsite\MyOfficialEshopWebsite\AccountManagement.Application.Contract\obj\Debug\net5.0\AccountManagement.Application.Contract.csprojAssemblyReference.cache
+E:\Programming\Codes and projects\MyOfficialEshopWebsite\MyOfficialEshopWebsite\AccountManagement.Application.Contract\obj\Debug\net5.0\AccountManagement.Application.Contract.GeneratedMSBuildEditorConfig.editorconfig
+E:\Programming\Codes and projects\MyOfficialEshopWebsite\MyOfficialEshopWebsite\AccountManagement.Application.Contract\obj\Debug\net5.0\AccountManagement.Application.Contract.AssemblyInfoInputs.cache
+E:\Programming\Codes and projects\MyOfficialEshopWebsite\MyOfficialEshopWebsite\AccountManagement.Application.Contract\obj\Debug\net5.0\AccountManagement.Application.Contract.AssemblyInfo.cs
+E:\Programming\Codes and projects\MyOfficialEshopWebsite\MyOfficialEshopWebsite\AccountManagement.Application.Contract\obj\Debug\net5.0\AccountManagement.Application.Contract.csproj.CoreCompileInputs.cache
+E:\Programming\Codes and projects\MyOfficialEshopWebsite\MyOfficialEshopWebsite\AccountManagement.Application.Contract\obj\Debug\net5.0\AccountManagement.Application.Contract.csproj.CopyComplete
+E:\Programming\Codes and projects\MyOfficialEshopWebsite\MyOfficialEshopWebsite\AccountManagement.Application.Contract\obj\Debug\net5.0\AccountManagement.Application.Contract.dll
+E:\Programming\Codes and projects\MyOfficialEshopWebsite\MyOfficialEshopWebsite\AccountManagement.Application.Contract\obj\Debug\net5.0\ref\AccountManagement.Application.Contract.dll
+E:\Programming\Codes and projects\MyOfficialEshopWebsite\MyOfficialEshopWebsite\AccountManagement.Application.Contract\obj\Debug\net5.0\AccountManagement.Application.Contract.pdb

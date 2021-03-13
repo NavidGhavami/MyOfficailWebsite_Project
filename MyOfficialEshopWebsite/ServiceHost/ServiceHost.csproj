@@ -11,6 +11,7 @@
     <Compile Remove="wwwroot\ckeditorFull\**" />
     <Compile Remove="wwwroot\Pictures\Blog\دنیای-مد-و-فشن\navid\**" />
     <Compile Remove="wwwroot\Pictures\Blog\دنیای-مد-و-فشن\rahim\**" />
+    <Compile Remove="wwwroot\Pictures\Blog\دنیای-مد-و-فشن\کادو-برای-دوست-صمیمی-چی-بخریم\**" />
     <Compile Remove="wwwroot\Pictures\Blog\کادو-و-تزیینات\farah\**" />
     <Compile Remove="wwwroot\Pictures\Blog\کادو-و-تزیینات\nasim\**" />
     <Content Remove="wwwroot\ckeditor-customized2\**" />
@@ -19,6 +20,7 @@
     <Content Remove="wwwroot\ckeditorFull\**" />
     <Content Remove="wwwroot\Pictures\Blog\دنیای-مد-و-فشن\navid\**" />
     <Content Remove="wwwroot\Pictures\Blog\دنیای-مد-و-فشن\rahim\**" />
+    <Content Remove="wwwroot\Pictures\Blog\دنیای-مد-و-فشن\کادو-برای-دوست-صمیمی-چی-بخریم\**" />
     <Content Remove="wwwroot\Pictures\Blog\کادو-و-تزیینات\farah\**" />
     <Content Remove="wwwroot\Pictures\Blog\کادو-و-تزیینات\nasim\**" />
     <EmbeddedResource Remove="wwwroot\ckeditor-customized2\**" />
@@ -27,6 +29,7 @@
     <EmbeddedResource Remove="wwwroot\ckeditorFull\**" />
     <EmbeddedResource Remove="wwwroot\Pictures\Blog\دنیای-مد-و-فشن\navid\**" />
     <EmbeddedResource Remove="wwwroot\Pictures\Blog\دنیای-مد-و-فشن\rahim\**" />
+    <EmbeddedResource Remove="wwwroot\Pictures\Blog\دنیای-مد-و-فشن\کادو-برای-دوست-صمیمی-چی-بخریم\**" />
     <EmbeddedResource Remove="wwwroot\Pictures\Blog\کادو-و-تزیینات\farah\**" />
     <EmbeddedResource Remove="wwwroot\Pictures\Blog\کادو-و-تزیینات\nasim\**" />
     <None Remove="wwwroot\ckeditor-customized2\**" />
@@ -35,6 +38,7 @@
     <None Remove="wwwroot\ckeditorFull\**" />
     <None Remove="wwwroot\Pictures\Blog\دنیای-مد-و-فشن\navid\**" />
     <None Remove="wwwroot\Pictures\Blog\دنیای-مد-و-فشن\rahim\**" />
+    <None Remove="wwwroot\Pictures\Blog\دنیای-مد-و-فشن\کادو-برای-دوست-صمیمی-چی-بخریم\**" />
     <None Remove="wwwroot\Pictures\Blog\کادو-و-تزیینات\farah\**" />
     <None Remove="wwwroot\Pictures\Blog\کادو-و-تزیینات\nasim\**" />
   </ItemGroup>
@@ -323,6 +327,10 @@
     <Content Include="wwwroot\AdminTheme\fonts\Material-Design-Iconic-Font.svg" />
     <Content Include="wwwroot\AdminTheme\fonts\Material-Design-Iconic-Font.ttf" />
     <Content Include="wwwroot\AdminTheme\fonts\Material-Design-Iconic-Font.woff" />
+    <Content Include="wwwroot\AdminTheme\fonts\Vazir-Medium.eot" />
+    <Content Include="wwwroot\AdminTheme\fonts\Vazir-Medium.ttf" />
+    <Content Include="wwwroot\AdminTheme\fonts\Vazir-Medium.woff" />
+    <Content Include="wwwroot\AdminTheme\fonts\Vazir-Medium.woff2" />
     <Content Include="wwwroot\ckEditor\ckeditor-customized2\adapters\jquery.js" />
     <Content Include="wwwroot\ckEditor\ckeditor-customized2\build-config.js" />
     <Content Include="wwwroot\ckEditor\ckeditor-customized2\CHANGES.md" />
@@ -1510,7 +1518,6 @@
     <Content Include="wwwroot\Pictures\Blog\دنیای-مد-و-فشن\راهنمای-کامل-ست-کردن-جواهرات\2021-03-07-16-53-05-abc.jpg" />
     <Content Include="wwwroot\Pictures\Blog\دنیای-مد-و-فشن\چه-جعبه-هایی-برای-کادو-مناسب-است\2021-03-09-01-50-19-aa.jpg" />
     <Content Include="wwwroot\Pictures\Blog\دنیای-مد-و-فشن\چگونه-اسباب-بازی-خوب-و-مناسب-برای-کودک-3-تا-5-ساله-انتخاب-کنیم؟\2021-03-09-01-41-26-Construction-of-Russian-dolls.jpg" />
-    <Content Include="wwwroot\Pictures\Blog\دنیای-مد-و-فشن\کادو-برای-دوست-صمیمی-چی-بخریم\2021-03-07-14-32-16-abc.jpg" />
     <Content Include="wwwroot\Pictures\Blog\کادو-و-تزیینات\2021-03-07-14-08-05-کادو-ولنتاین-برای-پسر-1.jpg" />
     <Content Include="wwwroot\Pictures\Blog\کادو-و-تزیینات\پیشنهادات-ویژه-برای-هدیه-روز-مادر-و-روز-زن\2021-03-09-02-04-30-tuxpi.com_.1590662175.jpg" />
     <Content Include="wwwroot\Pictures\Blog\کادو-و-تزیینات\چگونه-اسباب-بازی-خوب-و-مناسب-برای-کودک-3-تا-5-ساله-انتخاب-کنیم؟\2021-03-09-01-42-31-tildadollsblog.jpg" />
@@ -1867,6 +1874,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\AccountManagement.Configuration\AccountManagement.Configuration.csproj" />
     <ProjectReference Include="..\BlogManagement.Configuration\BlogManagement.Configuration.csproj" />
     <ProjectReference Include="..\CommentManagement.Configuration\CommentManagement.Configuration.csproj" />
     <ProjectReference Include="..\DiscountManagement.Configure\DiscountManagement.Configuration.csproj" />

@@ -6,10 +6,13 @@ using Microsoft.Extensions.Hosting;
 using System.Text.Encodings.Web;
 using System.Text.Unicode;
 using _0_Framework.Application;
+using AccountManagement.Configuration;
 using BlogManagement.Configuration;
 using CommentManagement.Configuration;
 using DiscountManagement.Configuration;
 using InventoryManagement.Configuration;
+using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.AspNetCore.Http;
 using ServiceHost.Services;
 using ShopManagement.Configuration;
 
@@ -29,17 +32,38 @@ namespace ServiceHost
         {
             var connectionString = Configuration.GetConnectionString("MyOfficialEshopWebsite");
 
+            services.AddHttpContextAccessor();
+
             ShopManagementBootstrapper.Configure(services, connectionString);
             DiscountManagementBootStrapper.Configure(services, connectionString);
             InventoryManagementBootstrapper.Configure(services, connectionString);
             CommentManagementBootstrapper.Configure(services, connectionString);
             BlogManagementBootstrapper.Configure(services, connectionString);
+            AccountManagementBootstrapper.Configure(services, connectionString);
 
 
 
             services.AddSingleton(HtmlEncoder.Create(UnicodeRanges.BasicLatin, UnicodeRanges.Arabic));
 
+            services.AddSingleton<IPasswordHasher, PasswordHasher>();
             services.AddTransient<IFileUploader, FileUploader>();
+            services.AddTransient<IAuthHelper, AuthHelper>();
+
+
+
+            services.Configure<CookiePolicyOptions>(options =>
+            {
+                options.CheckConsentNeeded = context => true;
+                options.MinimumSameSitePolicy = SameSiteMode.Lax;
+            });
+
+            services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
+                .AddCookie(CookieAuthenticationDefaults.AuthenticationScheme, o =>
+                {
+                    o.LoginPath = new PathString("/Account");
+                    o.LogoutPath = new PathString("/Account");
+                    o.AccessDeniedPath = new PathString("/AccessDenied");
+                });
 
             services.AddRazorPages();
         }
@@ -58,8 +82,13 @@ namespace ServiceHost
                 app.UseHsts();
             }
 
+            app.UseAuthentication();
+
             app.UseHttpsRedirection();
+
             app.UseStaticFiles();
+
+            app.UseCookiePolicy();
 
             app.UseRouting();
 

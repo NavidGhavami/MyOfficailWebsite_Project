@@ -1,0 +1,74 @@
+﻿@page
+@using AccountManagement.Configuration.Permissions
+@model ServiceHost.Areas.Administration.Pages.Accounts.Roles.IndexModel
+
+
+@{
+    Layout = "Shared/_AdminLayout";
+    ViewData["Title"] = "مدیریت نقش ها";
+}
+
+<div class="content">
+    <div class="row">
+        <div class="col-sm-12">
+            <h4 class="page-title pull-right">@ViewData["Title"]</h4>
+            <p class="pull-left">
+                <a permission="@AccountPermission.CreateRole" asp-page="Create" class="btn btn-success btn-lg">ایجاد نقش جدید</a>
+            </p>
+        </div>
+    </div>
+
+
+    <div class="row" id="ProductCategoriesDiv">
+        <div class="col-md-12">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title">لیست نقش ها : (@Model.Role.Count)</h3>
+                </div>
+                <div class="panel-body">
+                    <div class="row">
+                        <div class="col-md-12 col-sm-12 col-xs-12">
+                            <table id="datatable" class="table table-hover table-responsive table-striped table-bordered">
+                                <thead>
+                                    <tr>
+                                        <th>#</th>
+                                        <th>نام نقش</th>
+                                        <th>تاریخ ایجاد</th>
+                                        <th>عملیات</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach (var item in Model.Role)
+                                    {
+                                        <tr>
+                                            <td>@item.Id</td>
+                                            <td>@item.Name</td>
+                                            <td>@item.CreationDate</td>
+                                            <td>
+                                                <a permission="@AccountPermission.EditRole" class="btn btn-warning btn-rounded waves-effect waves-light text-dark m-b-5"
+                                                   asp-page="Edit" asp-route-id="@item.Id">
+                                                    <i class="fa fa-edit"></i> ویرایش
+                                                </a>
+                                            </td>
+                                        </tr>
+                                    }
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+@section Scripts {
+    <script src="~/AdminTheme/assets/datatables/jquery.dataTables.min.js"></script>
+    <script src="~/AdminTheme/assets/datatables/dataTables.bootstrap.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('#datatable').dataTable();
+        });
+    </script>
+
+}

@@ -1,4 +1,7 @@
-﻿@model _01_Query.MenuModel
+﻿@using _0_Framework.Application
+@model _01_Query.MenuModel
+@inject IAuthHelper AuthHelper
+
 
 <div class="off_canvars_overlay"></div>
 <div class="Offcanvas_menu">
@@ -137,9 +140,18 @@
                             <li class="menu-item-has-children">
                                 <a asp-page="/FrequentQuestion">سوالات متداول</a>
                             </li>
-                            <li class="menu-item-has-children">
-                                <a asp-page="/Login">ورود | ثبت نام</a>
-                            </li>
+                            @if (AuthHelper.IsAuthenticated())
+                            {
+                                <li class="menu-item-has-children">
+                                    <a asp-page="/Account" asp-page-handler="Logout">خروج</a>
+                                </li>
+                            }
+                            else
+                            {
+                                <li class="menu-item-has-children">
+                                    <a asp-page="/Account">ورود | ثبت نام</a>
+                                </li>
+                            }
                         </ul>
                     </div>
                     <div class="Offcanvas_footer">
@@ -218,7 +230,14 @@
                                     <li><a asp-page="/AboutUs">درباره ما</a></li>
                                     <li><a asp-page="/ContactUs"> تماس با ما</a></li>
                                     <li><a asp-page="/FrequentQuestion">سوالات متداول</a></li>
-                                    <li><a asp-page="/Login">ورود | ثبت نام</a></li>
+                                    @if (AuthHelper.IsAuthenticated())
+                                    {
+                                        <li><a asp-page="/Account" asp-page-handler="Logout">خروج</a></li>
+                                    }
+                                    else
+                                    {
+                                        <li><a asp-page="/Account">ورود | ثبت نام</a></li>
+                                    }
                                 </ul>
                             </nav>
                         </div>

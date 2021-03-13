@@ -53,8 +53,8 @@ Date: Jun 2015
 */
 
 @font-face {
-    font-family: 'IranSans';
-    src: url('../../fonts/IranianSans.eot'), url('../../fonts/IranianSans.eot') format('embedded-opentype'), url('../../fonts/IranianSans.woff') format('woff'), url('../../fonts/IranianSans.ttf') format('truetype'), url('../../fonts/IranianSans.svg') format('svg');
+    font-family: 'Vazir-Medium';
+    src: url('../../fonts/Vazir-Medium.eot'), url('../../fonts/Vazir-Medium.eot') format('embedded-opentype'), url('../../fonts/Vazir-Medium.woff') format('woff'), url('../../fonts/Vazir-Medium.ttf') format('truetype'), url('../../fonts/Vazir-Medium.svg') format('svg');
     font-weight: normal;
     font-style: normal;
 }
@@ -65,7 +65,7 @@ body {
     background: #f5f5f5;
     margin: 0;
     -webkit-text-size-adjust: 100%;
-    font-family: IranSans;
+    font-family: Vazir-Medium;
     direction: rtl;
 }
 
@@ -94,7 +94,7 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: IranSans;
+    font-family: Vazir-Medium;
     color: #505458;
 }
 
@@ -384,7 +384,7 @@ a:focus {
 
 .btn {
     border-radius: 2px;
-    font-family: IranSans;
+    font-family: Vazir-Medium;
     letter-spacing: 0.2px;
     opacity: 0.93;
     -webkit-box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.1);
@@ -1516,7 +1516,7 @@ body.fixed-left .side-menu.left {
 }
 
 .user-details .user-info a.dropdown-toggle {
-    font-family: IranSans;
+    font-family: Vazir-Medium;
     font-weight: 600;
     color: #666;
     font-size: 16px;
@@ -3218,7 +3218,7 @@ div.dataTables_info { padding-top: 38px; }
 
 .home-wrapper { margin: 10% 0px; }
 
-.home-text { font-family: IranSans; }
+.home-text { font-family: Vazir-Medium; }
 
 .lj-countdown {
     color: #317eeb;
