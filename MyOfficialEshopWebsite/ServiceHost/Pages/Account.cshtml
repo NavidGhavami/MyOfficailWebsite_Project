@@ -55,7 +55,11 @@
                 <div class="col-lg-6 col-md-6">
                     <div class="account_form register">
                         <h2>ثبت نام</h2>
-                        <form action="#">
+                        @if (Model.LoginMessage != null)
+                        {
+                            <div class="alert alert-danger">@Model.RegisterMessage</div>
+                        }
+                        <form method="post" asp-page-handler="Register">
                             <p>
                                 <label>نام و نام خانوادگی<span>*</span></label>
                                 <input type="text" name="fullname" dir="ltr">

@@ -1,4 +1,5 @@
 ﻿@using _0_Framework.Application
+@using _0_Framework.Infrastructure
 @model _01_Query.MenuModel
 @inject IAuthHelper AuthHelper
 
@@ -20,10 +21,14 @@
                     </div>
                     <div class="header_top_settings text-right">
                         <ul>
-                            <li><a href="#">آدرس‌های فروشگاه</a></li>
-                            <li><a href="#">پیگیری سفارش</a></li>
+                            <li><a href="https://tracking.post.ir/">پیگیری سفارش</a></li>
                             <li>تلفن تماس: <a class="ltr-text" href="tel:+(+98)9337878585">(+98) 933 787 8585 </a></li>
                             <li>ضمانت کیفیت محصولات</li>
+                            @if (AuthHelper.IsAuthenticated())
+                            {
+                                <li>@AuthHelper.CurrentAccountInfo().FullName عزیز، خوش آمدید!</li>
+
+                            }
                         </ul>
                     </div>
                     <div class="header_configure_area">
@@ -142,9 +147,10 @@
                             </li>
                             @if (AuthHelper.IsAuthenticated())
                             {
-                                <li class="menu-item-has-children">
-                                    <a asp-page="/Account" asp-page-handler="Logout">خروج</a>
-                                </li>
+                        <li class="menu-item-has-children">
+                            <a asp-page="/UserDashboard">پروفایل من</a>
+                            <a asp-page="/Account" asp-page-handler="Logout">خروج</a>
+                        </li>
                             }
                             else
                             {
@@ -183,10 +189,20 @@
                     <div class="col-lg-8 col-md-7">
                         <div class="header_top_settings text-right">
                             <ul>
-                                <li><a href="#">آدرس‌های فروشگاه</a></li>
-                                <li><a href="#">پیگیری سفارش</a></li>
+                                @if (AuthHelper.IsAuthenticated())
+                                {
+                                    <li><a href="#">@AuthHelper.CurrentAccountInfo().FullName عزیز خوش آمدید!</a></li>
+                                }
+                                <li><a href="https://tracking.post.ir/">پیگیری سفارش</a></li>
                                 <li>تلفن تماس: <a class="ltr-text" href="tel:+(+98)9337878585">(+98) 933 787 8585 </a></li>
                                 <li>ضمانت کیفیت محصولات</li>
+                                @if (AuthHelper.CurrentAccountRole() == Roles.Administrator ||
+                                     AuthHelper.CurrentAccountRole() == Roles.AdminAssistant ||
+                                     AuthHelper.CurrentAccountRole() == Roles.ContentUploader)
+                                {
+                                    <li><a asp-page="/Index" asp-area="Administration">مدیریت سایت</a></li>
+
+                                }
                             </ul>
                         </div>
                     </div>
@@ -232,6 +248,7 @@
                                     <li><a asp-page="/FrequentQuestion">سوالات متداول</a></li>
                                     @if (AuthHelper.IsAuthenticated())
                                     {
+                                        <li><a asp-page="/UserDashboard">پروفایل من</a></li>
                                         <li><a asp-page="/Account" asp-page-handler="Logout">خروج</a></li>
                                     }
                                     else

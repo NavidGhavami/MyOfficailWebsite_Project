@@ -1,4 +1,6 @@
-﻿
+﻿@using _0_Framework.Application
+@using _0_Framework.Infrastructure
+@inject IAuthHelper AuthHelper
 @{
 }
 
@@ -6,11 +8,11 @@
     <div class="sidebar-inner slimscrollleft">
         <div class="user-details">
             <div class="pull-right">
-                @*<img src="~/ProductPicture/@AuthHelper.CurrentAccountInfo().Picture" alt="" class="thumb-md img-circle">*@
+                <img src="~/Pictures/@AuthHelper.CurrentAccountInfo().Picture" alt="" class="thumb-md img-circle">
             </div>
             <div class="user-info">
                 <div class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">@*@AuthHelper.CurrentAccountInfo().FullName*@navid<span class="caret"></span></a>
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">@AuthHelper.CurrentAccountInfo().FullName<span class="caret"></span></a>
                     <ul class="dropdown-menu">
                         <li><a href="javascript:void(0)"><i class="md md-face-unlock"></i> پروفایل<div class="ripple-wrapper"></div></a></li>
                         <li><a href="javascript:void(0)"><i class="md md-settings"></i> تنظیمات</a></li>
@@ -18,7 +20,7 @@
                     </ul>
                 </div>
 
-                <p class="text-muted m-0">@*@AuthHelper.CurrentAccountInfo().Role*@</p>
+                <p class="text-muted m-0">@AuthHelper.CurrentAccountInfo().Role</p>
             </div>
         </div>
         <!--- Divider -->
@@ -28,8 +30,8 @@
                     <a asp-page="/Index" class="waves-effect active"><i class="md md-home"></i><span> داشبورد </span></a>
                 </li>
 
-                @*@if (AuthHelper.CurrentAccountRole() == Roles.Administrator || AuthHelper.CurrentAccountRole() == Roles.AdminAssistant)
-                {*@
+                @if (AuthHelper.CurrentAccountRole() == Roles.Administrator || AuthHelper.CurrentAccountRole() == Roles.AdminAssistant)
+                {
                     <li class="has_sub">
                         <a class="waves-effect"><i class="md md-shopping-basket"></i><span> فروشگاه </span><span class="pull-right"><i class="md md-add"></i></span></a>
                         <ul class="list-unstyled">
@@ -64,7 +66,7 @@
                         <a asp-page="/Inventory/Index" class="waves-effect"><i class="md md-store"></i><span>انبارداری</span></a>
                     </li>
                     
-                @*}*@
+                }
                 <li>
                     <a asp-page="/Shop/Orders/Index" class="waves-effect"><i class="md md-shopping-cart"></i><span>مدیریت سفارشات</span></a>
                 </li>

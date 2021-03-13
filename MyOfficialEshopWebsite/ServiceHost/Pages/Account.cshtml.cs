@@ -44,11 +44,11 @@ namespace ServiceHost.Pages
             var result = _accountApplication.Register(command);
             if (result.IsSuccedded)
             {
-                return RedirectToPage("/Account", result);
+                return RedirectToPage("/RegisterSuccess", result);
             }
 
             RegisterMessage = result.Message;
-            return RedirectToPage("/RegisterSuccess", result);
+            return RedirectToPage("/Account", result);
 
         }
     }

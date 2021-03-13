@@ -22,7 +22,7 @@ namespace AccountManagement.Domain.AccountAgg
 
             if (roleId == 0)
             {
-                RoleId = 2;
+                RoleId = 3;
             }
 
             Mobile = mobile;

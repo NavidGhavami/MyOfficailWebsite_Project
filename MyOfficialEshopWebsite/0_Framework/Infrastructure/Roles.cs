@@ -5,8 +5,8 @@ namespace _0_Framework.Infrastructure
     public static class Roles
     {
         public const string Administrator = "1";
-        public const string UserSystem = "2";
-        public const string ContentUploader = "3";
+        public const string ContentUploader = "2";
+        public const string UserSystem = "3";
         public const string AdminAssistant = "4";
         public const string ColleagueUser = "5";
 
@@ -16,7 +16,7 @@ namespace _0_Framework.Infrastructure
             {
                 case 1:
                     return "مدیر سیستم";
-                case 3:
+                case 2:
                     return "محتوا گذار";
                 case 4:
                     return "دستیار مدیر";

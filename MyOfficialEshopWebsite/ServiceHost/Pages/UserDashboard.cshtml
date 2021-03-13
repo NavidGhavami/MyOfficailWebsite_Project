@@ -1,0 +1,161 @@
+﻿@page
+@model ServiceHost.Pages.UserDashboardModel
+@{
+    ViewData["Title"] = "پروفایل من";
+}
+
+<div class="breadcrumbs_area">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="breadcrumb_content">
+                    <ul>
+                        <li><a asp-page="/Index">صفحه اصلی</a></li>
+                        <li>پروفایل من</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="account_page_bg">
+    <div class="container">
+        <section class="main_content_area">
+            <div class="account_dashboard">
+                <div class="row">
+                    <div class="col-sm-12 col-md-3 col-lg-3">
+                        <!-- Nav tabs -->
+                        <div class="dashboard_tab_button">
+                            <ul role="tablist" class="nav flex-column dashboard-list">
+                                <li><a href="#dashboard" data-toggle="tab" class="nav-link active">داشبورد</a></li>
+                                <li> <a href="#orders" data-toggle="tab" class="nav-link"> سفارشات من</a></li>
+                                <li><a href="#cart" data-toggle="tab" class="nav-link">سبد خرید</a></li>
+                                <li><a href="#wishlist" data-toggle="tab" class="nav-link">لیست مورد علاقه ها</a></li>
+                                <li><a href="#address" data-toggle="tab" class="nav-link">آدرس</a></li>
+                                <li><a asp-page="/Account" asp-page-handler="Logout" class="nav-link">خروج</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-9 col-lg-9">
+                        <!-- Tab panes -->
+                        <div class="tab-content dashboard_content">
+                            <div class="tab-pane fade show active" id="dashboard">
+                                <h3>داشبورد </h3>
+                                <p>
+                                     خوش آمدید. در این بخش می توانید کلیه سفارش های خود را مشاهده فرمایید. همچنین آدرس خود را نیز ویرایش نمایید.
+                                </p>
+                            </div>
+                            <div class="tab-pane fade" id="orders">
+                                <h3>سفارشات من</h3>
+                                <div class="table-responsive">
+                                    <table class="table">
+                                        <thead>
+                                            <tr>
+                                                <th>ترتیب</th>
+                                                <th>تاریخ</th>
+                                                <th>وضعیت</th>
+                                                <th>جمع</th>
+                                                <th>اقدامات</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>1</td>
+                                                <td>10 تیر 1397</td>
+                                                <td><span class="success">اتمام یافته</span></td>
+                                                <td>50,000 تومان برای یک محصول </td>
+                                                <td><a href="cart.html" class="view">مشاهده</a></td>
+                                            </tr>
+                                            <tr>
+                                                <td>2</td>
+                                                <td>10 تیر 1397</td>
+                                                <td>در حال پردازش</td>
+                                                <td>180,000 تومان برای یک محصول </td>
+                                                <td><a href="cart.html" class="view">مشاهده</a></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="cart">
+                                <h3>سبد خرید</h3>
+                                <div class="table-responsive">
+                                    <table class="table">
+                                        <thead>
+                                        <tr>
+                                            <th>محصول</th>
+                                            <th>دریافت ها</th>
+                                            <th>انقضا</th>
+                                            <th>دریافت</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        <tr>
+                                            <td>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم</td>
+                                            <td>10 تیر 1397</td>
+                                            <td><span class="danger">منقضی شده</span></td>
+                                            <td><a href="#" class="view">برای دریافت فایل خود کلیک کنید</a></td>
+                                        </tr>
+                                        <tr>
+                                            <td>لورم ایپسوم متن ساختگی با تولید سادگی</td>
+                                            <td>11 مرداد 1397</td>
+                                            <td>هرگز</td>
+                                            <td><a href="#" class="view">برای دریافت فایل خود کلیک کنید</a></td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="wishlist">
+                                <h3>لیست مورد علاقه ها</h3>
+                                <div class="table-responsive">
+                                    <table class="table">
+                                        <thead>
+                                        <tr>
+                                            <th>محصول</th>
+                                            <th>دریافت ها</th>
+                                            <th>انقضا</th>
+                                            <th>دریافت</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        <tr>
+                                            <td>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم</td>
+                                            <td>10 تیر 1397</td>
+                                            <td><span class="danger">منقضی شده</span></td>
+                                            <td><a href="#" class="view">برای دریافت فایل خود کلیک کنید</a></td>
+                                        </tr>
+                                        <tr>
+                                            <td>لورم ایپسوم متن ساختگی با تولید سادگی</td>
+                                            <td>11 مرداد 1397</td>
+                                            <td>هرگز</td>
+                                            <td><a href="#" class="view">برای دریافت فایل خود کلیک کنید</a></td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <div class="tab-pane" id="address">
+                                <form action="/" method="post">
+                                    <p>آدرس های زیر به صورت پیش فرض در صفحه سفارش شما استفاده خواهند شد.</p>
+                                    <h4 class="billing-address">آدرس صورت حساب</h4>
+                                    <a href="#" class="view">ویرایش</a>
+                                    <p><strong>جان اسنو</strong></p>
+                                    <address>
+                                        ایران<br>
+                                        آذربایجان شرقی<br>
+                                        تبریز<br>
+                                        چهارراه آبرسان، فلکه دانشگاه، برج بلور، طبقه 456، واحد 89
+                                    </address>
+                                    <div class="save_button primary_btn default_button">
+                                        <button type="submit">ویرایش</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</div>
