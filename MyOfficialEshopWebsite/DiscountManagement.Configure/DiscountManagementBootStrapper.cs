@@ -1,6 +1,8 @@
-﻿using DiscountManagement.Application;
+﻿using _0_Framework.Infrastructure;
+using DiscountManagement.Application;
 using DiscountManagement.Application.Contract.ColleagueDiscount;
 using DiscountManagement.Application.Contract.CustomerDiscount;
+using DiscountManagement.Configuration.Permissions;
 using DiscountManagement.Domain.ColleagueDiscount;
 using DiscountManagement.Infrastructure.EFCore;
 using DiscountManagement.Infrastructure.EFCore.Repository;
@@ -20,7 +22,7 @@ namespace DiscountManagement.Configuration
             services.AddTransient<IColleagueDiscountApplication, ColleagueDiscountApplication>();
             services.AddTransient<IColleagueDiscountRepository, ColleagueDiscountRepository>();
 
-            //services.AddTransient<IPermissionExposition, DiscountPermissionExposition>();
+            services.AddTransient<IPermissionExposition, DiscountPermissionExposition>();
 
 
 

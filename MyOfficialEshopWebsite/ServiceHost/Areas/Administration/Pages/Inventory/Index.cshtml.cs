@@ -2,7 +2,9 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using _0_Framework.Infrastructure;
 using InventoryManagement.Application.Contract;
+using InventoryManagement.Configuration.Permissions;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc.Rendering;
@@ -46,7 +48,6 @@ namespace ServiceHost.Areas.Administration.Pages.Inventory
             return Partial("./Create", command);
         }
 
-
         public JsonResult OnPostCreate(CreateInventory command)
         {
             var result = _inventoryApplication.Create(command);
@@ -59,6 +60,7 @@ namespace ServiceHost.Areas.Administration.Pages.Inventory
             inventory.Products = _productApplication.GetProducts();
             return Partial("Edit", inventory);
         }
+
 
         public JsonResult OnPostEdit(EditInventory command)
         {

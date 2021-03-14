@@ -108,14 +108,14 @@ namespace AccountManagement.Application
                 return operation.Failed(ApplicationMessages.WrongUserPass);
             }
 
-            //var permissions = _roleRepository
-            //    .Get(account.RoleId)
-            //    .Permissions
-            //    .Select(x => x.Code)
-            //    .ToList();
+            var permissions = _roleRepository
+                .Get(account.RoleId)
+                .Permissions
+                .Select(x => x.Code)
+                .ToList();
 
             var authViewModel = new AuthViewModel(account.Id, account.RoleId, account.FullName,
-                account.Username, account.ProfilePhoto/*, permissions*/);
+                account.Username, account.ProfilePhoto, permissions);
 
             _authHelper.SignIn(authViewModel);
 

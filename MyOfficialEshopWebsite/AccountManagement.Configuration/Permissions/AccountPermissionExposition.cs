@@ -3,7 +3,7 @@ using _0_Framework.Infrastructure;
 
 namespace AccountManagement.Configuration.Permissions
 {
-    public class AccountPermissionExposition:IPermissionExposition
+    public class AccountPermissionExposition : IPermissionExposition
     {
         public Dictionary<string, List<PermissionDto>> Expose()
         {

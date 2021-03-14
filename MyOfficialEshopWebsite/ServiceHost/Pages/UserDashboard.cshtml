@@ -1,4 +1,6 @@
 ﻿@page
+@inject IAuthHelper AuthHelper
+@using _0_Framework.Application
 @model ServiceHost.Pages.UserDashboardModel
 @{
     ViewData["Title"] = "پروفایل من";
@@ -12,6 +14,7 @@
                     <ul>
                         <li><a asp-page="/Index">صفحه اصلی</a></li>
                         <li>پروفایل من</li>
+                        <li>@AuthHelper.CurrentAccountInfo().FullName</li>
                     </ul>
                 </div>
             </div>

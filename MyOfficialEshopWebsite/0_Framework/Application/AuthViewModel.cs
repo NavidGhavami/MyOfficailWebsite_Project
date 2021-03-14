@@ -17,14 +17,14 @@ namespace _0_Framework.Application
         {
         }
 
-        public AuthViewModel(long id, long roleId, string fullName, string username, string picture/*, List<int> permissions*/)
+        public AuthViewModel(long id, long roleId, string fullName, string username, string picture, List<int> permissions)
         {
             Id = id;
             RoleId = roleId;
             FullName = fullName;
             Username = username;
             Picture = picture;
-            //Permissions = permissions;
+            Permissions = permissions;
         }
     }
 }

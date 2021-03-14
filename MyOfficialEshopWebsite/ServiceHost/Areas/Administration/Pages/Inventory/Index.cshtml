@@ -1,4 +1,5 @@
 ﻿@page
+@using InventoryManagement.Configuration.Permissions
 @model ServiceHost.Areas.Administration.Pages.Inventory.IndexModel
 @{
 }
@@ -14,7 +15,7 @@
         <div class="col-sm-12">
             <h4 class="page-title pull-right">@ViewData["Title"]</h4>
             <p class="pull-left">
-                <a @*permission="@InventoryPermission.CreateInventory"*@ class="btn btn-success btn-lg" href="#showmodal=@Url.Page("./Index", "Create")">ایجاد انبار جدید</a>
+                <a permission="@InventoryPermission.CreateInventory" class="btn btn-success btn-lg" href="#showmodal=@Url.Page("./Index", "Create")">ایجاد انبار جدید</a>
             </p>
         </div>
     </div>
@@ -83,15 +84,15 @@
                                             <td>@item.CurrentCount</td>
                                             <td>@item.CreationDate</td>
                                             <td>
-                                                <a permission="@*@InventoryPermission.EditInventory*@" class="btn btn-warning btn-rounded waves-effect waves-light text-dark m-b-5"
+                                                <a permission="@InventoryPermission.EditInventory" class="btn btn-warning btn-rounded waves-effect waves-light text-dark m-b-5"
                                                    href="#showmodal=@Url.Page("./Index", "Edit", new { id = item.Id})">
                                                     <i class="fa fa-edit"></i> ویرایش
                                                 </a>
-                                                <a permission="@*@InventoryPermission.IncreaseInventory*@" class="btn btn-success btn-rounded waves-effect waves-light text-light m-b-5"
+                                                <a permission="@InventoryPermission.IncreaseInventory" class="btn btn-success btn-rounded waves-effect waves-light text-light m-b-5"
                                                    href="#showmodal=@Url.Page("./Index", "Increase", new { id = item.Id})">
                                                     <i class="fa fa-plus"></i> افزایش موجودی
                                                 </a>
-                                                <a permission="@*@InventoryPermission.DecreaseInventory*@" class="btn btn-danger btn-rounded waves-effect waves-light text-light m-b-5"
+                                                <a permission="@InventoryPermission.DecreaseInventory" class="btn btn-danger btn-rounded waves-effect waves-light text-light m-b-5"
                                                    href="#showmodal=@Url.Page("./Index", "Decrease", new { id = item.Id})">
                                                     <i class="fa fa-minus"></i>  کاهش موجودی
                                                 </a>
