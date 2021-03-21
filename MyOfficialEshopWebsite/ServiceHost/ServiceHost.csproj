@@ -1868,6 +1868,7 @@
     <Content Include="wwwroot\SiteTheme\assets\img\slider\slider7.jpg" />
     <Content Include="wwwroot\SiteTheme\assets\img\slider\slider8.jpg" />
     <Content Include="wwwroot\SiteTheme\assets\img\slider\slider9.jpg" />
+    <Content Include="wwwroot\SiteTheme\assets\js\Custom.js" />
     <Content Include="wwwroot\SiteTheme\assets\js\main.js" />
     <Content Include="wwwroot\SiteTheme\assets\js\map.js" />
     <Content Include="wwwroot\SiteTheme\assets\js\plugins.js" />
@@ -1888,6 +1889,7 @@
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="5.0.2" />
+    <PackageReference Include="Nancy" Version="2.0.0" />
   </ItemGroup>
 
 </Project>

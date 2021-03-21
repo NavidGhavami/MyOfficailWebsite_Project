@@ -1,0 +1,120 @@
+﻿@page
+@using _0_Framework.Application
+@model ServiceHost.Pages.ShoppingCartModel
+@{
+    ViewData["Title"] = "سبد خرید";
+}
+
+<div class="breadcrumbs_area">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="breadcrumb_content">
+                    <ul>
+                        <li><a asp-page="/Index">صفحه اصلی</a></li>
+                        <li>سبد خرید شما</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<div class="cart_page_bg">
+    <div class="container">
+        <div class="shopping_cart_area">
+            @foreach (var item in Model.CartItems.Where(x => !x.IsInStock))
+            {
+                <div class="alert alert-warning">
+                    <i class="fa fa-warning"></i>
+                    کالای <strong>@item.Name</strong> در انبار، کمتر از تعداد درخواستی موجود می باشد. لطفا دوباره تلاش کنید.
+                </div>
+            }
+            <form action="#">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="table_desc">
+                            <div class="cart_page table-responsive">
+                                @if (@Model.IsCartEmpty)
+                                {
+                                    <table>
+                                        <thead>
+                                            <tr>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+
+                                            <tr>
+                                                <td class="product_total">@Model.Message</td>
+                                            </tr>
+
+                                        </tbody>
+                                    </table>
+                                }
+                                else
+                                {
+                                    <table>
+                                        <thead>
+                                            <tr>
+                                                <th class="product_thumb">تصویر</th>
+                                                <th class="product_name">محصول</th>
+                                                <th class="product-price">قیمت</th>
+                                                <th class="product_quantity">تعداد</th>
+                                                <th class="product_total">جمع</th>
+                                                <th class="product_remove">حذف</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            @foreach (var item in Model.CartItems)
+                                            {
+                                                <tr>
+                                                    <td class="product_thumb"><a href="#"><img src="~/Pictures/@item.Picture" alt="@item.Name" title="@item.Name"></a></td>
+                                                    <td class="product_name"><a href="#">@item.Name</a></td>
+                                                    <td class="product-price">@item.UnitPrice.ToMoney() تومان</td>
+
+                                                    <td class="product_quantity">
+                                                        <label>تعداد</label> <input min="1" max="100" value="@item.Count"
+                                                                                    onchange="changeCartItemCount('@item.Id','totalItemPrice-@item.Id', this.value)"
+                                                                                    type="number">
+                                                    </td>
+
+                                                    <td class="product_total" id="totalItemPrice-@item.Id">@item.TotalItemPrice.ToMoney() تومان</td>
+                                                    <td class="product_remove"><a onclick="removeFromCart('@item.Id')"><i class="fa fa-trash-o"></i></a></td>
+
+                                                </tr>
+                                            }
+                                        </tbody>
+                                    </table>
+                                    <div class="cart_submit">
+                                        <button asp-page="/ShoppingCart" type="submit">به روز رسانی سبد خرید</button>
+                                    </div>
+                                }
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--coupon code area start-->
+                @if (@Model.IsCartEmpty == false)
+                {
+                    <div class="coupon_area">
+                        <div class="row">
+                            <div class="col-lg-12 col-md-12">
+                                <div class="coupon_code right">
+                                    <h3>ادامه و تکمیل فرایند خرید</h3>
+                                    <div class="coupon_inner">
+                                        <div class="checkout_btn">
+                                            <a asp-page-handler="GotoPersonalInfo">تکمیل فرایند خرید</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                }
+                <!--coupon code area end-->
+            </form>
+        </div>
+    </div>
+</div>

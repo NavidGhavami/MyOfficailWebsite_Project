@@ -1,0 +1,98 @@
+﻿@page
+@model ServiceHost.Pages.PersonalInfoModel
+
+@{
+    ViewData["Title"] = "تکمیل اطلاعات شخصی ";
+}
+
+<div class="breadcrumbs_area">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="breadcrumb_content">
+                    <ul>
+                        <li><a asp-page="/Index">صفحه اصلی</a></li>
+                        <li><a asp-page="/ShoppingCart">سبد خرید</a></li>
+                        <li>مشخصات فردی و آدرس</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="checkout_page_bg">
+    <div class="container">
+        <div class="Checkout_section">
+            <div class="checkout_form">
+                <div class="row">
+                    <div class="col-lg-12 col-md-12">
+                            <div class="checkout_form_left">
+                                <form action="#">
+                                    <h3>مشخصات فردی و آدرس</h3>
+                                    <div class="row">
+
+                                        <div class="col-lg-6 mb-20">
+                                            <label>نام <span>*</span></label>
+                                            <input type="text">
+                                        </div>
+                                        <div class="col-lg-6 mb-20">
+                                            <label>نام خانوادگی <span>*</span></label>
+                                            <input type="text">
+                                        </div>
+                                        <div class="col-12 mb-20">
+                                            <label>نام فروشگاه یا شرکت</label>
+                                            <input type="text">
+                                        </div>
+                                        <div class="col-lg-4 mb-20">
+                                            <label>کشور <span>*</span></label>
+                                            <input placeholder="مثلا : ایران" type="text">
+                                        </div>
+                                        <div class="col-lg-4 mb-20">
+                                            <label>استان <span>*</span></label>
+                                            <input placeholder="مثلا : تهران" type="text">
+                                        </div>
+                                        <div class="col-lg-4 mb-20">
+                                            <label>شهر / شهرستان <span>*</span></label>
+                                            <input placeholder="مثلا : تهران" type="text">
+                                        </div>
+                                        <div class="col-lg-12 mb-20">
+                                            <label>خیابان <span>*</span></label>
+                                            <input placeholder="نام خیابان و نام کوچه و ..." type="text">
+                                        </div>
+                                        <div class="col-lg-4 mb-20">
+                                            <label>کد پستی <span>*</span></label>
+                                            <input type="text">
+                                        </div>
+                                        <div class="col-lg-4 mb-20">
+                                            <label>شماره پلاک <span>*</span></label>
+                                            <input type="text">
+                                        </div>
+                                        <div class="col-lg-4 mb-20">
+                                            <label>تلفن همراه <span>*</span></label>
+                                            <input type="text" dir="ltr">
+                                        </div>
+                                        <div class="col-lg-12 mb-20">
+                                            <label>آدرس ایمیل <span>*</span></label>
+                                            <input placeholder="مثلا : info@gmail.com" type="email" dir="rtl">
+                                        </div>
+                                        <div class="col-lg-12">
+                                            <div class="order-notes">
+                                                <label for="order_note">توضیحات سفارش</label>
+                                                <textarea id="order_note" placeholder="یادداشت های مربوط به سفارش، مانند نحوه ارسال، نحوه دریافت و ..."></textarea>
+                                            </div>
+                                            <br />
+                                            <div class="checkout_btn">
+                                                <a asp-page="/Checkout">تایید و مشاهده فاکتور</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+

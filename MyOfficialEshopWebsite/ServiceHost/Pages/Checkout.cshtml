@@ -1,0 +1,158 @@
+﻿@page
+@using _0_Framework.Application
+@model ServiceHost.Pages.CheckoutModel
+
+@{
+    ViewData["Title"] = "ادامه و تکمیل فرایند خرید";
+}
+
+<div class="breadcrumbs_area">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="breadcrumb_content">
+                    <ul>
+                        <li><a asp-page="/Index">خانه</a></li>
+                        <li><a asp-page="/ShoppingCart">سبد خرید</a></li>
+                        <li><a asp-page="/PersonalInfo">مشخصات فردی و آدرس</a></li>
+                        <li>ادامه و تکمیل فرایند خرید</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="checkout_page_bg">
+    <div class="container">
+        <div class="Checkout_section">
+            <div class="row">
+                <div class="col-12">
+                    <div class="user-actions">
+                        <h3>
+                            <i class="fa fa-file-o" aria-hidden="true"></i>
+                            کد تخفیف دارید؟
+                            <a class="Returning" href="#" data-toggle="collapse" data-target="#checkout_coupon" aria-expanded="true">برای وارد کردن کد تخفیف کلیک کنید</a>
+
+                        </h3>
+                        <div id="checkout_coupon" class="collapse">
+                            <div class="checkout_info">
+                                <form action="#">
+                                    <input placeholder="کد تخفیف" type="text" dir="ltr">
+                                    <button type="submit">اعمال کد تخفیف</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="checkout_form">
+                <div class="row">
+                    <div class="col-lg-12 col-md-12">
+                        <div class="checkout_form_right">
+                            <form action="#">
+                                <h3>فاکتور سفارش های شما</h3>
+                                <div class="order_table table-responsive table-bordered">
+                                    <table>
+                                        <thead>
+                                        <tr>
+                                            <th>تصویر</th>
+                                            <th>محصول</th>
+                                            <th>تعداد</th>
+                                            <th>قیمت واحد</th>
+                                            <th>مبلغ کل بدون تخفیف</th>
+                                            <th>درصد تخفیف</th>
+                                            <th>مبلغ کل تخفیف</th>
+                                            <th>مبلغ پس از تخفیف</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        @foreach (var item in Model.Cart.Items)
+                                        {
+                                            <tr>
+                                                <td>
+                                                    <img src="~/Pictures/@item.Picture" style="width: 100px;height: 100px" alt="@item.Name" />
+                                                </td>
+                                                <td>
+                                                    <span class="d-inline-block">@item.Name</span>
+                                                </td>
+                                                <td>@item.Count عدد</td>
+                                                <td>@item.UnitPrice.ToMoney() تومان</td>
+                                                <td>@item.TotalItemPrice.ToMoney() تومان</td>
+                                                <td>@item.DiscountRate%</td>
+                                                <td>@item.DiscountAmount.ToMoney() تومان</td>
+                                                <td>@item.ItemPayAmount.ToMoney() تومان</td>
+                                            </tr>
+                                        }
+                                        </tbody>
+                                    </table>
+                                    <br />
+                                    <h3>خلاصه وضعیت فاکتور</h3>
+                                    <div class="order_table table-responsive table-bordered">
+                                        <table>
+                                            <thead>
+                                                <tr>
+                                                    <th>مبلغ قابل پرداخت</th>
+                                                    <th>مبلغ نهایی</th>
+                                                    <th>مبلغ تخفیف</th>
+                                                    <th>هزینه ارسال</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+
+                                                    <td>@Model.Cart.PayAmount.ToMoney() تومان</td>
+                                                    <td>@Model.Cart.TotalAmount.ToMoney() تومان</td>
+                                                    <td>@Model.Cart.DiscountAmount.ToMoney() تومان</td>
+                                                    @if (Model.Cart.FreeTransform)
+                                                    {
+                                                        <td>رایگان</td>
+                                                    }
+                                                    else
+                                                    {
+                                                        <td>20,000 تومان</td>
+                                                    }
+
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                                <div class="payment_method" id="accordion">
+                                    <div class="panel-default">
+                                        <label data-toggle="collapse" data-target="#method" aria-controls="method">
+                                            <input name="check_method" type="radio" checked=""> پرداخت نقدی
+                                        </label>
+
+                                        <div id="method" class="collapse show one" data-parent="#accordion">
+                                            <div class="card-body1">
+                                                <p>این روش پرداخت، فعلا فقط برای شهرستان بوکان امکان پذیر می باشد.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="panel-default">
+                                        <label data-toggle="collapse" data-target="#collapsedefult" aria-controls="collapsedefult">
+                                            <input name="check_method" type="radio"> پرداخت آنلاین از طریق درگاه بانکی <img src="~/SiteTheme/assets/img/icon/BankLogo.png" alt="پرداخت آنلاین">
+                                        </label>
+
+                                        <div id="collapsedefult" class="collapse one" data-parent="#accordion">
+                                            <div class="card-body1">
+                                                <p>با هر نوع کارت شتاب بانکی می توانید خرید خود را آنلاین انجام دهید</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="order_button">
+                                        <button type="submit">تایید و انتقال به درگاه پرداخت </button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+

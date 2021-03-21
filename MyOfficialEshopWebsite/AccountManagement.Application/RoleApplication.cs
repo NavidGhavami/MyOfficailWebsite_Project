@@ -7,11 +7,14 @@ namespace AccountManagement.Application
 {
     public class RoleApplication : IRoleApplication
     {
+        
         private readonly IRoleRepository _roleRepository;
 
         public RoleApplication(IRoleRepository roleRepository)
         {
+            
             _roleRepository = roleRepository;
+           
         }
 
         public OperationResult CreateRole(CreateRole command)

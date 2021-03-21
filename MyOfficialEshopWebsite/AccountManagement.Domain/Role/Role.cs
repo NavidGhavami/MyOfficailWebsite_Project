@@ -12,7 +12,7 @@ namespace AccountManagement.Domain.Role
         public List<Account> Accounts { get; private set; }
         public List<Permission> Permissions { get; private set; }
 
-        protected Role()
+        public Role()
         {
         }
         public Role(string name, List<Permission> permissions)

@@ -7,6 +7,7 @@ using CommentManagement.Infrastructure.EFCore;
 using DiscountManagement.Infrastructure.EFCore;
 using InventoryManagement.Infrastructure.EfCore;
 using Microsoft.EntityFrameworkCore;
+using ShopManagement.Application.Contract.Order;
 using ShopManagement.Application.Contract.Product;
 using ShopManagement.Domain.ProductPicture;
 using ShopManagement.Infrastructure.EFCore;
@@ -329,6 +330,25 @@ namespace _01_Query.Query
 
 
             return products;
+        }
+
+        public List<CartItem> CheckInventoryStatus(List<CartItem> cartItems)
+        {
+            var inventory = _inventoryContext.Inventories.ToList();
+
+            foreach (var cartItem in cartItems)
+            {
+                if (inventory.Any(x => x.ProductId == cartItem.Id && x.InStock))
+                {
+                    var itemInventory = inventory.Find(x => x.ProductId == cartItem.Id);
+                    if (itemInventory != null)
+                    {
+                        cartItem.IsInStock = itemInventory.CalculateCurrentCount() >= cartItem.Count;
+                    }
+                }
+            }
+
+            return cartItems;
         }
 
 

@@ -12,17 +12,13 @@ namespace _0_Framework.Infrastructure
 
         public static string GetRoleBy(long id)
         {
-            switch (id)
+            return id switch
             {
-                case 1:
-                    return "مدیر سیستم";
-                case 2:
-                    return "محتوا گذار";
-                case 4:
-                    return "دستیار مدیر";
-                default:
-                    return "";
-            }
+                1 => "مدیر سیستم",
+                2 => "محتوا گذار",
+                4 => "دستیار مدیر",
+                _ => ""
+            };
         }
 
         

@@ -1,0 +1,103 @@
+﻿@page
+@using _0_Framework.Application
+@model ServiceHost.Pages.WishlistModel
+@{
+    ViewData["Title"] = "لیست علاقه مندی ها";
+}
+
+
+<div class="breadcrumbs_area">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="breadcrumb_content">
+                    <ul>
+                        <li><a asp-page="/Index">صفحه اصلی</a></li>
+                        <li>لیست علاقه‌مندی‌های شما</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="wishlist_page_bg">
+    <div class="container">
+        <div class="wishlist_area">
+            <div class="wishlist_inner">
+                <form action="#">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="table_desc wishlist">
+                                <div class="cart_page table-responsive">
+                                    @if (@Model.IsWishlistEmpty)
+                                    {
+                                        <table>
+                                            <thead>
+                                            <tr>
+                                            </tr>
+                                            </thead>
+                                            <tbody>
+
+                                            <tr>
+                                                <td class="product_total">@Model.Message</td>
+                                            </tr>
+
+                                            </tbody>
+                                        </table>
+                                    }
+                                    else
+                                    {
+                                        <table>
+                                            <thead>
+                                            <tr>
+                                                <th class="product_thumb">تصویر</th>
+                                                <th class="product_name">محصول</th>
+                                                <th class="product-price">قیمت</th>
+                                                <th class="product_quantity">وضعیت انبار</th>
+                                                <th class="product_remove">حذف</th>
+                                            </tr>
+                                            </thead>
+                                            <tbody>
+                                           @foreach (var item in Model.WishlistItems)
+                                           {
+                                               <tr>
+
+                                                   <td class="product_thumb"><a href="#"><img src="~/Pictures/@item.Picture" alt="@item.Name" title="@item.Name"></a></td>
+                                                   <td class="product_name"><a href="#">@item.Name</a></td>
+                                                   <td class="product-price">@item.UnitPrice.ToMoney() تومان</td>
+                                                   <td class="product_quantity">در انبار موجود می باشد</td>
+                                                   <td class="product_remove"><a onclick="removeFromWishlist('@item.Id')"><i class="fa fa-trash-o"></i></a></td>
+
+                                               </tr>
+                                           }
+                                            </tbody>
+                                        </table>
+                                    }
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+           @if (!Model.IsWishlistEmpty)
+           {
+               <div class="row">
+                   <div class="col-12">
+                       <div class="wishlist_share">
+                           <h4>اشتراک گذاری در:</h4>
+                           <ul>
+                               <li><a href="#"><i class="fa fa-rss"></i></a></li>
+                               <li><a href="#"><i class="fa fa-telegram"></i></a></li>
+                               <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                               <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                               <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                           </ul>
+                       </div>
+                   </div>
+               </div>
+           }
+           
+           </div>
+    </div>
+</div>

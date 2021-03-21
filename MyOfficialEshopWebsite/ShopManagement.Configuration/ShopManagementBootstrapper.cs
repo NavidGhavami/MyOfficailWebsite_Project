@@ -1,4 +1,6 @@
 ﻿using _0_Framework.Infrastructure;
+using _01_LampshadeQuery.Query;
+using _01_Query.Contract.Cart;
 using _01_Query.Contract.Product;
 using _01_Query.Contract.ProductCategory;
 using _01_Query.Contract.Slider;
@@ -6,6 +8,7 @@ using _01_Query.Query;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using ShopManagement.Application;
+using ShopManagement.Application.Contract.Order;
 using ShopManagement.Application.Contract.Product;
 using ShopManagement.Application.Contract.ProductCategory;
 using ShopManagement.Application.Contract.ProductPicture;
@@ -41,6 +44,9 @@ namespace ShopManagement.Configuration
             services.AddTransient<IProductQuery, ProductQuery>();
 
             services.AddTransient<IPermissionExposition, ShopPermissionExposition>();
+
+            services.AddTransient<ICartCalculatorService, CartCalculatorService>();
+            services.AddTransient<ICartService, CartService>();
 
 
 

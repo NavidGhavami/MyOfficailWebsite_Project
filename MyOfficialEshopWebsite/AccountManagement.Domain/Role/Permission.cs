@@ -8,6 +8,10 @@
         public long RoleId { get; private set; }
         public Role Role { get; private set; }
 
+        public Permission()
+        {
+            
+        }
         public Permission(int code, string name)
         {
             Code = code;
