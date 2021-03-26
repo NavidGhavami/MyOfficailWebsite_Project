@@ -3,6 +3,9 @@ E:\Programming\Codes and projects\MyOfficialEshopWebsite\MyOfficialEshopWebsite\
 E:\Programming\Codes and projects\MyOfficialEshopWebsite\MyOfficialEshopWebsite\InventoryManagement.Infrastructure.EFCore\bin\Debug\net5.0\ref\InventoryManagement.Infrastructure.EFCore.dll
 E:\Programming\Codes and projects\MyOfficialEshopWebsite\MyOfficialEshopWebsite\InventoryManagement.Infrastructure.EFCore\bin\Debug\net5.0\InventoryManagement.Infrastructure.EFCore.pdb
 E:\Programming\Codes and projects\MyOfficialEshopWebsite\MyOfficialEshopWebsite\InventoryManagement.Infrastructure.EFCore\bin\Debug\net5.0\0_Framework.dll
+E:\Programming\Codes and projects\MyOfficialEshopWebsite\MyOfficialEshopWebsite\InventoryManagement.Infrastructure.EFCore\bin\Debug\net5.0\AccountManagement.Application.Contract.dll
+E:\Programming\Codes and projects\MyOfficialEshopWebsite\MyOfficialEshopWebsite\InventoryManagement.Infrastructure.EFCore\bin\Debug\net5.0\AccountManagement.Domain.dll
+E:\Programming\Codes and projects\MyOfficialEshopWebsite\MyOfficialEshopWebsite\InventoryManagement.Infrastructure.EFCore\bin\Debug\net5.0\AccountManagement.Infrastructure.EFCore.dll
 E:\Programming\Codes and projects\MyOfficialEshopWebsite\MyOfficialEshopWebsite\InventoryManagement.Infrastructure.EFCore\bin\Debug\net5.0\InventoryManagement.Application.Contract.dll
 E:\Programming\Codes and projects\MyOfficialEshopWebsite\MyOfficialEshopWebsite\InventoryManagement.Infrastructure.EFCore\bin\Debug\net5.0\InventoryManagement.Domain.dll
 E:\Programming\Codes and projects\MyOfficialEshopWebsite\MyOfficialEshopWebsite\InventoryManagement.Infrastructure.EFCore\bin\Debug\net5.0\ShopManagement.Application.Contract.dll
@@ -11,6 +14,9 @@ E:\Programming\Codes and projects\MyOfficialEshopWebsite\MyOfficialEshopWebsite\
 E:\Programming\Codes and projects\MyOfficialEshopWebsite\MyOfficialEshopWebsite\InventoryManagement.Infrastructure.EFCore\bin\Debug\net5.0\0_Framework.pdb
 E:\Programming\Codes and projects\MyOfficialEshopWebsite\MyOfficialEshopWebsite\InventoryManagement.Infrastructure.EFCore\bin\Debug\net5.0\InventoryManagement.Domain.pdb
 E:\Programming\Codes and projects\MyOfficialEshopWebsite\MyOfficialEshopWebsite\InventoryManagement.Infrastructure.EFCore\bin\Debug\net5.0\ShopManagement.Infrastructure.EFCore.pdb
+E:\Programming\Codes and projects\MyOfficialEshopWebsite\MyOfficialEshopWebsite\InventoryManagement.Infrastructure.EFCore\bin\Debug\net5.0\AccountManagement.Application.Contract.pdb
+E:\Programming\Codes and projects\MyOfficialEshopWebsite\MyOfficialEshopWebsite\InventoryManagement.Infrastructure.EFCore\bin\Debug\net5.0\AccountManagement.Domain.pdb
+E:\Programming\Codes and projects\MyOfficialEshopWebsite\MyOfficialEshopWebsite\InventoryManagement.Infrastructure.EFCore\bin\Debug\net5.0\AccountManagement.Infrastructure.EFCore.pdb
 E:\Programming\Codes and projects\MyOfficialEshopWebsite\MyOfficialEshopWebsite\InventoryManagement.Infrastructure.EFCore\bin\Debug\net5.0\InventoryManagement.Application.Contract.pdb
 E:\Programming\Codes and projects\MyOfficialEshopWebsite\MyOfficialEshopWebsite\InventoryManagement.Infrastructure.EFCore\bin\Debug\net5.0\ShopManagement.Application.Contract.pdb
 E:\Programming\Codes and projects\MyOfficialEshopWebsite\MyOfficialEshopWebsite\InventoryManagement.Infrastructure.EFCore\bin\Debug\net5.0\ShopManagement.Domain.pdb

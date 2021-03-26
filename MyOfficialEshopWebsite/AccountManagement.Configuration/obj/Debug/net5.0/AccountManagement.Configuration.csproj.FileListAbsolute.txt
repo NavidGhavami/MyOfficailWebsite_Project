@@ -2,14 +2,6 @@ E:\Programming\Codes and projects\MyOfficialEshopWebsite\MyOfficialEshopWebsite\
 E:\Programming\Codes and projects\MyOfficialEshopWebsite\MyOfficialEshopWebsite\AccountManagement.Configuration\bin\Debug\net5.0\AccountManagement.Configuration.dll
 E:\Programming\Codes and projects\MyOfficialEshopWebsite\MyOfficialEshopWebsite\AccountManagement.Configuration\bin\Debug\net5.0\ref\AccountManagement.Configuration.dll
 E:\Programming\Codes and projects\MyOfficialEshopWebsite\MyOfficialEshopWebsite\AccountManagement.Configuration\bin\Debug\net5.0\AccountManagement.Configuration.pdb
-E:\Programming\Codes and projects\MyOfficialEshopWebsite\MyOfficialEshopWebsite\AccountManagement.Configuration\obj\Debug\net5.0\AccountManagement.Configuration.csprojAssemblyReference.cache
-E:\Programming\Codes and projects\MyOfficialEshopWebsite\MyOfficialEshopWebsite\AccountManagement.Configuration\obj\Debug\net5.0\AccountManagement.Configuration.GeneratedMSBuildEditorConfig.editorconfig
-E:\Programming\Codes and projects\MyOfficialEshopWebsite\MyOfficialEshopWebsite\AccountManagement.Configuration\obj\Debug\net5.0\AccountManagement.Configuration.AssemblyInfoInputs.cache
-E:\Programming\Codes and projects\MyOfficialEshopWebsite\MyOfficialEshopWebsite\AccountManagement.Configuration\obj\Debug\net5.0\AccountManagement.Configuration.AssemblyInfo.cs
-E:\Programming\Codes and projects\MyOfficialEshopWebsite\MyOfficialEshopWebsite\AccountManagement.Configuration\obj\Debug\net5.0\AccountManagement.Configuration.csproj.CoreCompileInputs.cache
-E:\Programming\Codes and projects\MyOfficialEshopWebsite\MyOfficialEshopWebsite\AccountManagement.Configuration\obj\Debug\net5.0\AccountManagement.Configuration.dll
-E:\Programming\Codes and projects\MyOfficialEshopWebsite\MyOfficialEshopWebsite\AccountManagement.Configuration\obj\Debug\net5.0\ref\AccountManagement.Configuration.dll
-E:\Programming\Codes and projects\MyOfficialEshopWebsite\MyOfficialEshopWebsite\AccountManagement.Configuration\obj\Debug\net5.0\AccountManagement.Configuration.pdb
 E:\Programming\Codes and projects\MyOfficialEshopWebsite\MyOfficialEshopWebsite\AccountManagement.Configuration\bin\Debug\net5.0\0_Framework.dll
 E:\Programming\Codes and projects\MyOfficialEshopWebsite\MyOfficialEshopWebsite\AccountManagement.Configuration\bin\Debug\net5.0\AccountManagement.Application.Contract.dll
 E:\Programming\Codes and projects\MyOfficialEshopWebsite\MyOfficialEshopWebsite\AccountManagement.Configuration\bin\Debug\net5.0\AccountManagement.Application.dll
@@ -20,4 +12,12 @@ E:\Programming\Codes and projects\MyOfficialEshopWebsite\MyOfficialEshopWebsite\
 E:\Programming\Codes and projects\MyOfficialEshopWebsite\MyOfficialEshopWebsite\AccountManagement.Configuration\bin\Debug\net5.0\AccountManagement.Infrastructure.EFCore.pdb
 E:\Programming\Codes and projects\MyOfficialEshopWebsite\MyOfficialEshopWebsite\AccountManagement.Configuration\bin\Debug\net5.0\0_Framework.pdb
 E:\Programming\Codes and projects\MyOfficialEshopWebsite\MyOfficialEshopWebsite\AccountManagement.Configuration\bin\Debug\net5.0\AccountManagement.Application.Contract.pdb
+E:\Programming\Codes and projects\MyOfficialEshopWebsite\MyOfficialEshopWebsite\AccountManagement.Configuration\obj\Debug\net5.0\AccountManagement.Configuration.csprojAssemblyReference.cache
+E:\Programming\Codes and projects\MyOfficialEshopWebsite\MyOfficialEshopWebsite\AccountManagement.Configuration\obj\Debug\net5.0\AccountManagement.Configuration.GeneratedMSBuildEditorConfig.editorconfig
+E:\Programming\Codes and projects\MyOfficialEshopWebsite\MyOfficialEshopWebsite\AccountManagement.Configuration\obj\Debug\net5.0\AccountManagement.Configuration.AssemblyInfoInputs.cache
+E:\Programming\Codes and projects\MyOfficialEshopWebsite\MyOfficialEshopWebsite\AccountManagement.Configuration\obj\Debug\net5.0\AccountManagement.Configuration.AssemblyInfo.cs
+E:\Programming\Codes and projects\MyOfficialEshopWebsite\MyOfficialEshopWebsite\AccountManagement.Configuration\obj\Debug\net5.0\AccountManagement.Configuration.csproj.CoreCompileInputs.cache
 E:\Programming\Codes and projects\MyOfficialEshopWebsite\MyOfficialEshopWebsite\AccountManagement.Configuration\obj\Debug\net5.0\AccountManagement.Configuration.csproj.CopyComplete
+E:\Programming\Codes and projects\MyOfficialEshopWebsite\MyOfficialEshopWebsite\AccountManagement.Configuration\obj\Debug\net5.0\AccountManagement.Configuration.dll
+E:\Programming\Codes and projects\MyOfficialEshopWebsite\MyOfficialEshopWebsite\AccountManagement.Configuration\obj\Debug\net5.0\ref\AccountManagement.Configuration.dll
+E:\Programming\Codes and projects\MyOfficialEshopWebsite\MyOfficialEshopWebsite\AccountManagement.Configuration\obj\Debug\net5.0\AccountManagement.Configuration.pdb

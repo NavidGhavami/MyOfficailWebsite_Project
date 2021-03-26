@@ -37,8 +37,8 @@ namespace ShopManagement.Application
             var product = new Product(command.Name, command.Code, command.ShortDescription,
                 command.Description, command.Seller, primaryFilename, secondaryFilename, command.PictureAlt, command.PictureTitle,
                 slug, command.Keywords, command.MetaDescription, command.CategoryId);
-            _productRepository.Create(product);
 
+            _productRepository.Create(product);
             _productRepository.SaveChanges();
 
             return operation.Succedded();

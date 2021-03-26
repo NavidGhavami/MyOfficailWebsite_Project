@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "suL/ZJMA2fIRz0p3AGle6vjSJf9FJWYDS3PzlR3wcQRLcKX5epBC91zdm8AWdIMS0vYdUy7JiKhldLgZvi9oFg==",
+  "dgSpecHash": "YbvuHqKT2EIHDBs0tGxJWmBTxmkO5KFTAl0nyzRflyfWqWZazLJEeKy+AcgNvqzBlluaw4YaPI6ZZ/q8UQ9H0g==",
   "success": true,
   "projectFilePath": "E:\\Programming\\Codes and projects\\MyOfficialEshopWebsite\\MyOfficialEshopWebsite\\AccountManagement.Configuration\\AccountManagement.Configuration.csproj",
   "expectedPackageFiles": [
@@ -53,6 +53,7 @@
     "C:\\Users\\DELL\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",
     "C:\\Users\\DELL\\.nuget\\packages\\microsoft.win32.systemevents\\4.7.0\\microsoft.win32.systemevents.4.7.0.nupkg.sha512",
     "C:\\Users\\DELL\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512",
+    "C:\\Users\\DELL\\.nuget\\packages\\restsharp\\106.11.7\\restsharp.106.11.7.nupkg.sha512",
     "C:\\Users\\DELL\\.nuget\\packages\\runtime.native.system\\4.3.0\\runtime.native.system.4.3.0.nupkg.sha512",
     "C:\\Users\\DELL\\.nuget\\packages\\system.buffers\\4.5.0\\system.buffers.4.5.0.nupkg.sha512",
     "C:\\Users\\DELL\\.nuget\\packages\\system.collections\\4.3.0\\system.collections.4.3.0.nupkg.sha512",

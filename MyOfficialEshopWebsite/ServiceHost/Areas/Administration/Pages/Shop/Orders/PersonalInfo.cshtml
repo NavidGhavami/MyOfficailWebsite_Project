@@ -1,0 +1,70 @@
+﻿@using _0_Framework.Application
+@model ShopManagement.Application.Contract.Order.PersonalInfoItemViewModel
+
+
+@{
+}
+
+<div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+    <h4 class="modal-title">آدرس مشتری</h4>
+</div>
+
+<div class="modal-body">
+
+    <table class="table table-bordered table-responsive table-hover table-striped">
+
+        <thead>
+
+            <tr>
+                <th>#</th>
+                <th>نام</th>
+                <th>نام خانوادگی</th>
+                <th>فروشگاه یا شرکت</th>
+                <th>کشور</th>
+                <th>استان</th>
+                <th>شهر / شهرستان</th>
+                <th>خیابان</th>
+                <th>کد پستی</th>
+                <th>شماره پلاک</th>
+                <th>موبایل</th>
+                <th>ایمیل</th>
+                <th>توضیحات</th>
+            </tr>
+
+
+        </thead>
+
+        <tbody>
+
+           
+        <tr>
+
+            <td>@Model.Id</td>
+            <td>@Model.Name</td>
+            <td>@Model.Family</td>
+            <td>@Model.Company</td>
+            <td>@Model.Country</td>
+            <td>@Model.State</td>
+            <td>@Model.City</td>
+            <td>@Model.Street</td>
+            <td>@Model.PostalCode</td>
+            <td>@Model.PlaqueNo</td>
+            <td>@Model.Mobile</td>
+            <td>@Model.Email</td>
+            <td>@Model.Description</td>
+
+        </tr>
+            
+
+
+
+        </tbody>
+
+
+    </table>
+
+</div>
+<div class="modal-footer">
+    <button type="button" class="btn btn-default waves-effect" data-dismiss="modal">بستن</button>
+</div>

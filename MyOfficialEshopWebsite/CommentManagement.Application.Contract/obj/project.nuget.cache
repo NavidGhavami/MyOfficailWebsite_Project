@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "Zk4+nKFKMCby/2IwNOZ3qUIpXg+3yawfJvetf//Ncc/H0fohzXcVPZtPVCmttSJg1/8Il8pfUpEu64oXanwzJw==",
+  "dgSpecHash": "Qc+Mt4lhKTPrERVGXwuueRjLvmGg/4y5ZVxgGq7L/mSrM4bQKkhhW3NpHdg65r/AzCVq80OnCH71ajGPu5JerQ==",
   "success": true,
   "projectFilePath": "E:\\Programming\\Codes and projects\\MyOfficialEshopWebsite\\MyOfficialEshopWebsite\\CommentManagement.Application.Contract\\CommentManagement.Application.Contract.csproj",
   "expectedPackageFiles": [
@@ -40,6 +40,7 @@
     "C:\\Users\\DELL\\.nuget\\packages\\microsoft.netcore.platforms\\2.0.0\\microsoft.netcore.platforms.2.0.0.nupkg.sha512",
     "C:\\Users\\DELL\\.nuget\\packages\\microsoft.win32.registry\\4.5.0\\microsoft.win32.registry.4.5.0.nupkg.sha512",
     "C:\\Users\\DELL\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512",
+    "C:\\Users\\DELL\\.nuget\\packages\\restsharp\\106.11.7\\restsharp.106.11.7.nupkg.sha512",
     "C:\\Users\\DELL\\.nuget\\packages\\system.buffers\\4.5.0\\system.buffers.4.5.0.nupkg.sha512",
     "C:\\Users\\DELL\\.nuget\\packages\\system.collections.immutable\\5.0.0\\system.collections.immutable.5.0.0.nupkg.sha512",
     "C:\\Users\\DELL\\.nuget\\packages\\system.componentmodel.annotations\\5.0.0\\system.componentmodel.annotations.5.0.0.nupkg.sha512",

@@ -4,6 +4,9 @@ E:\Programming\Codes and projects\MyOfficialEshopWebsite\MyOfficialEshopWebsite\
 E:\Programming\Codes and projects\MyOfficialEshopWebsite\MyOfficialEshopWebsite\BlogManagement.Configuration\bin\Debug\net5.0\BlogManagement.Configuration.pdb
 E:\Programming\Codes and projects\MyOfficialEshopWebsite\MyOfficialEshopWebsite\BlogManagement.Configuration\bin\Debug\net5.0\01_Query.dll
 E:\Programming\Codes and projects\MyOfficialEshopWebsite\MyOfficialEshopWebsite\BlogManagement.Configuration\bin\Debug\net5.0\0_Framework.dll
+E:\Programming\Codes and projects\MyOfficialEshopWebsite\MyOfficialEshopWebsite\BlogManagement.Configuration\bin\Debug\net5.0\AccountManagement.Application.Contract.dll
+E:\Programming\Codes and projects\MyOfficialEshopWebsite\MyOfficialEshopWebsite\BlogManagement.Configuration\bin\Debug\net5.0\AccountManagement.Domain.dll
+E:\Programming\Codes and projects\MyOfficialEshopWebsite\MyOfficialEshopWebsite\BlogManagement.Configuration\bin\Debug\net5.0\AccountManagement.Infrastructure.EFCore.dll
 E:\Programming\Codes and projects\MyOfficialEshopWebsite\MyOfficialEshopWebsite\BlogManagement.Configuration\bin\Debug\net5.0\BlogManagement.Application.Contract.dll
 E:\Programming\Codes and projects\MyOfficialEshopWebsite\MyOfficialEshopWebsite\BlogManagement.Configuration\bin\Debug\net5.0\BlogManagement.Application.dll
 E:\Programming\Codes and projects\MyOfficialEshopWebsite\MyOfficialEshopWebsite\BlogManagement.Configuration\bin\Debug\net5.0\BlogManagement.Domain.dll
@@ -26,6 +29,9 @@ E:\Programming\Codes and projects\MyOfficialEshopWebsite\MyOfficialEshopWebsite\
 E:\Programming\Codes and projects\MyOfficialEshopWebsite\MyOfficialEshopWebsite\BlogManagement.Configuration\bin\Debug\net5.0\BlogManagement.Domain.pdb
 E:\Programming\Codes and projects\MyOfficialEshopWebsite\MyOfficialEshopWebsite\BlogManagement.Configuration\bin\Debug\net5.0\BlogManagement.Infrastructure.EFCore.pdb
 E:\Programming\Codes and projects\MyOfficialEshopWebsite\MyOfficialEshopWebsite\BlogManagement.Configuration\bin\Debug\net5.0\0_Framework.pdb
+E:\Programming\Codes and projects\MyOfficialEshopWebsite\MyOfficialEshopWebsite\BlogManagement.Configuration\bin\Debug\net5.0\AccountManagement.Application.Contract.pdb
+E:\Programming\Codes and projects\MyOfficialEshopWebsite\MyOfficialEshopWebsite\BlogManagement.Configuration\bin\Debug\net5.0\AccountManagement.Domain.pdb
+E:\Programming\Codes and projects\MyOfficialEshopWebsite\MyOfficialEshopWebsite\BlogManagement.Configuration\bin\Debug\net5.0\AccountManagement.Infrastructure.EFCore.pdb
 E:\Programming\Codes and projects\MyOfficialEshopWebsite\MyOfficialEshopWebsite\BlogManagement.Configuration\bin\Debug\net5.0\Comment.Management.Domain.pdb
 E:\Programming\Codes and projects\MyOfficialEshopWebsite\MyOfficialEshopWebsite\BlogManagement.Configuration\bin\Debug\net5.0\CommentManagement.Application.Contract.pdb
 E:\Programming\Codes and projects\MyOfficialEshopWebsite\MyOfficialEshopWebsite\BlogManagement.Configuration\bin\Debug\net5.0\CommentManagement.Infrastructure.EFCore.pdb

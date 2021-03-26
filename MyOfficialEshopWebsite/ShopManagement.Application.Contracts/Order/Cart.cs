@@ -5,9 +5,11 @@ namespace ShopManagement.Application.Contract.Order
     public class Cart
     {
         public List<CartItem> Items { get; set; }
+        public PersonalInfoItemViewModel PersonalInfo { get; set; }
         public double TotalAmount { get; set; }
         public double DiscountAmount { get; set; }
         public double PayAmount { get; set; }
+        public int PaymentMethod { get; set; }
         public double TransferAmount { get; set; }
         public double MinimumBuyingAmount { get; set; }
         public bool FreeTransform { get; set; }
@@ -15,6 +17,7 @@ namespace ShopManagement.Application.Contract.Order
         public Cart()
         {
             Items = new List<CartItem>();
+            PersonalInfo = new PersonalInfoItemViewModel();
         }
 
         public void Add(CartItem cartItem)
@@ -26,13 +29,13 @@ namespace ShopManagement.Application.Contract.Order
             TotalAmount += cartItem.TotalItemPrice;
             DiscountAmount += cartItem.DiscountAmount;
             PayAmount += cartItem.ItemPayAmount;
-
-            
-            
-
-
-
         }
+
+        public void SetPaymentMethod(int methodId)
+        {
+            PaymentMethod = methodId;
+        }
+        
 
 
     }

@@ -1,5 +1,6 @@
 ﻿@page
 @using _0_Framework.Application
+@using ShopManagement.Application.Contract
 @model ServiceHost.Pages.CheckoutModel
 
 @{
@@ -12,9 +13,8 @@
             <div class="col-12">
                 <div class="breadcrumb_content">
                     <ul>
-                        <li><a asp-page="/Index">خانه</a></li>
+                        <li><a asp-page="/Index">صفحه اصلی</a></li>
                         <li><a asp-page="/ShoppingCart">سبد خرید</a></li>
-                        <li><a asp-page="/PersonalInfo">مشخصات فردی و آدرس</a></li>
                         <li>ادامه و تکمیل فرایند خرید</li>
                     </ul>
                 </div>
@@ -33,7 +33,6 @@
                             <i class="fa fa-file-o" aria-hidden="true"></i>
                             کد تخفیف دارید؟
                             <a class="Returning" href="#" data-toggle="collapse" data-target="#checkout_coupon" aria-expanded="true">برای وارد کردن کد تخفیف کلیک کنید</a>
-
                         </h3>
                         <div id="checkout_coupon" class="collapse">
                             <div class="checkout_info">
@@ -50,99 +49,156 @@
                 <div class="row">
                     <div class="col-lg-12 col-md-12">
                         <div class="checkout_form_right">
-                            <form action="#">
+                            <form method="post">
                                 <h3>فاکتور سفارش های شما</h3>
                                 <div class="order_table table-responsive table-bordered">
                                     <table>
                                         <thead>
-                                        <tr>
-                                            <th>تصویر</th>
-                                            <th>محصول</th>
-                                            <th>تعداد</th>
-                                            <th>قیمت واحد</th>
-                                            <th>مبلغ کل بدون تخفیف</th>
-                                            <th>درصد تخفیف</th>
-                                            <th>مبلغ کل تخفیف</th>
-                                            <th>مبلغ پس از تخفیف</th>
-                                        </tr>
+                                            <tr>
+                                                <th>تصویر</th>
+                                                <th>محصول</th>
+                                                <th>تعداد</th>
+                                                <th>قیمت واحد</th>
+                                                <th>مبلغ کل بدون تخفیف</th>
+                                                <th>درصد تخفیف</th>
+                                                <th>مبلغ کل تخفیف</th>
+                                                <th>مبلغ پس از تخفیف</th>
+                                            </tr>
                                         </thead>
                                         <tbody>
-                                        @foreach (var item in Model.Cart.Items)
-                                        {
-                                            <tr>
-                                                <td>
-                                                    <img src="~/Pictures/@item.Picture" style="width: 100px;height: 100px" alt="@item.Name" />
-                                                </td>
-                                                <td>
-                                                    <span class="d-inline-block">@item.Name</span>
-                                                </td>
-                                                <td>@item.Count عدد</td>
-                                                <td>@item.UnitPrice.ToMoney() تومان</td>
-                                                <td>@item.TotalItemPrice.ToMoney() تومان</td>
-                                                <td>@item.DiscountRate%</td>
-                                                <td>@item.DiscountAmount.ToMoney() تومان</td>
-                                                <td>@item.ItemPayAmount.ToMoney() تومان</td>
-                                            </tr>
-                                        }
+                                            @foreach (var item in Model.Cart.Items)
+                                            {
+                                                <tr>
+                                                    <td>
+                                                        <img src="~/Pictures/@item.Picture" style="width: 100px;height: 100px" alt="@item.Name" />
+                                                    </td>
+                                                    <td>
+                                                        <span class="d-inline-block">@item.Name</span>
+                                                    </td>
+                                                    <td>@item.Count عدد</td>
+                                                    <td>@item.UnitPrice.ToMoney() تومان</td>
+                                                    <td>@item.TotalItemPrice.ToMoney() تومان</td>
+                                                    <td>@item.DiscountRate%</td>
+                                                    <td>@item.DiscountAmount.ToMoney() تومان</td>
+                                                    <td>@item.ItemPayAmount.ToMoney() تومان</td>
+                                                </tr>
+                                            }
                                         </tbody>
                                     </table>
                                     <br />
-                                    <h3>خلاصه وضعیت فاکتور</h3>
-                                    <div class="order_table table-responsive table-bordered">
-                                        <table>
-                                            <thead>
-                                                <tr>
-                                                    <th>مبلغ قابل پرداخت</th>
-                                                    <th>مبلغ نهایی</th>
-                                                    <th>مبلغ تخفیف</th>
-                                                    <th>هزینه ارسال</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <tr>
-
-                                                    <td>@Model.Cart.PayAmount.ToMoney() تومان</td>
-                                                    <td>@Model.Cart.TotalAmount.ToMoney() تومان</td>
-                                                    <td>@Model.Cart.DiscountAmount.ToMoney() تومان</td>
-                                                    @if (Model.Cart.FreeTransform)
-                                                    {
-                                                        <td>رایگان</td>
-                                                    }
-                                                    else
-                                                    {
-                                                        <td>20,000 تومان</td>
-                                                    }
-
-                                                </tr>
-                                            </tbody>
-                                        </table>
+                                </div>
+                                <div class="">
+                                    <h3>مشخصات فردی و آدرس</h3>
+                                    <div class="row">
+                                        <div class="col-lg-6 mb-20">
+                                            <label>نام <span>*</span></label>
+                                            <input type="text" name="name" id="name" required="این فیلد الزامی است">
+                                        </div>
+                                        <div class="col-lg-6 mb-20">
+                                            <label>نام خانوادگی <span>*</span></label>
+                                            <input type="text" name="family" id="family" required="این فیلد الزامی است">
+                                        </div>
+                                        <div class="col-12 mb-20">
+                                            <label>نام فروشگاه یا شرکت</label>
+                                            <input type="text" name="company" id="company">
+                                        </div>
+                                        <div class="col-lg-4 mb-20">
+                                            <label>کشور <span>*</span></label>
+                                            <input placeholder="مثلا : ایران" type="text" name="country" id="country" required="این فیلد الزامی است">
+                                        </div>
+                                        <div class="col-lg-4 mb-20">
+                                            <label>استان <span>*</span></label>
+                                            <input placeholder="مثلا : تهران" type="text" name="state" id="state" required="این فیلد الزامی است">
+                                        </div>
+                                        <div class="col-lg-4 mb-20">
+                                            <label>شهر / شهرستان <span>*</span></label>
+                                            <input placeholder="مثلا : تهران" type="text" name="city" id="city" required="این فیلد الزامی است">
+                                        </div>
+                                        <div class="col-lg-12 mb-20">
+                                            <label>خیابان <span>*</span></label>
+                                            <input placeholder="نام خیابان و نام کوچه و ..." type="text" name="street" id="street" required="این فیلد الزامی است">
+                                        </div>
+                                        <div class="col-lg-4 mb-20">
+                                            <label>کد پستی <span>*</span></label>
+                                            <input type="text" name="postalCode" id="postalCode" required="این فیلد الزامی است">
+                                        </div>
+                                        <div class="col-lg-4 mb-20">
+                                            <label>شماره پلاک <span>*</span></label>
+                                            <input type="text" name="plaqueNo" id="plaqueNo" required="این فیلد الزامی است">
+                                        </div>
+                                        <div class="col-lg-4 mb-20">
+                                            <label>تلفن همراه <span>*</span></label>
+                                            <input type="text" dir="ltr" name="mobile" id="mobile" required="این فیلد الزامی است">
+                                        </div>
+                                        <div class="col-lg-12 mb-20">
+                                            <label>آدرس ایمیل <span>*</span></label>
+                                            <input placeholder="مثلا : info@gmail.com" type="email" dir="rtl" name="email" id="email" required="این فیلد الزامی است">
+                                        </div>
+                                        <div class="order-notes col-lg-12 mb-20">
+                                            <label>توضیحات سفارش</label>
+                                            <textarea placeholder="یادداشت های مربوط به سفارش، مانند نحوه ارسال، نحوه دریافت و ..." name="description" id="description"></textarea>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-12">
+                                        <br />
+                                        <h3>خلاصه وضعیت فاکتور</h3>
+                                        <div class="order_table table-responsive table-bordered">
+                                            <table>
+                                                <thead>
+                                                    <tr>
+                                                        <th>مبلغ قابل پرداخت</th>
+                                                        <th>مبلغ نهایی</th>
+                                                        <th>مبلغ تخفیف</th>
+                                                        <th>هزینه ارسال</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>@Model.Cart.PayAmount.ToMoney() تومان</td>
+                                                        <td>@Model.Cart.TotalAmount.ToMoney() تومان</td>
+                                                        <td>@Model.Cart.DiscountAmount.ToMoney() تومان</td>
+                                                        @if (Model.Cart.FreeTransform)
+                                                        {
+                                                            <td>رایگان</td>
+                                                        }
+                                                        else
+                                                        {
+                                                            <td>20,000 تومان</td>
+                                                        }
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="payment_method" id="accordion">
-                                    <div class="panel-default">
-                                        <label data-toggle="collapse" data-target="#method" aria-controls="method">
-                                            <input name="check_method" type="radio" checked=""> پرداخت نقدی
-                                        </label>
+                                    @foreach (var item in PaymentMethod.GetList())
+                                    {
+                                        <div class="panel-default">
+                                            <label for="payment_@item.Id" data-toggle="collapse"
+                                                   data-target="#collapse_@item.Id" aria-controls="collapse_@item.Id"
+                                                   @(PaymentMethod.GetList().First().Id == item.Id ? "checked" : "")>
+                                                <input type="radio" id="@item.Id" name="check_method" value="@item.Id">
 
-                                        <div id="method" class="collapse show one" data-parent="#accordion">
-                                            <div class="card-body1">
-                                                <p>این روش پرداخت، فعلا فقط برای شهرستان بوکان امکان پذیر می باشد.</p>
+                                                @item.Name
+
+                                                @if (PaymentMethod.GetList().FirstOrDefault(x => x.Id == 2)?.Name == item.Name)
+                                                {
+                                                    <img src="~/SiteTheme/assets/img/icon/BankLogo.png" alt="پرداخت آنلاین">
+                                                }
+
+                                            </label>
+
+                                            <div id="collapse_@item.Id" class="collapse one" data-parent="#accordion">
+                                                <div class="card-body1">
+                                                    <p>@item.Description</p>
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class="panel-default">
-                                        <label data-toggle="collapse" data-target="#collapsedefult" aria-controls="collapsedefult">
-                                            <input name="check_method" type="radio"> پرداخت آنلاین از طریق درگاه بانکی <img src="~/SiteTheme/assets/img/icon/BankLogo.png" alt="پرداخت آنلاین">
-                                        </label>
+                                    }
 
-                                        <div id="collapsedefult" class="collapse one" data-parent="#accordion">
-                                            <div class="card-body1">
-                                                <p>با هر نوع کارت شتاب بانکی می توانید خرید خود را آنلاین انجام دهید</p>
-                                            </div>
-                                        </div>
-                                    </div>
                                     <div class="order_button">
-                                        <button type="submit">تایید و انتقال به درگاه پرداخت </button>
+                                        <button type="submit" asp-page-handler="Pay">تایید و پرداخت سفارش</button>
                                     </div>
                                 </div>
                             </form>

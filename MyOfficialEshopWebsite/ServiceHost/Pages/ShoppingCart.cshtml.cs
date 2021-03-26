@@ -47,7 +47,7 @@ namespace ServiceHost.Pages
         }
 
 
-        public IActionResult OnGetGotoPersonalInfo()
+        public IActionResult OnGetGotoCheckout()
         {
             var serializer = new JavaScriptSerializer();
             var value = Request.Cookies[CookieName];
@@ -59,7 +59,7 @@ namespace ServiceHost.Pages
             }
 
             CartItems = _productQuery.CheckInventoryStatus(cartItems);
-            return RedirectToPage(CartItems.Any(x => !x.IsInStock) ? "/ShoppingCart" : "/PersonalInfo");
+            return RedirectToPage(CartItems.Any(x => !x.IsInStock) ? "/ShoppingCart" : "/Checkout");
         }
     }
 }

@@ -14,6 +14,7 @@ using ShopManagement.Application.Contract.ProductCategory;
 using ShopManagement.Application.Contract.ProductPicture;
 using ShopManagement.Application.Contract.Slider;
 using ShopManagement.Configuration.Permissions;
+using ShopManagement.Domain.Order;
 using ShopManagement.Domain.Product;
 using ShopManagement.Domain.ProductCategory;
 using ShopManagement.Domain.ProductPicture;
@@ -46,7 +47,11 @@ namespace ShopManagement.Configuration
             services.AddTransient<IPermissionExposition, ShopPermissionExposition>();
 
             services.AddTransient<ICartCalculatorService, CartCalculatorService>();
-            services.AddTransient<ICartService, CartService>();
+
+            services.AddSingleton<ICartService, CartService>();
+
+            services.AddTransient<IOrderApplication, OrderApplication>();
+            services.AddTransient<IOrderRepository, OrderRepository>();
 
 
 

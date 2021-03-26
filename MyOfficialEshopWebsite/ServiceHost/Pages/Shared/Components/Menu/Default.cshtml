@@ -17,7 +17,7 @@
                         <a href="javascript:void(0)"><i class="ion-android-close"></i></a>
                     </div>
                     <div class="antomi_message">
-                        <p>ارسال رایگان - ضمانت بازگشت کالا تا 7 روز</p>
+                        <p>ارسال رایگان برای خریدهای بیش از 500 هزار تومان - ضمانت بازگشت کالا تا 7 روز</p>
                     </div>
                     <div class="header_top_settings text-right">
                         <ul>
@@ -147,9 +147,13 @@
             <div class="header_top">
                 <div class="row align-items-center">
                     <div class="col-lg-4 col-md-5">
-                        <div class="antomi_message">
-                            <p>ارسال رایگان - ضمانت بازگشت کالا تا 7 روز</p>
-                        </div>
+                        @if (AuthHelper.CurrentAccountRole() == Roles.Administrator ||
+                             AuthHelper.CurrentAccountRole() == Roles.AdminAssistant ||
+                             AuthHelper.CurrentAccountRole() == Roles.ContentUploader)
+                        {
+                            <a asp-page="/Index" asp-area="Administration">مدیریت سایت</a>
+
+                        }
                     </div>
                     <div class="col-lg-8 col-md-7">
                         <div class="header_top_settings text-right">
@@ -159,15 +163,8 @@
                                     <li><a href="#">@AuthHelper.CurrentAccountInfo().FullName عزیز خوش آمدید!</a></li>
                                 }
                                 <li><a href="https://tracking.post.ir/">پیگیری سفارش</a></li>
-                                <li>تلفن تماس: <a class="ltr-text" href="tel:+(+98)9337878585">(+98) 933 787 8585 </a></li>
                                 <li>ضمانت کیفیت محصولات</li>
-                                @if (AuthHelper.CurrentAccountRole() == Roles.Administrator ||
-                                    AuthHelper.CurrentAccountRole() == Roles.AdminAssistant ||
-                                    AuthHelper.CurrentAccountRole() == Roles.ContentUploader)
-                                {
-                                    <li><a asp-page="/Index" asp-area="Administration">مدیریت سایت</a></li>
-
-                                }
+                                <li>ضمانت بازگشت کالا تا 7 روز</li>
                             </ul>
                         </div>
                     </div>

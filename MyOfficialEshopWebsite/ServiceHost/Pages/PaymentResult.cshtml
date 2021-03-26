@@ -1,0 +1,60 @@
+﻿@page
+@model ServiceHost.Pages.PaymentResultModel
+
+@{
+    ViewData["Title"] = "نتیجه پرداخت تراکنش";
+}
+
+
+<div class="error_page_bg">
+    <div class="container">
+        <div class="error_section">
+            <div class="row">
+                <div class="col-12">
+                    <div class="error_form">
+                        @if (Model.Result.IsSuccessful)
+                        {
+                            <h1>مبارکتون باشه!</h1>
+                            <h3>مشتری گرامی از خرید شما سپاسگزاریم به امید دیدار مجدد شما در خریدهای آتی</h3>
+                            <br />
+                            if (!string.IsNullOrWhiteSpace(Model.Result.IssueTrackingNo))
+                            {
+                                <div class="order_table table-responsive table-bordered">
+                                    <table>
+                                        <thead>
+                                            <tr>
+                                                <th>شماره پیگیری تراکنش</th>
+                                                <th>نتیجه تراکنش</th>
+                                                <th>تاریخ انجام تراکنش</th>
+                                            </tr>
+                                        </thead>
+
+                                        <tbody>
+                                            <tr>
+                                                <td><strong> @Model.Result.IssueTrackingNo</strong></td>
+                                                <td class="text text-success"><strong> @Model.Result.Message</strong></td>
+                                                <td><strong> @Model.Result.CreationDate</strong></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <br />
+                                </div>
+                            }
+                            <a asp-page="/Index">بازگشت به صفحه اصلی</a>
+                        }
+                        else
+                        {
+                            <h1>متاسفیم!</h1>
+                            <h2>متاسفانه پرداخت با خطا مواجه شد. لطفا دوباره تلاش نمایید.</h2>
+                            <p class="alert alert-danger">
+                                @Model.Result.Message<br>
+                            </p>
+                            <a asp-page="/Index">بازگشت به صفحه اصلی</a>
+                        }
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
