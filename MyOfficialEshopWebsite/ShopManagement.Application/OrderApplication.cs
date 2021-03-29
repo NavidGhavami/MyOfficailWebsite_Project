@@ -1,8 +1,10 @@
 ﻿using System.Collections.Generic;
 using _0_Framework.Application;
 using Microsoft.Extensions.Configuration;
+using ShopManagement.Application.Contract;
 using ShopManagement.Application.Contract.Order;
 using ShopManagement.Domain.Order;
+using ShopManagement.Domain.Services;
 
 namespace ShopManagement.Application
 {
@@ -10,16 +12,16 @@ namespace ShopManagement.Application
     {
         private readonly IAuthHelper _authHelper;
         private readonly IConfiguration _configuration;
-        private readonly IOrderRepository _orderRepository;
-        // private readonly IShopInventoryAcl _shopInventoryAcl;
+        private readonly IOrderRepository _orderRepository; 
+        private readonly IShopInventoryAcl _shopInventoryAcl;
 
         public OrderApplication(IOrderRepository orderRepository, IAuthHelper authHelper,
-            IConfiguration configuration/*, IShopInventoryAcl shopInventoryAcl*/)
+            IConfiguration configuration, IShopInventoryAcl shopInventoryAcl)
         {
             _orderRepository = orderRepository;
             _authHelper = authHelper;
-            _configuration = configuration;
-            // _shopInventoryAcl = shopInventoryAcl;
+            _configuration = configuration; 
+            _shopInventoryAcl = shopInventoryAcl;
         }
 
         public long PlaceOrder(Cart cart, PersonalInfoItemViewModel personalInfo)
@@ -61,7 +63,7 @@ namespace ShopManagement.Application
             var issueTrackingNo = CodeGenerator.Generate(symbol);
             order.SetIssueTrackingNo(issueTrackingNo);
 
-            // if (!_shopInventoryAcl.DecreaseFromInventory(order.Items)) return "";
+            if (!_shopInventoryAcl.DecreaseFromInventory(order.Items)) return "";
 
             _orderRepository.SaveChanges();
             return issueTrackingNo;
@@ -94,5 +96,7 @@ namespace ShopManagement.Application
         {
             return _orderRepository.GetPersonalInfoBy(orderId);
         }
+
+        
     }
 }

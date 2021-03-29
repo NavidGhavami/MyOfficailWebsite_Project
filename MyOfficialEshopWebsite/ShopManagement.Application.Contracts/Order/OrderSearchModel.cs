@@ -6,5 +6,6 @@
         public string AccountName { get; set; }
         public string IssueTrackingNo { get; set; }
         public bool IsCanceled { get; set; }
+        
     }
 }

@@ -12,6 +12,7 @@
         public bool IsCanceled { get; set; }
         public long RefId { get; set; }
         public string IssueTrackingNo { get; set; }
+        public int PaymentMethod { get; set; }
         public string CreationDate { get; set; }
     }
 }

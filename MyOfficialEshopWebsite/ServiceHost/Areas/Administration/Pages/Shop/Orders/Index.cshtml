@@ -73,6 +73,7 @@
                                         <th>شماره پیگیری</th>
                                         <th>شناسه خرید</th>
                                         <th>تاریخ خرید</th>
+                                        <th>نحوه خرید</th>
                                         <th>وضعیت</th>
                                         <th>عملیات</th>
                                     </tr>
@@ -80,50 +81,62 @@
                                 <tbody>
                                     @foreach (var item in Model.Orders)
                                     {
-                                        <tr>
-                                            <td>@item.Id</td>
-                                            <td>@item.AccountFullname</td>
-                                            <td>@item.TotalAmount.ToMoney() تومان</td>
-                                            <td>@item.DiscountAmount.ToMoney() تومان</td>
-                                            <td>@item.PayAmount.ToMoney() تومان</td>
-                                            <td>@item.IssueTrackingNo</td>
-                                            <td>@item.RefId</td>
-                                            <td>@item.CreationDate</td>
-                                            <td>
-                                                @if (item.IsCanceled)
-                                                {
-                                                    <span class="text-danger">کنسل شده</span>
-                                                }
-                                                @if (item.IsPaid)
-                                                {
-                                                    <span class="text-success">پرداخت شده</span>
-                                                }
-                                                @if (!item.IsCanceled && !item.IsPaid)
-                                                {
-                                                    <span class="text-warning">در انتظار پرداخت</span>
-                                                }
-                                            </td>
-                                            <td>
-                                                @if (item.IsPaid == false)
-                                                {
-                                                    <a class="btn btn-success btn-rounded waves-effect waves-light m-b-5" asp-page-handler="Confirm" asp-route-id="@item.Id">
-                                                        <i class="fa fa-check"></i> تایید
-                                                    </a>
-                                                    <a class="btn btn-danger btn-rounded waves-effect waves-light m-b-5" asp-page-handler="Cancel" asp-route-id="@item.Id">
-                                                        <i class="fa fa-close"></i> لغو
-                                                    </a>
-                                                }
-                                                <a class="btn btn-warning btn-rounded waves-effect waves-light m-b-5"
-                                                   href="#showmodal=@Url.Page("./Index", "GetItems", new {id = item.Id})">
-                                                    <i class="fa fa-shopping-bag"></i>  محصولات
+                                    <tr>
+                                        <td>@item.Id</td>
+                                        <td>@item.AccountFullname</td>
+                                        <td>@item.TotalAmount.ToMoney() تومان</td>
+                                        <td>@item.DiscountAmount.ToMoney() تومان</td>
+                                        <td>@item.PayAmount.ToMoney() تومان</td>
+                                        <td>@item.IssueTrackingNo</td>
+                                        <td>@item.RefId</td>
+                                        <td>@item.CreationDate</td>
+                                        @if (item.PaymentMethod == 1)
+                                        {
+                                            <td>نقدی</td>
+                                        }
+                                        else
+                                        {
+                                            <td>اینترنتی</td>
+
+                                        }
+
+
+
+                                        <td>
+                                            @if (item.IsCanceled)
+                                            {
+                                                <span class="text-danger">کنسل شده</span>
+                                            }
+                                            @if (item.IsPaid)
+                                            {
+                                                <span class="text-success">پرداخت شده</span>
+                                            }
+                                            @if (!item.IsCanceled && !item.IsPaid)
+                                            {
+                                                <span class="text-warning">در انتظار پرداخت</span>
+                                            }
+                                        </td>
+                                        <td>
+                                            @if (item.IsPaid == false)
+                                            {
+                                                <a class="btn btn-success btn-rounded waves-effect waves-light m-b-5" asp-page-handler="Confirm" asp-route-id="@item.Id">
+                                                    <i class="fa fa-check"></i> تایید
                                                 </a>
-                                                <a class="btn btn-primary btn-rounded waves-effect waves-light m-b-5"
-                                                   href="#showmodal=@Url.Page("./Index", "GetPersonalInfo", new {id = item.Id})"
-                                                   onclick="$('.modal-dialog').css('width','100%')">
-                                                    <i class="fa fa-shopping-bag"></i>  آدرس مشتری
+                                                <a class="btn btn-danger btn-rounded waves-effect waves-light m-b-5" asp-page-handler="Cancel" asp-route-id="@item.Id">
+                                                    <i class="fa fa-close"></i> لغو
                                                 </a>
-                                            </td>
-                                        </tr>
+                                            }
+                                            <a class="btn btn-warning btn-rounded waves-effect waves-light m-b-5"
+                                               href="#showmodal=@Url.Page("./Index", "GetItems", new {id = item.Id})">
+                                                <i class="fa fa-shopping-bag"></i>  محصولات
+                                            </a>
+                                            <a class="btn btn-primary btn-rounded waves-effect waves-light m-b-5"
+                                               href="#showmodal=@Url.Page("./Index", "GetPersonalInfo", new {id = item.Id})"
+                                               onclick="$('.modal-dialog').css('width','100%')">
+                                                <i class="fa fa-shopping-bag"></i>  آدرس مشتری
+                                            </a>
+                                        </td>
+                                    </tr>
                                     }
                                 </tbody>
                             </table>
@@ -139,7 +152,7 @@
     <script src="~/AdminTheme/assets/datatables/dataTables.bootstrap.js"></script>
 
     <script type="text/javascript">
-        $(document).ready(function() {
+        $(document).ready(function () {
             $('#datatable').dataTable();
         });
     </script>

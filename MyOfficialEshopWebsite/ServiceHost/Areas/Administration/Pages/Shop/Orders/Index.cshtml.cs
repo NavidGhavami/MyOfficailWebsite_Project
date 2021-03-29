@@ -1,4 +1,4 @@
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using AccountManagement.Application.Contract.Account;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
@@ -12,6 +12,9 @@ namespace ServiceHost.Areas.Administration.Pages.Shop.Orders
         public OrderSearchModel SearchModel;
         public List<OrderViewModel> Orders;
         public SelectList Accounts;
+        public bool PaymentMethod;
+        public int PaymentName = 1;
+
 
         private readonly IOrderApplication _orderApplication;
         private readonly IAccountApplication _accountApplication;
@@ -21,6 +24,8 @@ namespace ServiceHost.Areas.Administration.Pages.Shop.Orders
             _orderApplication = orderApplication;
             _accountApplication = accountApplication;
         }
+
+      
 
         public void OnGet(OrderSearchModel searchModel)
         {

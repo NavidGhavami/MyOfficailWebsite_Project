@@ -30,9 +30,11 @@ namespace ShopManagement.Application.Contract
             };
         }
 
-        public PaymentMethod GetBy(long id)
+        public static PaymentMethod GetBy(long id)
         {
             return GetList().FirstOrDefault(x => x.Id == id);
         }
+
+       
     }
 }

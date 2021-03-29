@@ -15,12 +15,12 @@ namespace InventoryManagement.Domain.InventoryAgg
         public long InventoryId { get; private set; }
         public Inventory Inventory { get; set; }
 
-        public InventoryOperation(bool operation, long count,  long currentCount,
+        public InventoryOperation(bool operation, long count, long operatorId, long currentCount,
             string description, long orderId, long inventoryId)
         {
             Operation = operation;
             Count = count;
-           // OperatorId = operatorId;
+            OperatorId = operatorId;
             CurrentCount = currentCount;
             Description = description;
             OrderId = orderId;

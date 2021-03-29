@@ -8,12 +8,12 @@ namespace InventoryManagement.Application
     public class InventoryApplication : IInventoryApplication
     {
         private readonly IInventoryRepository _inventoryRepository;
-        // private readonly IAuthHelper _authHelper;
+        private readonly IAuthHelper _authHelper;
 
-        public InventoryApplication(IInventoryRepository inventoryRepository)
+        public InventoryApplication(IInventoryRepository inventoryRepository, IAuthHelper authHelper)
         {
             _inventoryRepository = inventoryRepository;
-            //_authHelper = authHelper;
+            _authHelper = authHelper;
         }
 
         public OperationResult Create(CreateInventory command)
@@ -76,7 +76,8 @@ namespace InventoryManagement.Application
                 return operation.Failed(ApplicationMessages.RecordNotFound);
             }
 
-            inventory.Increase(command.Count, command.Description);
+            var operatorId = _authHelper.CurrentAccountId();
+            inventory.Increase(command.Count, operatorId, command.Description);
 
             _inventoryRepository.SaveChanges();
 
@@ -93,8 +94,8 @@ namespace InventoryManagement.Application
                 return operation.Failed(ApplicationMessages.RecordNotFound);
             }
 
-            //var operatorId = _authHelper.CurrentAccountId();
-            inventory.Decrease(command.Count, command.Description, 0);
+            var operatorId = _authHelper.CurrentAccountId();
+            inventory.Decrease(command.Count, operatorId, command.Description, 0);
 
             _inventoryRepository.SaveChanges();
 
@@ -104,11 +105,11 @@ namespace InventoryManagement.Application
         public OperationResult Decrease(List<DecreaseInventory> command)
         {
             var operation = new OperationResult();
-            //var operatorId = _authHelper.CurrentAccountId();
+            var operatorId = _authHelper.CurrentAccountId();
             foreach (var item in command)
             {
                 var inventory = _inventoryRepository.GetBy(item.ProductId);
-                inventory.Decrease(item.Count, item.Description, item.OrderId);
+                inventory.Decrease(item.Count, operatorId, item.Description, item.OrderId);
             }
 
             _inventoryRepository.SaveChanges();

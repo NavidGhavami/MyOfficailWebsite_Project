@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using _0_Framework.Domain;
+using ShopManagement.Application.Contract;
 using ShopManagement.Application.Contract.Order;
 
 namespace ShopManagement.Domain.Order

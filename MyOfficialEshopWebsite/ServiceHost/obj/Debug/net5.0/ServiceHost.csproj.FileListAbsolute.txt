@@ -289,3 +289,5 @@ E:\Programming\Codes and projects\MyOfficialEshopWebsite\MyOfficialEshopWebsite\
 E:\Programming\Codes and projects\MyOfficialEshopWebsite\MyOfficialEshopWebsite\ServiceHost\obj\Debug\net5.0\ServiceHost.pdb
 E:\Programming\Codes and projects\MyOfficialEshopWebsite\MyOfficialEshopWebsite\ServiceHost\obj\Debug\net5.0\ServiceHost.genruntimeconfig.cache
 E:\Programming\Codes and projects\MyOfficialEshopWebsite\MyOfficialEshopWebsite\ServiceHost\obj\Debug\net5.0\Razor\Areas\Administration\Pages\Shop\Orders\PersonalInfo.cshtml.g.cs
+E:\Programming\Codes and projects\MyOfficialEshopWebsite\MyOfficialEshopWebsite\ServiceHost\bin\Debug\net5.0\ShopManagement.Infrastructure.InventoryAcl.dll
+E:\Programming\Codes and projects\MyOfficialEshopWebsite\MyOfficialEshopWebsite\ServiceHost\bin\Debug\net5.0\ShopManagement.Infrastructure.InventoryAcl.pdb

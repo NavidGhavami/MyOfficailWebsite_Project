@@ -14,5 +14,6 @@ namespace ShopManagement.Application.Contract.Order
         PersonalInfoItemViewModel GetPersonalInfoBy(long orderId);
 
 
+
     }
 }

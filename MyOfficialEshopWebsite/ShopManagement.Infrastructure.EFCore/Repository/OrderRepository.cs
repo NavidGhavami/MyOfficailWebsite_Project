@@ -1,9 +1,11 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using _0_Framework.Application;
 using _0_Framework.Infrastructure;
 using AccountManagement.Infrastructure.EFCore;
 using Microsoft.EntityFrameworkCore;
+using ShopManagement.Application.Contract;
 using ShopManagement.Application.Contract.Order;
 using ShopManagement.Domain.Order;
 
@@ -44,6 +46,7 @@ namespace ShopManagement.Infrastructure.EFCore.Repository
                 PayAmount = x.PayAmount,
                 RefId = x.RefId,
                 TotalAmount = x.TotalAmount,
+                PaymentMethod = x.PaymentMethod,
                 CreationDate = x.CreationDate.ToFarsi(),
 
 
@@ -121,7 +124,7 @@ namespace ShopManagement.Infrastructure.EFCore.Repository
                 return new PersonalInfoItemViewModel();
             }
 
-            var personalInfo = new PersonalInfoItemViewModel 
+            var personalInfo = new PersonalInfoItemViewModel
             {
                 Id = order.PersonalInfoItem.Id,
                 AccountId = order.PersonalInfoItem.AccountId,
@@ -140,9 +143,9 @@ namespace ShopManagement.Infrastructure.EFCore.Repository
 
             };
 
-
-
             return personalInfo;
         }
+
+       
     }
 }
