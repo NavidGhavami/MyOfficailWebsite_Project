@@ -92,11 +92,11 @@
                                     <div class="row">
                                         <div class="col-lg-6 mb-20">
                                             <label>نام <span>*</span></label>
-                                            <input type="text" name="name" id="name" required="این فیلد الزامی است">
+                                            <input type="text" name="name" id="name" required>
                                         </div>
                                         <div class="col-lg-6 mb-20">
                                             <label>نام خانوادگی <span>*</span></label>
-                                            <input type="text" name="family" id="family" required="این فیلد الزامی است">
+                                            <input type="text" name="family" id="family" required>
                                         </div>
                                         <div class="col-12 mb-20">
                                             <label>نام فروشگاه یا شرکت</label>
@@ -104,102 +104,95 @@
                                         </div>
                                         <div class="col-lg-4 mb-20">
                                             <label>کشور <span>*</span></label>
-                                            <input placeholder="مثلا : ایران" type="text" name="country" id="country" required="این فیلد الزامی است">
+                                            <input placeholder="مثلا : ایران" type="text" name="country" id="country" required>
                                         </div>
                                         <div class="col-lg-4 mb-20">
                                             <label>استان <span>*</span></label>
-                                            <input placeholder="مثلا : تهران" type="text" name="state" id="state" required="این فیلد الزامی است">
+                                            <input placeholder="مثلا : تهران" type="text" name="state" id="state" required>
                                         </div>
                                         <div class="col-lg-4 mb-20">
                                             <label>شهر / شهرستان <span>*</span></label>
-                                            <input placeholder="مثلا : تهران" type="text" name="city" id="city" required="این فیلد الزامی است">
+                                            <input placeholder="مثلا : تهران" type="text" name="city" id="city" required>
                                         </div>
                                         <div class="col-lg-12 mb-20">
                                             <label>خیابان <span>*</span></label>
-                                            <input placeholder="نام خیابان و نام کوچه و ..." type="text" name="street" id="street" required="این فیلد الزامی است">
+                                            <input placeholder="نام خیابان و نام کوچه و ..." type="text" name="street" id="street" required>
                                         </div>
                                         <div class="col-lg-4 mb-20">
                                             <label>کد پستی <span>*</span></label>
-                                            <input type="text" name="postalCode" id="postalCode" required="این فیلد الزامی است">
+                                            <input type="text" name="postalCode" id="postalCode" required>
                                         </div>
                                         <div class="col-lg-4 mb-20">
                                             <label>شماره پلاک <span>*</span></label>
-                                            <input type="text" name="plaqueNo" id="plaqueNo" required="این فیلد الزامی است">
+                                            <input type="text" name="plaqueNo" id="plaqueNo" required>
                                         </div>
                                         <div class="col-lg-4 mb-20">
                                             <label>تلفن همراه <span>*</span></label>
-                                            <input type="text" dir="ltr" name="mobile" id="mobile" required="این فیلد الزامی است">
+                                            <input type="text" dir="ltr" name="mobile" id="mobile" required>
                                         </div>
                                         <div class="col-lg-12 mb-20">
                                             <label>آدرس ایمیل <span>*</span></label>
-                                            <input placeholder="مثلا : info@gmail.com" type="email" dir="rtl" name="email" id="email" required="این فیلد الزامی است">
+                                            <input placeholder="مثلا : info@gmail.com" type="email" dir="rtl" name="email" id="email" required>
                                         </div>
                                         <div class="order-notes col-lg-12 mb-20">
                                             <label>توضیحات سفارش</label>
                                             <textarea placeholder="یادداشت های مربوط به سفارش، مانند نحوه ارسال، نحوه دریافت و ..." name="description" id="description"></textarea>
                                         </div>
                                     </div>
-                                    <div class="col-lg-12">
-                                        <br />
-                                        <h3>خلاصه وضعیت فاکتور</h3>
-                                        <div class="order_table table-responsive table-bordered">
-                                            <table>
-                                                <thead>
-                                                    <tr>
-                                                        <th>مبلغ قابل پرداخت</th>
-                                                        <th>مبلغ نهایی</th>
-                                                        <th>مبلغ تخفیف</th>
-                                                        <th>هزینه ارسال</th>
-                                                    </tr>
-                                                </thead>
-                                                <tbody>
-                                                    <tr>
-                                                        <td>@Model.Cart.PayAmount.ToMoney() تومان</td>
-                                                        <td>@Model.Cart.TotalAmount.ToMoney() تومان</td>
-                                                        <td>@Model.Cart.DiscountAmount.ToMoney() تومان</td>
-                                                        @if (Model.Cart.FreeTransform)
-                                                        {
-                                                            <td>رایگان</td>
-                                                        }
-                                                        else
-                                                        {
-                                                            <td>20,000 تومان</td>
-                                                        }
-                                                    </tr>
-                                                </tbody>
-                                            </table>
-                                        </div>
+                                    <br />
+                                    <h3>خلاصه وضعیت فاکتور</h3>
+                                    <div class="order_table table-responsive table-bordered">
+                                        <table>
+                                            <thead>
+                                                <tr>
+                                                    <th>مبلغ قابل پرداخت</th>
+                                                    <th>مبلغ نهایی</th>
+                                                    <th>مبلغ تخفیف</th>
+                                                    <th>هزینه ارسال</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>@Model.Cart.PayAmount.ToMoney() تومان</td>
+                                                    <td>@Model.Cart.TotalAmount.ToMoney() تومان</td>
+                                                    <td>@Model.Cart.DiscountAmount.ToMoney() تومان</td>
+                                                    @if (Model.Cart.FreeTransform)
+                                                    {
+                                                        <td>رایگان</td>
+                                                    }
+                                                    else
+                                                    {
+                                                        <td>20,000 تومان</td>
+                                                    }
+                                                </tr>
+                                            </tbody>
+                                        </table>
                                     </div>
                                 </div>
                                 <div class="payment_method" id="accordion">
-                                    @foreach (var item in PaymentMethod.GetList())
+                                    <h3>نحوه پرداخت</h3>
+                                    @foreach (var method in PaymentMethod.GetList())
                                     {
                                         <div class="panel-default">
-                                            <label for="payment_@item.Id" data-toggle="collapse"
-                                                   data-target="#collapse_@item.Id" aria-controls="collapse_@item.Id"
-                                                   @(PaymentMethod.GetList().First().Id == item.Id ? "checked" : "")>
-                                                <input type="radio" id="@item.Id" name="check_method" value="@item.Id">
+                                            <input type="radio" id="payment_@method.Id" name="paymentMethod" value="@method.Id" @(PaymentMethod.GetList().First().Id == method.Id ? "checked" : "")>
+                                            <label for="payment_@method.Id" data-toggle="collapse"
+                                                   data-target="#collapse_@method.Id" aria-controls="collapse_@method.Id">@method.Name</label>
 
-                                                @item.Name
-
-                                                @if (PaymentMethod.GetList().FirstOrDefault(x => x.Id == 2)?.Name == item.Name)
+                                                @if (PaymentMethod.GetList().FirstOrDefault(x => x.Id == 2)?.Name == method.Name)
                                                 {
-                                                    <img src="~/SiteTheme/assets/img/icon/BankLogo.png" alt="پرداخت آنلاین">
+                                                    <img src="~/SiteTheme/assets/img/icon/BankLogo.png" alt="پرداخت اینترنتی">
                                                 }
-
-                                            </label>
-
-                                            <div id="collapse_@item.Id" class="collapse one" data-parent="#accordion">
-                                                <div class="card-body1">
-                                                    <p>@item.Description</p>
+                                                <div id="collapse_@method.Id" class="collapse one" data-parent="#accordion">
+                                                    <div class="card-body1">
+                                                        <p data-method="@method.Id" style="display:@(PaymentMethod.GetList().First().Id == method.Id ? "block" : "none")">@method.Description</p>
+                                                    </div>
                                                 </div>
                                             </div>
-                                        </div>
-                                    }
-
-                                    <div class="order_button">
-                                        <button type="submit" asp-page-handler="Pay">تایید و پرداخت سفارش</button>
-                                    </div>
+                                        }
+                                </div>
+                                <br />
+                                <div class="order_button">
+                                    <button type="submit" asp-page-handler="Pay">تایید و پرداخت سفارش</button>
                                 </div>
                             </form>
                         </div>

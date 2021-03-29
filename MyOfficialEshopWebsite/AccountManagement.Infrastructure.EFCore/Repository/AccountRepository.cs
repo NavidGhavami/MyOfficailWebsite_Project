@@ -30,7 +30,7 @@ namespace AccountManagement.Infrastructure.EFCore.Repository
                 RoleId = x.RoleId,
                 FullName = x.FullName,
                 Username = x.Username,
-                Mobile = x.Mobile
+                Mobile = x.Mobile,
             }).FirstOrDefault(x => x.Id == id);
         }
 

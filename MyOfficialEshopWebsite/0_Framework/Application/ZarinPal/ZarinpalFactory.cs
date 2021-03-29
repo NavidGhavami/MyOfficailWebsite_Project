@@ -19,7 +19,7 @@ namespace _0_Framework.Application.ZarinPal
             MerchantId= _configuration.GetSection("payment")["merchant"];
         }
 
-        public PaymentResponse CreatePaymentRequest(string amount, string mobile, string email, string description, long orderId)
+        public PaymentResponse CreatePaymentRequest(string amount, string mobile, string username, string description, long orderId)
         {
             amount = amount.Replace(",", "");
             var finalAmount = int.Parse(amount);
@@ -33,7 +33,7 @@ namespace _0_Framework.Application.ZarinPal
                 Mobile = mobile,
                 CallbackURL = $"{siteUrl}/Checkout?handler=CallBack&oId={orderId}",
                 Description = description,
-                Email = email,
+                Username = username,
                 Amount = finalAmount,
                 MerchantID = MerchantId
             };

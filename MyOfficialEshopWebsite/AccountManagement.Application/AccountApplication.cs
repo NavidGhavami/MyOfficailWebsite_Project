@@ -115,7 +115,7 @@ namespace AccountManagement.Application
                 .ToList();
 
             var authViewModel = new AuthViewModel(account.Id, account.RoleId, account.FullName,
-                account.Username, account.ProfilePhoto, permissions);
+                account.Username, account.ProfilePhoto, permissions, account.Mobile);
 
             _authHelper.SignIn(authViewModel);
 

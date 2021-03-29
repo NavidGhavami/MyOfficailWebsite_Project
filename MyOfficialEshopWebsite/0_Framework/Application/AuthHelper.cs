@@ -23,6 +23,7 @@ namespace _0_Framework.Application
         public void SignIn(AuthViewModel account)
         {
             var permission = JsonConvert.SerializeObject(account.Permissions);
+
             var claims = new List<Claim>
             {
                 new Claim("AccountId", account.Id.ToString()),
@@ -32,6 +33,7 @@ namespace _0_Framework.Application
                 new Claim("Fullname", account.FullName),
                 new Claim("Picture", account.Picture),
                 new Claim("permissions", permission),
+                new Claim("Mobile",account.Mobile),
 
             };
 
@@ -67,6 +69,7 @@ namespace _0_Framework.Application
         public AuthViewModel CurrentAccountInfo()
         {
             var result = new AuthViewModel();
+
             if (!IsAuthenticated())
             {
                 return new AuthViewModel();
@@ -75,11 +78,13 @@ namespace _0_Framework.Application
             var claims = _contextAccessor.HttpContext.User.Claims.ToList();
 
             result.Id = long.Parse(claims.FirstOrDefault(x => x.Type == "AccountId").Value);
-            result.FullName = claims.FirstOrDefault(x => x.Type == "Fullname").Value;
+            result.FullName = claims.FirstOrDefault(x => x.Type == "Fullname")?.Value;
             result.RoleId = long.Parse(claims.FirstOrDefault(x => x.Type == ClaimTypes.Role).Value);
-            result.Username = claims.FirstOrDefault(x => x.Type == "Username").Value;
+            result.Username = claims.FirstOrDefault(x => x.Type == "Username")?.Value;
             result.Role = Roles.GetRoleBy(result.RoleId);
-            result.Picture = claims.FirstOrDefault(x => x.Type == "Picture").Value;
+            result.Picture = claims.FirstOrDefault(x => x.Type == "Picture")?.Value;
+            result.Mobile = claims.FirstOrDefault(x => x.Type == "Mobile")?.Value;
+            
 
 
             return result;

@@ -40,6 +40,27 @@
                                     <br />
                                 </div>
                             }
+                            else
+                            {
+                                <div class="order_table table-responsive table-bordered">
+                                    <table>
+                                        <thead>
+                                        <tr>
+                                            <th>نتیجه تراکنش</th>
+                                            <th>تاریخ انجام تراکنش</th>
+                                        </tr>
+                                        </thead>
+
+                                        <tbody>
+                                        <tr>
+                                            <td class="text text-success"><strong> @Model.Result.Message</strong></td>
+                                            <td><strong> @Model.Result.CreationDate</strong></td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                    <br />
+                                </div>
+                            }
                             <a asp-page="/Index">بازگشت به صفحه اصلی</a>
                         }
                         else

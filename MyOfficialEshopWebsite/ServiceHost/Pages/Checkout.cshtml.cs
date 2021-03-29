@@ -21,12 +21,12 @@ namespace ServiceHost.Pages
         public Cart Cart;
         public const string CookieName = "cart-items";
 
-        private readonly ICartCalculatorService _cartCalculatorService;
+        private readonly IAuthHelper _authHelper;
         private readonly ICartService _cartService;
         private readonly IProductQuery _productQuery;
-        private readonly IOrderApplication _orderApplication;
         private readonly IZarinPalFactory _zarinPalFactory;
-        private readonly IAuthHelper _authHelper;
+        private readonly IOrderApplication _orderApplication;
+        private readonly ICartCalculatorService _cartCalculatorService;
         public CheckoutModel(ICartCalculatorService calculatorService, ICartService cartService,
             IProductQuery productQuery, IOrderApplication orderApplication, IZarinPalFactory zarinPalFactory, IAuthHelper authHelper)
         {
@@ -80,7 +80,8 @@ namespace ServiceHost.Pages
             }
 
             var orderId = _orderApplication.PlaceOrder(cart, personalInfo);
-
+            var accountMobile = _authHelper.CurrentAccountInfo().Mobile;
+            var accountUserName = _authHelper.CurrentAccountInfo().Username;
 
 
             if (paymentMethod == 1)
@@ -88,8 +89,12 @@ namespace ServiceHost.Pages
                 var paymentResult = new PaymentResult();
                 var creationDate = DateTime.Now.ToFarsi();
 
+                Response.Cookies.Delete(CookieName);
+
                 return RedirectToPage("/PaymentResult", paymentResult.Succeeded(
                     "سفارش شما ثبت شد. پس از تماس کارشناسان ما و پرداخت وجه سفارش ارسال خواهد شد.", null, creationDate));
+                
+
             }
             else
             {
@@ -97,10 +102,11 @@ namespace ServiceHost.Pages
                 var paymentResponse = _zarinPalFactory.CreatePaymentRequest(
 
                     cart.PayAmount.ToString(CultureInfo.InvariantCulture),
-                    "",
-                    "",
+                    accountMobile,
+                    accountUserName,
                     "خرید از فروشگاه هنری",
                     orderId
+                  
                 );
 
                 return Redirect($"https://{_zarinPalFactory.Prefix}.zarinpal.com/pg/StartPay/{paymentResponse.Authority}");
