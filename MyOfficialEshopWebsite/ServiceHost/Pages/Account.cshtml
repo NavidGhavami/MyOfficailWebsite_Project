@@ -33,11 +33,11 @@
                         <form method="post" asp-page-handler="Login">
                             <p>
                                 <label>نام کاربری <span>*</span></label>
-                                <input type="text" name="username" dir="ltr">
+                                <input type="text" name="username" required dir="ltr">
                             </p>
                             <p>
                                 <label>رمز عبور <span>*</span></label>
-                                <input type="password" name="password" dir="ltr">
+                                <input type="password" name="password" required dir="ltr">
                             </p>
                             <div class="login_submit">
                                 <a href="#">رمز عبور خود را فراموش کرده اید؟</a>
@@ -62,27 +62,27 @@
                         <form method="post" asp-page-handler="Register">
                             <p>
                                 <label>نام و نام خانوادگی<span>*</span></label>
-                                <input type="text" name="fullname" dir="ltr">
+                                <input type="text" name="fullname" required dir="ltr">
                             </p>
                             <p>
                                 <label>نام کاربری<span>*</span></label>
-                                <input type="text" name="username" dir="ltr">
+                                <input type="text" name="username" required dir="ltr">
                             </p>
                             <p>
                                 <label>موبایل<span>*</span></label>
-                                <input type="text" name="mobile" dir="ltr">
+                                <input type="text" name="mobile" required dir="ltr">
                             </p>
                             <p>
                                 <label>آدرس ایمیل <span>*</span></label>
-                                <input type="email" name="email" dir="ltr">
+                                <input type="email" name="email" required dir="ltr">
                             </p>
                             <p>
                                 <label>رمز عبور <span>*</span></label>
-                                <input type="password" name="password" dir="ltr">
+                                <input type="password" name="password" required dir="ltr">
                             </p>
                             <p>
                                 <label>تکرار رمز عبور<span>*</span></label>
-                                <input type="password" name="repassword" dir="ltr">
+                                <input type="password" name="repassword" required dir="ltr">
                             </p>
                             <div class="login_submit">
                                 <button type="submit">ثبت نام</button>

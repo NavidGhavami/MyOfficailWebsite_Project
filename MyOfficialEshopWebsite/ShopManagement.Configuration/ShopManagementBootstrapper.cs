@@ -1,6 +1,7 @@
 ﻿using _0_Framework.Infrastructure;
 using _01_LampshadeQuery.Query;
 using _01_Query.Contract.Cart;
+using _01_Query.Contract.Order;
 using _01_Query.Contract.Product;
 using _01_Query.Contract.ProductCategory;
 using _01_Query.Contract.Slider;
@@ -45,6 +46,7 @@ namespace ShopManagement.Configuration
             services.AddTransient<ISliderQuery, SliderQuery>();
             services.AddTransient<IProductCategoryQuery, ProductCategoryQuery>();
             services.AddTransient<IProductQuery, ProductQuery>();
+            services.AddTransient<IOrderQuery, OrderQuery>();
 
             services.AddTransient<IPermissionExposition, ShopPermissionExposition>();
 

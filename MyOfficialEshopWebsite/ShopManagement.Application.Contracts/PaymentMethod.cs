@@ -35,6 +35,7 @@ namespace ShopManagement.Application.Contract
             return GetList().FirstOrDefault(x => x.Id == id);
         }
 
-       
+
+
     }
 }

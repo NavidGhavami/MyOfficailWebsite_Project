@@ -12,8 +12,6 @@ namespace ServiceHost.Areas.Administration.Pages.Shop.Orders
         public OrderSearchModel SearchModel;
         public List<OrderViewModel> Orders;
         public SelectList Accounts;
-        public bool PaymentMethod;
-        public int PaymentName = 1;
 
 
         private readonly IOrderApplication _orderApplication;
@@ -25,12 +23,13 @@ namespace ServiceHost.Areas.Administration.Pages.Shop.Orders
             _accountApplication = accountApplication;
         }
 
-      
+
 
         public void OnGet(OrderSearchModel searchModel)
         {
+            Accounts = new SelectList(_accountApplication.GetAccounts(), "Id", "FullName");
             Orders = _orderApplication.Search(searchModel);
-            Accounts = new SelectList(_accountApplication.GetAccounts(), "Id", "Fullname");
+
         }
 
         public IActionResult OnGetConfirm(long id)

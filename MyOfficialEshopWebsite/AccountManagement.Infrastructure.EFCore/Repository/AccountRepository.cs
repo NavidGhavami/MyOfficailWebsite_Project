@@ -37,18 +37,18 @@ namespace AccountManagement.Infrastructure.EFCore.Repository
         public List<AccountViewModel> Search(AccountSearchModel searchModel)
         {
             var query = _accountContext.Accounts
-                .Include(x=>x.Role)
+                .Include(x => x.Role)
                 .Select(x => new AccountViewModel
-            {
-                Id = x.Id,
-                FullName = x.FullName,
-                Username = x.Username,
-                ProfilePhoto = x.ProfilePhoto,
-                Role = x.Role.Name,
-                RoleId = x.RoleId,
-                Mobile = x.Mobile,
-                CreationDate = x.CreationDate.ToFarsi()
-            });
+                {
+                    Id = x.Id,
+                    FullName = x.FullName,
+                    Username = x.Username,
+                    ProfilePhoto = x.ProfilePhoto,
+                    Role = x.Role.Name,
+                    RoleId = x.RoleId,
+                    Mobile = x.Mobile,
+                    CreationDate = x.CreationDate.ToFarsi()
+                });
 
             if (!string.IsNullOrWhiteSpace(searchModel.FullName))
             {
@@ -78,8 +78,9 @@ namespace AccountManagement.Infrastructure.EFCore.Repository
             {
                 Id = x.Id,
                 FullName = x.FullName
-
             }).ToList();
         }
+
+
     }
 }

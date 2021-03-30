@@ -1,6 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using _0_Framework.Application;
 using _0_Framework.Infrastructure;
 using AccountManagement.Infrastructure.EFCore;
@@ -32,9 +32,12 @@ namespace ShopManagement.Infrastructure.EFCore.Repository
             return 0;
         }
 
+       
+
         public List<OrderViewModel> Search(OrderSearchModel searchModel)
         {
-            var accounts = _accountContext.Accounts.Select(x => new { x.Id, x.FullName });
+            var accounts = _accountContext.Accounts.Select(x => new { x.Id, x.FullName }).ToList();
+
             var query = _shopContext.Orders.Select(x => new OrderViewModel
             {
                 Id = x.Id,
@@ -47,46 +50,40 @@ namespace ShopManagement.Infrastructure.EFCore.Repository
                 RefId = x.RefId,
                 TotalAmount = x.TotalAmount,
                 PaymentMethod = x.PaymentMethod,
+                PaymentMethodId = x.PaymentMethod,
                 CreationDate = x.CreationDate.ToFarsi(),
+                
+
 
 
             });
 
             query = query.Where(x => x.IsCanceled == searchModel.IsCanceled);
 
-            if (searchModel.AccountId > 0)
-            {
-                query = query.Where(x => x.AccountId == searchModel.AccountId);
-            }
-            if (!string.IsNullOrWhiteSpace(searchModel.AccountName))
-            {
-                var ords = query.OrderByDescending(x => x.Id).ToList();
+            if (searchModel.AccountId > 0) query = query.Where(x => x.AccountId == searchModel.AccountId);
 
-                foreach (var order in ords)
-                {
-                    order.AccountFullname = accounts.FirstOrDefault(x => x.Id == order.AccountId)?.FullName;
-                }
-                query = query.Where(x => x.AccountFullname.Contains(searchModel.AccountName));
-            }
             if (!string.IsNullOrWhiteSpace(searchModel.IssueTrackingNo))
             {
                 query = query.Where(x => x.IssueTrackingNo.Contains(searchModel.IssueTrackingNo));
             }
 
             var orders = query.OrderByDescending(x => x.Id).ToList();
-
             foreach (var order in orders)
             {
                 order.AccountFullname = accounts.FirstOrDefault(x => x.Id == order.AccountId)?.FullName;
+                order.PaymentMethodText = PaymentMethod.GetBy(order.PaymentMethodId).Name;
             }
 
             return orders;
 
+
         }
+
+        
 
         public List<OrderItemViewModel> GetItemsBy(long orderId)
         {
-            var products = _shopContext.Products.Select(x => new { x.Id, x.Name }).ToList();
+            var products = _shopContext.Products.Select(x => new { x.Id, x.Name, x.Seller }).ToList();
             var order = _shopContext.Orders.FirstOrDefault(x => x.Id == orderId);
             if (order == null)
             {
@@ -108,10 +105,14 @@ namespace ShopManagement.Infrastructure.EFCore.Repository
             foreach (var item in items)
             {
                 item.Product = products.FirstOrDefault(x => x.Id == item.ProductId)?.Name;
+                item.Seller = products.FirstOrDefault(x => x.Id == item.ProductId)?.Seller;
             }
 
             return items;
         }
+
+       
+
 
         public PersonalInfoItemViewModel GetPersonalInfoBy(long orderId)
         {
@@ -128,6 +129,7 @@ namespace ShopManagement.Infrastructure.EFCore.Repository
             {
                 Id = order.PersonalInfoItem.Id,
                 AccountId = order.PersonalInfoItem.AccountId,
+                OrderId = order.PersonalInfoItem.OrderId,
                 Name = order.PersonalInfoItem.Name,
                 Family = order.PersonalInfoItem.Family,
                 Company = order.PersonalInfoItem.Company,
@@ -146,6 +148,8 @@ namespace ShopManagement.Infrastructure.EFCore.Repository
             return personalInfo;
         }
 
-       
+
     }
 }
+
+

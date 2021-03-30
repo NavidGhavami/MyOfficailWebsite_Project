@@ -44,7 +44,7 @@
                             <div class="tab-pane fade show active" id="dashboard">
                                 <h3>داشبورد </h3>
                                 <p>
-                                    @AuthHelper.CurrentAccountInfo().FullName عزیز خوش آمدید. در این بخش می توانید کلیه سفارش های خود را مشاهده فرمایید. همچنین می توانید سفارش های خود را لغو نمایید.
+                                    @AuthHelper.CurrentAccountInfo().FullName عزیز خوش آمدید. در این بخش می توانید کلیه سفارش های خود را مشاهده فرمایید. همچنین می توانید آدرس های مربوط به سفارش های خود را مشاهده نمایید.
                                 </p>
                             </div>
                             <div class="tab-pane fade" id="orders">
@@ -53,49 +53,122 @@
                                     <table class="table">
                                         <thead>
                                             <tr>
-                                                <th>ترتیب</th>
-                                                <th>تاریخ</th>
+                                                <th>شماره سفارش</th>
+                                                <th>خریدار</th>
+                                                <th>کل مبلغ</th>
+                                                <th>کل تخفیف</th>
+                                                <th>پرداختی</th>
+                                                <th>شماره پیگیری</th>
+                                                <th>شناسه خرید</th>
+                                                <th>تاریخ خرید</th>
+                                                <th>نحوه خرید</th>
                                                 <th>وضعیت</th>
-                                                <th>جمع</th>
-                                                <th>اقدامات</th>
+                                                <th>عملیات</th>
+
                                             </tr>
                                         </thead>
                                         <tbody>
-                                            <tr>
-                                                <td>1</td>
-                                                <td>10 تیر 1397</td>
-                                                <td><span class="success">اتمام یافته</span></td>
-                                                <td>50,000 تومان برای یک محصول </td>
-                                                <td><a href="cart.html" class="view">مشاهده</a></td>
-                                            </tr>
-                                            <tr>
-                                                <td>2</td>
-                                                <td>10 تیر 1397</td>
-                                                <td>در حال پردازش</td>
-                                                <td>180,000 تومان برای یک محصول </td>
-                                                <td><a href="cart.html" class="view">مشاهده</a></td>
-                                            </tr>
+
+                                            @foreach (var item in Model.Orders)
+                                            {
+                                                <tr>
+                                                    <td>@item.Id</td>
+                                                    <td>@item.AccountFullname</td>
+                                                    <td>@item.TotalAmount.ToMoney() تومان</td>
+                                                    <td>@item.DiscountAmount.ToMoney() تومان</td>
+                                                    <td>@item.PayAmount.ToMoney() تومان</td>
+                                                    <td>@item.IssueTrackingNo</td>
+                                                    <td>@item.RefId</td>
+                                                    <td>@item.CreationDate</td>
+                                                    @if (item.PaymentMethod == 1)
+                                                    {
+                                                        <td>نقدی</td>
+                                                    }
+                                                    else
+                                                    {
+                                                        <td>اینترنتی</td>
+
+                                                    }
+
+                                                    <td>
+                                                        @if (item.IsCanceled)
+                                                        {
+                                                            <span class="text-danger">کنسل شده</span>
+                                                        }
+                                                        @if (item.IsPaid)
+                                                        {
+                                                            <span class="text-success">پرداخت شده</span>
+                                                        }
+                                                        @if (!item.IsCanceled && !item.IsPaid)
+                                                        {
+                                                            <span class="text-warning">در انتظار پرداخت</span>
+                                                        }
+                                                    </td>
+                                                    <td>
+
+                                                        <a class="btn btn-warning btn-rounded waves-effect waves-light m-b-5"
+                                                           asp-page="OrderItems" asp-page-handler="GetItems" asp-route-id="@item.Id">
+                                                            <i class="fa fa-shopping-bag"></i>  محصولات
+                                                        </a>
+
+                                                    </td>
+                                                </tr>
+                                            }
+
                                         </tbody>
                                     </table>
                                 </div>
                             </div>
-                            <div class="tab-pane" id="address">
-                                <form action="/" method="post">
-                                    <p>آدرس های زیر به صورت پیش فرض در صفحه سفارش شما استفاده خواهند شد.</p>
-                                    <h4 class="billing-address">آدرس صورت حساب</h4>
-                                    <a href="#" class="view">ویرایش</a>
-                                    <p><strong>جان اسنو</strong></p>
-                                    <address>
-                                        ایران<br>
-                                        آذربایجان شرقی<br>
-                                        تبریز<br>
-                                        چهارراه آبرسان، فلکه دانشگاه، برج بلور، طبقه 456، واحد 89
-                                    </address>
-                                    <div class="save_button primary_btn default_button">
-                                        <button type="submit">ویرایش</button>
-                                    </div>
-                                </form>
+                            <div class="tab-pane fade" id="address">
+                                <h3>آدرس های من</h3>
+                                <div class="table-responsive">
+                                    <table class="table">
+                                        <thead>
+                                            <tr>
+                                                <th>شماره کاربر</th>
+                                                <th>شماره سفارش</th>
+                                                <th>نام</th>
+                                                <th>نام خانوادگی</th>
+                                                <th>شرکت یا فروشگاه</th>
+                                                <th>کشور</th>
+                                                <th>استان</th>
+                                                <th>شهر / شهرستان</th>
+                                                <th>خیابان</th>
+                                                <th>کد پستی</th>
+                                                <th>پلاک</th>
+                                                <th>موبایل</th>
+                                                <th>ایمیل</th>
+                                                <th>توضیحات سفارش</th>
+
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+
+                                            @foreach (var item in Model.PersonalInfo)
+                                            {
+                                                <tr>
+                                                    <td>@item.AccountId</td>
+                                                    <td>@item.OrderId</td>
+                                                    <td>@item.Name</td>
+                                                    <td>@item.Family </td>
+                                                    <td>@item.Company</td>
+                                                    <td>@item.Country</td>
+                                                    <td>@item.State</td>
+                                                    <td>@item.City</td>
+                                                    <td>@item.Street</td>
+                                                    <td>@item.PostalCode</td>
+                                                    <td>@item.PlaqueNo</td>
+                                                    <td>@item.Mobile</td>
+                                                    <td>@item.Email</td>
+                                                    <td>@item.Description</td>
+                                                </tr>
+                                            }
+
+                                        </tbody>
+                                    </table>
+                                </div>
                             </div>
+
                             <div class="tab-pane" id="changePassword">
                                 <form action="/" method="post">
                                     <p>آدرس های زیر به صورت پیش فرض در صفحه سفارش شما استفاده خواهند شد.</p>
