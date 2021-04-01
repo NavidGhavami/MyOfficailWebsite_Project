@@ -1,5 +1,6 @@
 ﻿@page
 @using _0_Framework.Application
+@using ShopManagement.Configuration.Permissions
 @model ServiceHost.Areas.Administration.Pages.Shop.Orders.IndexModel
 
 
@@ -34,8 +35,8 @@
                             <input class="form-control" asp-for="SearchModel.IssueTrackingNo" placeholder="شماره پیگیری">
                         </div>
                         <div class="form-group">
-                            <input class="form-control" type="checkbox" asp-for="SearchModel.IsCanceled" />
-                            <label asp-for="SearchModel.IsCanceled">
+                            <input permission="@ShopPermission.SearchInCancelOrder" class="form-control" type="checkbox" asp-for="SearchModel.IsCanceled" />
+                            <label permission="@ShopPermission.SearchInCancelOrder" asp-for="SearchModel.IsCanceled">
                                 جستجو در پرداخت نشده ها
                             </label>
                         </div>
@@ -113,10 +114,10 @@
                                         <td>
                                             @if (item.IsPaid == false)
                                             {
-                                                <a class="btn btn-success btn-rounded waves-effect waves-light m-b-5" asp-page-handler="Confirm" asp-route-id="@item.Id">
+                                                <a permission="@ShopPermission.ConfirmOrder" class="btn btn-success btn-rounded waves-effect waves-light m-b-5" asp-page-handler="Confirm" asp-route-id="@item.Id">
                                                     <i class="fa fa-check"></i> تایید
                                                 </a>
-                                                <a class="btn btn-danger btn-rounded waves-effect waves-light m-b-5" asp-page-handler="Cancel" asp-route-id="@item.Id">
+                                                <a permission="@ShopPermission.CancelOrder" class="btn btn-danger btn-rounded waves-effect waves-light m-b-5" asp-page-handler="Cancel" asp-route-id="@item.Id">
                                                     <i class="fa fa-close"></i> لغو
                                                 </a>
                                             }

@@ -9,6 +9,7 @@ namespace _0_Framework.Infrastructure
         public const string UserSystem = "3";
         public const string AdminAssistant = "4";
         public const string ColleagueUser = "5";
+        public const string UserSeller = "6";
 
         public static string GetRoleBy(long id)
         {
@@ -17,6 +18,7 @@ namespace _0_Framework.Infrastructure
                 1 => "مدیر سیستم",
                 2 => "محتوا گذار",
                 4 => "دستیار مدیر",
+                6 => "کاربر فروشنده",
                 _ => ""
             };
         }

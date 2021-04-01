@@ -34,7 +34,7 @@ namespace ShopManagement.Application
                 personalInfo.Description);
 
             var order = new Order(currentAccountId, cart.PaymentMethod, cart.TotalAmount, cart.DiscountAmount, cart.PayAmount, personal);
-
+            
 
             foreach (var cartItem in cart.Items)
             {

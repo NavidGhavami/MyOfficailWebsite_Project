@@ -71,22 +71,23 @@ namespace ServiceHost
             services.AddAuthorization(options =>
             {
                 options.AddPolicy("AdminArea",
-                    builder => builder.RequireRole(new List<string> { Roles.Administrator, Roles.ContentUploader, Roles.AdminAssistant }));
+                    builder => builder.RequireRole(new List<string> { Roles.Administrator, Roles.ContentUploader,
+                        Roles.AdminAssistant, Roles.UserSeller }));
 
                 options.AddPolicy("Shop",
-                    builder => builder.RequireRole(new List<string> { Roles.Administrator, Roles.AdminAssistant }));
+                    builder => builder.RequireRole(new List<string> { Roles.Administrator, Roles.AdminAssistant, Roles.UserSeller }));
 
                 options.AddPolicy("Discount",
                     builder => builder.RequireRole(new List<string> { Roles.Administrator, Roles.AdminAssistant }));
 
                 options.AddPolicy("Account",
-                    builder => builder.RequireRole(new List<string> { Roles.Administrator}));
+                    builder => builder.RequireRole(new List<string> { Roles.Administrator }));
 
                 options.AddPolicy("Inventory",
                     builder => builder.RequireRole(new List<string> { Roles.Administrator, Roles.AdminAssistant }));
 
                 options.AddPolicy("Order",
-                    builder => builder.RequireRole(new List<string> { Roles.Administrator, Roles.AdminAssistant }));
+                    builder => builder.RequireRole(new List<string> { Roles.Administrator, Roles.AdminAssistant, Roles.UserSeller }));
             });
 
             services.AddRazorPages()

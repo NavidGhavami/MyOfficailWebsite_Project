@@ -25,5 +25,11 @@
         public const int CreateSlider = 25;
         public const int EditSlider = 26;
         public const int ShowSlider = 27;
+
+        public const int CancelOrder = 70;
+        public const int ConfirmOrder = 71;
+        public const int SearchInCancelOrder = 72;
+        
+
     }
 }

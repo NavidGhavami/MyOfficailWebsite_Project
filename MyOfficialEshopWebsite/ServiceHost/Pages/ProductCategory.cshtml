@@ -159,21 +159,30 @@
                                             <p>@product.ShortDescription</p>
                                         </div>
                                         <div class="add_to_cart">
-                                            <a href="cart.html" title="" data-original-title="افزودن به سبد">افزودن به سبد</a>
+                                            <a asp-page="/ProductDetails" asp-route-id="@product.Slug" title="" data-original-title="افزودن به سبد">افزودن به سبد</a>
                                         </div>
                                     </div>
                                 </figure>
                             </article>
                         </div>
                     }
-                </div>
 
+                </div>
                 <div class="shop_toolbar t_bottom">
                     <div class="pagination">
                         <ul>
-                            <li class="current">1</li>
-                            <li><a href="#">2</a></li>
-                            <li><a href="#">3</a></li>
+
+                            @for (int i = 1; i <= (@Model.PageCount + 1); i++)
+                            {
+
+                                <li class="@(((int) Model.PageId == i) ? "current" : "")">
+                                    <a asp-page="/ProductCategory" asp-route-id="@Model.ProductCategory.Slug">@i</a>
+
+                                </li>
+
+                            }
+
+
                             <li class="next"><a href="#">بعدی</a></li>
                             <li><a href="#"><i class="fa fa-angle-double-left"></i></a></li>
                         </ul>

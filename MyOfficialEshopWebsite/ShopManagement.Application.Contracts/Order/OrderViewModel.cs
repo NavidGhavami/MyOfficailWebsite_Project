@@ -7,6 +7,7 @@ namespace ShopManagement.Application.Contract.Order
         public long Id { get; set; }
         public long AccountId { get; set; }
         public string AccountFullname { get; set; }
+        public string Seller { get; set; }
         public int PaymentMethodId { get; set; }
         public double TotalAmount { get; set; }
         public double DiscountAmount { get; set; }

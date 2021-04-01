@@ -30,7 +30,12 @@
                                     }
                                     <div class="action_links">
                                         <ul>
-                                            <li class="wishlist"><a href="wishlist.html" title="افزودن به علاقه‌مندی‌ها"><i class="ion-android-favorite-outline"></i></a></li>
+                                            <li class="wishlist">
+                                                <a onclick="addToWishlist('@product.Id','@product.Name','@product.DoublePrice','@product.PrimaryPicture')"
+                                                   title="افزودن به علاقه‌مندی‌ها">
+                                                    <i class="ion-android-favorite-outline"></i>
+                                                </a>
+                                            </li>
                                         </ul>
                                     </div>
                                 </div>
@@ -52,7 +57,7 @@
                                         }
                                     </div>
                                     <div class="add_to_cart">
-                                        <a href="cart.html" title="افزودن به سبد">افزودن به سبد</a>
+                                        <a asp-page="/ProductDetails" asp-route-id="@product.Slug" title="افزودن به سبد">افزودن به سبد</a>
                                     </div>
 
                                 </div>

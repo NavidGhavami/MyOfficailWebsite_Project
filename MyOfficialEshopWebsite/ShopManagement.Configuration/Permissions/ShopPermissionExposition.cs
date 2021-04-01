@@ -41,6 +41,12 @@ namespace ShopManagement.Configuration.Permissions
                     new PermissionDto(ShopPermission.EditSlider,"ویرایش اسلایدر"),
                     new PermissionDto(ShopPermission.ShowSlider,"نمایش اسلایدر"),
                 }},
+                {"Order", new List<PermissionDto>
+                {
+                    new PermissionDto(ShopPermission.CancelOrder,"لغو سفارش"),
+                    new PermissionDto(ShopPermission.ConfirmOrder,"تایید سفارش"),
+                    new PermissionDto(ShopPermission.SearchInCancelOrder,"جستجو در سفارش"),
+                }},
             };
         }
     }

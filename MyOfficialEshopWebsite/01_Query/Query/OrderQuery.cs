@@ -79,7 +79,7 @@ namespace _01_Query.Query
                     Email = x.PersonalInfoItem.Email,
                     Description = x.PersonalInfoItem.Description
 
-                }).Distinct();
+                }).Distinct().Take(3);
 
 
             return info.ToList();

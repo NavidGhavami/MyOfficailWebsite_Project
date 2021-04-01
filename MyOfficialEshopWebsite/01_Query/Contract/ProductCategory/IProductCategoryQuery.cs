@@ -11,5 +11,7 @@ namespace _01_Query.Contract.ProductCategory
         List<ProductCategoryQueryModel> GetProductCategoriesWithProductsCount();
         List<ProductCategoryQueryModel> GetProductCategoriesWithProductsInMostSellProduct();
         List<ProductCategoryQueryModel> GetProductCategoriesWithProductsInBestChoice();
+        int ProductCategoryCount();
+
     }
 }

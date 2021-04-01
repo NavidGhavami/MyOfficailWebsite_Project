@@ -85,6 +85,12 @@
                         <a asp-page="/Comments/Index" class="waves-effect"><i class="md md-message"></i><span>کامنت ها</span></a>
                     </li>
                 }
+                @if (AuthHelper.CurrentAccountRole() == Roles.UserSeller)
+                {
+                    <li>
+                        <a asp-page="/Shop/Orders/Index" class="waves-effect"><i class="md md-shop-two"></i><span>مدیریت سفارشات</span></a>
+                    </li>
+                }
 
             </ul>
             <div class="clearfix"></div>

@@ -32,7 +32,7 @@ namespace ShopManagement.Infrastructure.EFCore.Repository
             return 0;
         }
 
-       
+
 
         public List<OrderViewModel> Search(OrderSearchModel searchModel)
         {
@@ -52,7 +52,7 @@ namespace ShopManagement.Infrastructure.EFCore.Repository
                 PaymentMethod = x.PaymentMethod,
                 PaymentMethodId = x.PaymentMethod,
                 CreationDate = x.CreationDate.ToFarsi(),
-                
+
 
 
 
@@ -79,7 +79,7 @@ namespace ShopManagement.Infrastructure.EFCore.Repository
 
         }
 
-        
+
 
         public List<OrderItemViewModel> GetItemsBy(long orderId)
         {
@@ -111,7 +111,7 @@ namespace ShopManagement.Infrastructure.EFCore.Repository
             return items;
         }
 
-       
+
 
 
         public PersonalInfoItemViewModel GetPersonalInfoBy(long orderId)

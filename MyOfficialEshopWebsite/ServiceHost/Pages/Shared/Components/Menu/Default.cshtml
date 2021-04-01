@@ -149,7 +149,9 @@
                     <div class="col-lg-4 col-md-5">
                         @if (AuthHelper.CurrentAccountRole() == Roles.Administrator ||
                              AuthHelper.CurrentAccountRole() == Roles.AdminAssistant ||
-                             AuthHelper.CurrentAccountRole() == Roles.ContentUploader)
+                             AuthHelper.CurrentAccountRole() == Roles.ContentUploader ||
+                             AuthHelper.CurrentAccountRole() == Roles.UserSeller)
+
                         {
                             <a asp-page="/Index" asp-area="Administration">مدیریت سایت</a>
 
@@ -268,14 +270,14 @@
                                     @foreach (var item in Model.ProductCategories)
                                     {
                                         <li class="menu_item_children">
-                                            <a href="#">@item.Name <i class="fa fa-angle-left"></i></a>
-                                            <ul class="categories_mega_menu">
+                                            <a asp-page="/ProductCategory" asp-route-id="@item.Slug">@item.Name @*<i class="fa fa-angle-left"></i>*@</a>
+                                            @*<ul class="categories_mega_menu">
                                                 <li class="menu_item_children">
                                                     <ul class="categorie_sub_menu">
                                                         <li><a href="">زیر پیراهن</a></li>
                                                     </ul>
                                                 </li>
-                                            </ul>
+                                            </ul>*@
                                         </li>
                                     }
                                 </ul>

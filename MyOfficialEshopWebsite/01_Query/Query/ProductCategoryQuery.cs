@@ -69,7 +69,7 @@ namespace _01_Query.Query
             var dateTime = DateTime.Now;
             var discounts = _discountContext.CustomerDiscounts
                 .Where(x => x.StartDate < dateTime && dateTime < x.EndDate)
-                .Select(x => new { x.ProductId, x.DiscountRate,x.EndDate });
+                .Select(x => new { x.ProductId, x.DiscountRate, x.EndDate });
 
             var categories = _shopContext.ProductCategories
                 .Where(x => x.IsShow)
@@ -115,6 +115,13 @@ namespace _01_Query.Query
 
         public ProductCategoryQueryModel GetProductCategoriesWithProductsBy(string slug)
         {
+            const int pageId = 1;
+            const int size = 60;
+            const int skip = (pageId - 1) * size;
+            const int take = size;
+            
+
+
             var inventory = _inventoryContext.Inventories
                .Select(x => new { x.ProductId, x.UnitPrice });
 
@@ -137,7 +144,12 @@ namespace _01_Query.Query
                     Slug = x.Slug,
                     Products = MapProducts(x.Products)
 
-                }).AsNoTracking().FirstOrDefault(x => x.Slug == slug);
+                }).AsNoTracking()
+                .OrderByDescending(x => x.Id)
+                .Skip(skip)
+                .Take(take)
+                .FirstOrDefault(x => x.Slug == slug);
+
 
 
             if (category != null)
@@ -205,7 +217,7 @@ namespace _01_Query.Query
                     Name = x.Name,
                     Products = MapProductsMostSell(x.Products)
 
-                }).OrderByDescending(x=>x.Id).Take(5).ToList();
+                }).OrderByDescending(x => x.Id).Take(5).ToList();
 
             foreach (var category in categories)
             {
@@ -244,7 +256,7 @@ namespace _01_Query.Query
             var dateTime = DateTime.Now;
             var discounts = _discountContext.CustomerDiscounts
                 .Where(x => x.StartDate < dateTime && dateTime < x.EndDate)
-                .Select(x => new { x.ProductId, x.DiscountRate,x.EndDate });
+                .Select(x => new { x.ProductId, x.DiscountRate, x.EndDate });
 
             var categories = _shopContext.ProductCategories
                 .Include(x => x.Products)
@@ -285,6 +297,12 @@ namespace _01_Query.Query
 
 
             return categories;
+        }
+
+        public int ProductCategoryCount()
+        {
+            
+            return _shopContext.Products.Count();
         }
 
 
@@ -328,19 +346,19 @@ namespace _01_Query.Query
         private static List<ProductQueryModel> MapProductsBestChoice(List<Product> products)
         {
             return products.Select(product => new ProductQueryModel
-                {
-                    Id = product.Id,
-                    Category = product.Category.Name,
-                    PrimaryPicture = product.PrimaryPicture,
-                    SecondaryPicture = product.SecondaryPicture,
-                    PictureAlt = product.PictureAlt,
-                    PictureTitle = product.PictureTitle,
-                    Slug = product.Slug,
-                    Name = product.Name,
-                    ShortDescription = product.ShortDescription,
-                    BestChoice = product.BestChoice
-                }).OrderByDescending(x => x.Id)
-                .Where(x=>x.BestChoice)
+            {
+                Id = product.Id,
+                Category = product.Category.Name,
+                PrimaryPicture = product.PrimaryPicture,
+                SecondaryPicture = product.SecondaryPicture,
+                PictureAlt = product.PictureAlt,
+                PictureTitle = product.PictureTitle,
+                Slug = product.Slug,
+                Name = product.Name,
+                ShortDescription = product.ShortDescription,
+                BestChoice = product.BestChoice
+            }).OrderByDescending(x => x.Id)
+                .Where(x => x.BestChoice)
                 .Take(25)
                 .ToList();
 

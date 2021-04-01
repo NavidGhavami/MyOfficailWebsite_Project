@@ -1734,9 +1734,14 @@
     <Content Include="wwwroot\SiteTheme\assets\img\about\about2.jpg" />
     <Content Include="wwwroot\SiteTheme\assets\img\about\about3.jpg" />
     <Content Include="wwwroot\SiteTheme\assets\img\about\about4.jpg" />
+    <Content Include="wwwroot\SiteTheme\assets\img\about\about5.jpg" />
+    <Content Include="wwwroot\SiteTheme\assets\img\about\about6.jpg" />
+    <Content Include="wwwroot\SiteTheme\assets\img\about\about7.jpg" />
+    <Content Include="wwwroot\SiteTheme\assets\img\about\about8.jpg" />
     <Content Include="wwwroot\SiteTheme\assets\img\about\About_icon1.png" />
     <Content Include="wwwroot\SiteTheme\assets\img\about\About_icon2.png" />
     <Content Include="wwwroot\SiteTheme\assets\img\about\About_icon3.png" />
+    <Content Include="wwwroot\SiteTheme\assets\img\about\contactMap.jpg" />
     <Content Include="wwwroot\SiteTheme\assets\img\about\quote-icon.png" />
     <Content Include="wwwroot\SiteTheme\assets\img\about\shipping1.png" />
     <Content Include="wwwroot\SiteTheme\assets\img\about\shipping2.png" />
