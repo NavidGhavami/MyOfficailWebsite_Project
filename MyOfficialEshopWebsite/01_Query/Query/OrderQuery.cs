@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using _0_Framework.Application;
 using _01_Query.Contract.Order;
+using AccountManagement.Application.Contract.Account;
 using AccountManagement.Infrastructure.EFCore;
 using Microsoft.EntityFrameworkCore;
 using ShopManagement.Application.Contract;
@@ -79,7 +80,7 @@ namespace _01_Query.Query
                     Email = x.PersonalInfoItem.Email,
                     Description = x.PersonalInfoItem.Description
 
-                }).Distinct().Take(3);
+                }).Distinct().OrderByDescending(x=>x.OrderId).Take(3);
 
 
             return info.ToList();
@@ -87,6 +88,29 @@ namespace _01_Query.Query
 
 
 
+        }
+
+        public AccountViewModel GetAccountInformation(long accountId)
+        {
+            var account = _accountContext.Accounts
+                .FirstOrDefault(x => x.Id == accountId);
+
+            if (account==null)
+            {
+                return new AccountViewModel();
+            }
+
+            var accountInfo = new AccountViewModel
+            {
+                Id = account.Id,
+                Mobile = account.Mobile,
+                FullName = account.FullName,
+                Username = account.Username,
+                ProfilePhoto = account.ProfilePhoto,
+                CreationDate = account.CreationDate.ToFarsi()
+            };
+
+            return accountInfo;
         }
     }
 }

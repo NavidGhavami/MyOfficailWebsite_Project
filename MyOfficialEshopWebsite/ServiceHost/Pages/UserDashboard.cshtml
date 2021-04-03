@@ -13,7 +13,7 @@
                 <div class="breadcrumb_content">
                     <ul>
                         <li><a asp-page="/Index">صفحه اصلی</a></li>
-                        <li>پروفایل من</li>
+                        <li><a href="#">پروفایل من</a></li>
                         <li>@AuthHelper.CurrentAccountInfo().FullName</li>
                     </ul>
                 </div>
@@ -31,6 +31,7 @@
                         <div class="dashboard_tab_button">
                             <ul role="tablist" class="nav flex-column dashboard-list">
                                 <li><a href="#dashboard" data-toggle="tab" class="nav-link active">داشبورد</a></li>
+                                <li> <a href="#information" data-toggle="tab" class="nav-link"> مشخصات من</a></li>
                                 <li> <a href="#orders" data-toggle="tab" class="nav-link"> سفارشات من</a></li>
                                 <li><a href="#address" data-toggle="tab" class="nav-link">آدرس های من</a></li>
                                 <li><a href="#changePassword" data-toggle="tab" class="nav-link">تغییر کلمه عبور</a></li>
@@ -44,8 +45,67 @@
                             <div class="tab-pane fade show active" id="dashboard">
                                 <h3>داشبورد </h3>
                                 <p>
-                                    @AuthHelper.CurrentAccountInfo().FullName عزیز خوش آمدید. در این بخش می توانید کلیه سفارش های خود را مشاهده فرمایید. همچنین می توانید آدرس های مربوط به سفارش های خود را مشاهده نمایید.
+                                    @AuthHelper.CurrentAccountInfo().FullName عزیز خوش آمدید. در این بخش می توانید کلیه سفارش های خود را مشاهده فرمایید. همچنین می توانید پروفایل کاربری خود را ویرایش نمایید و آدرس های مربوط به سفارش های خود را مشاهده نمایید.
                                 </p>
+                            </div>
+                            <div class="tab-pane fade" id="information">
+                                <h3>مشخصات کاربری من</h3>
+                                <div class="table-responsive">
+                                    <table class="table">
+                                        <thead>
+                                            <tr>
+                                                <th>تصویر</th>
+                                                <th>نام و نام خانوادگی</th>
+                                                <th>نام کاربری</th>
+                                                <th>شماره همراه</th>
+                                                <th>تاریخ ایجاد اکانت</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+
+
+                                            <tr>
+                                                <td>
+                                                    <img src="~/Pictures/@Model.AccountInfo.ProfilePhoto" style="width: 80px; height: 80px" alt="@Model.AccountInfo.FullName" title="@Model.AccountInfo.FullName" />
+                                                </td>
+                                                <td>@Model.AccountInfo.FullName</td>
+                                                <td>@Model.AccountInfo.Username</td>
+                                                <td>@Model.AccountInfo.Mobile</td>
+                                                <td>@Model.AccountInfo.CreationDate</td>
+
+                                            </tr>
+
+
+                                        </tbody>
+                                    </table>
+                                </div>
+
+                                <br>
+
+                                <h3>ویرایش مشخصات کاربری </h3>
+                                <div class="login">
+                                    <div class="login_form_container">
+                                        <div class="account_login_form">
+                                            <form method="post" enctype="multipart/form-data">
+                                                <br>
+                                                <label> نام و نام خانوادگی</label>
+                                                <input type="text" name="fullName" value="@Model.GetAccountDetails.FullName" required="">
+                                                <label>نام کاربری</label>
+                                                <input type="text" name="userName" value="@Model.GetAccountDetails.Username" required="">
+                                                <label>شماره همراه</label>
+                                                <input type="text" name="mobile" value="@Model.GetAccountDetails.Mobile" required="">
+                                                <label>تصویر پروفایل</label>
+                                                <input type="file" name="profilePhoto">
+                                                <input type="hidden" name="id" value="@Model.AccountInfo.Id">
+                                                <input type="hidden" name="roleId" value="@Model.AccountInfo.RoleId">
+                                                <br>
+                                                <div class="save_button primary_btn default_button">
+                                                    <button asp-page-handler="Edit" type="submit">ویرایش و ذخیره اطلاعات</button>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                             <div class="tab-pane fade" id="orders">
                                 <h3>سفارشات من</h3>
@@ -73,7 +133,7 @@
                                             {
                                                 <tr>
                                                     <td>@item.Id</td>
-                                                    <td>@item.AccountFullname</td>
+                                                    <td>@Model.AccountInfo.FullName</td>
                                                     <td>@item.TotalAmount.ToMoney() تومان</td>
                                                     <td>@item.DiscountAmount.ToMoney() تومان</td>
                                                     <td>@item.PayAmount.ToMoney() تومان</td>
@@ -125,7 +185,6 @@
                                     <table class="table">
                                         <thead>
                                             <tr>
-                                                <th>شماره کاربر</th>
                                                 <th>شماره سفارش</th>
                                                 <th>نام</th>
                                                 <th>نام خانوادگی</th>
@@ -147,7 +206,6 @@
                                             @foreach (var item in Model.PersonalInfo)
                                             {
                                                 <tr>
-                                                    <td>@item.AccountId</td>
                                                     <td>@item.OrderId</td>
                                                     <td>@item.Name</td>
                                                     <td>@item.Family </td>
@@ -170,21 +228,29 @@
                             </div>
 
                             <div class="tab-pane" id="changePassword">
-                                <form action="/" method="post">
-                                    <p>آدرس های زیر به صورت پیش فرض در صفحه سفارش شما استفاده خواهند شد.</p>
-                                    <h4 class="billing-address">آدرس صورت حساب</h4>
-                                    <a href="#" class="view">ویرایش</a>
-                                    <p><strong>جان اسنو</strong></p>
-                                    <address>
-                                        ایران<br>
-                                        آذربایجان شرقی<br>
-                                        تبریز<br>
-                                        چهارراه آبرسان، فلکه دانشگاه، برج بلور، طبقه 456، واحد 89
-                                    </address>
-                                    <div class="save_button primary_btn default_button">
-                                        <button type="submit">ویرایش</button>
+                                <h3>تغییر کلمه عبور </h3>
+                                <div class="login">
+                                    <div class="login_form_container">
+                                        <div class="account_login_form">
+                                            <form method="post">
+
+                                                <br>
+                                                <label> کلمه عبور فعلی</label>
+                                                <input type="text" disabled="" placeholder="********************" required="">
+                                                <label> کلمه عبور جدید</label>
+                                                <input type="text" name="password" required="">
+                                                <label>تکرار کلمه عبور جدید</label>
+                                                <input type="text" name="repassword" required="">
+                                                <input type="hidden" name="id" value="@Model.AccountInfo.Id">
+                                                <br>
+
+                                                <div class="save_button primary_btn default_button">
+                                                    <button asp-page-handler="ChangePassword" type="submit"> ذخیره اطلاعات</button>
+                                                </div>
+                                            </form>
+                                        </div>
                                     </div>
-                                </form>
+                                </div>
                             </div>
                         </div>
                     </div>
