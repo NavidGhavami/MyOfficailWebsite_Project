@@ -33,11 +33,13 @@
                         <form method="post" asp-page-handler="Login">
                             <p>
                                 <label>نام کاربری <span>*</span></label>
-                                <input type="text" name="username" dir="ltr" required="">
+                                <input type="text" name="username" dir="ltr" required oninvalid="this.setCustomValidity('لطفا نام کاربری را وارد کنید')"
+                                       oninput="this.setCustomValidity('')"/>
                             </p>
                             <p>
                                 <label>رمز عبور <span>*</span></label>
-                                <input type="password" name="password" dir="ltr" required="">
+                                <input type="password" name="password" dir="ltr" required oninvalid="this.setCustomValidity('لطفا کلمه عبور را وارد کنید')"
+                                       oninput="this.setCustomValidity('')"/>
                             </p>
                             <div class="login_submit">
                                 <a href="#">رمز عبور خود را فراموش کرده اید؟</a>
@@ -62,27 +64,33 @@
                         <form method="post" asp-page-handler="Register">
                             <p>
                                 <label>نام و نام خانوادگی<span>*</span></label>
-                                <input type="text" name="fullname" dir="ltr" required="">
+                                <input type="text" name="fullname" dir="ltr" required oninvalid="this.setCustomValidity('لطفا نام و نام خانوادگی خود را وارد کنید')"
+                                       oninput="this.setCustomValidity('')">
                             </p>
                             <p>
                                 <label>نام کاربری<span>*</span></label>
-                                <input type="text" name="username" required dir="ltr">
+                                <input type="text" name="username" required dir="ltr" oninvalid="this.setCustomValidity('لطفا نام کاربری خود را وارد کنید')"
+                                       oninput="this.setCustomValidity('')">
                             </p>
                             <p>
                                 <label>موبایل<span>*</span></label>
-                                <input type="text" name="mobile" required dir="ltr">
+                                <input type="text" name="mobile" required dir="ltr" oninvalid="this.setCustomValidity('لطفا موبایل خود را وارد کنید')"
+                                       oninput="this.setCustomValidity('')">
                             </p>
                             <p>
                                 <label>آدرس ایمیل <span>*</span></label>
-                                <input type="email" name="email" required dir="ltr">
+                                <input type="email" name="email" required dir="ltr" oninvalid="this.setCustomValidity('لطفا ایمیل خود را وارد کنید')"
+                                       oninput="this.setCustomValidity('')">
                             </p>
                             <p>
                                 <label>رمز عبور <span>*</span></label>
-                                <input type="password" name="password" required dir="ltr">
+                                <input type="password" name="password" required dir="ltr" oninvalid="this.setCustomValidity('لطفا کلمه عبور خود را وارد کنید')"
+                                       oninput="this.setCustomValidity('')">
                             </p>
                             <p>
                                 <label>تکرار رمز عبور<span>*</span></label>
-                                <input type="password" name="repassword" required dir="ltr">
+                                <input type="password" name="repassword" required dir="ltr" oninvalid="this.setCustomValidity('لطفا تکرار کلمه عبور خود را وارد کنید')"
+                                       oninput="this.setCustomValidity('')">
                             </p>
                             <div class="login_submit">
                                 <button type="submit">ثبت نام</button>

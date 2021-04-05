@@ -1,5 +1,8 @@
 ﻿@page "{id}"
+@using _0_Framework.Application
 @model ServiceHost.Pages.ProductDetailsModel
+@inject IAuthHelper AuthHelper
+
 @{
     ViewData["Title"] = "جزییات محصول";
 }
@@ -85,7 +88,7 @@
                                             type="submit">
                                         افزودن به سبد خرید
                                     </button>
-                                    <button class="button"  
+                                    <button class="button"
                                             onclick="addToWishlist('@Model.Product.Id','@Model.Product.Name','@Model.Product.DoublePrice','@Model.Product.PrimaryPicture')"
                                             type="submit">
                                         افزودن به علاقه مندی ها
@@ -213,32 +216,39 @@
 
                                             </div>
                                         }
-                                        <div class="comment_title">
-                                            <h2>نظر ارزشمند خود را با ما در میان بگذارید </h2>
-                                            <p>ایمیل شما منتشر نخواهد شد. فیلد های الزامی مشخص شده اند</p>
-                                        </div>
-                                        <div class="product_review_form">
-                                            <form method="post">
-                                                <div class="row">
-                                                    <div class="col-12">
-                                                        <label for="message">نقد و بررسی شما </label>
-                                                        <textarea name="message" id="message" placeholder="نظر خود را بنویسید..." required="این فیلد الزامی است"></textarea>
-                                                    </div>
-                                                    <div class="col-lg-6 col-md-6">
-                                                        <label for="name">نام</label>
-                                                        <input name="name" id="name" type="text" placeholder="نام و نام خانوادگی" required="این فیلد الزامی است">
 
+                                        @if (AuthHelper.IsAuthenticated())
+                                        {
+                                            <div class="comment_title">
+                                                <h2>نظر ارزشمند خود را با ما در میان بگذارید </h2>
+                                                <p>ایمیل شما منتشر نخواهد شد. فیلد های الزامی مشخص شده اند</p>
+                                            </div>
+                                            <div class="product_review_form">
+                                                <form method="post">
+                                                    <div class="row">
+                                                        <div class="col-12">
+                                                            <label for="message">نقد و بررسی شما </label>
+                                                            <textarea name="message" id="message" placeholder="نظر خود را بنویسید..." required oninvalid="this.setCustomValidity('لطفا نظر خود را وارد کنید')"
+                                                                      oninput="this.setCustomValidity('')"></textarea>
+                                                        </div>
+                                                        <div class="col-lg-6 col-md-6">
+                                                            <label for="name">نام</label>
+                                                            <input name="name" id="name" type="text" placeholder="نام و نام خانوادگی" required oninvalid="this.setCustomValidity('لطفا نام و نام خانوادگی خود را وارد کنید')"
+                                                                   oninput="this.setCustomValidity('')">
+
+                                                        </div>
+                                                        <div class="col-lg-6 col-md-6">
+                                                            <label for="email">ایمیل </label>
+                                                            <input name="email" id="email" type="email" dir="ltr" placeholder="info@gmail.com" required oninvalid="this.setCustomValidity('لطفا ایمیل خود را وارد کنید')"
+                                                                   oninput="this.setCustomValidity('')">
+                                                        </div>
+                                                        <input name="ownerRecordId" value="@Model.Product.Id" type="hidden">
+                                                        <input name="productSlug" value="@Model.Product.Slug" type="hidden">
                                                     </div>
-                                                    <div class="col-lg-6 col-md-6">
-                                                        <label for="email">ایمیل </label>
-                                                        <input name="email" id="email" type="email" dir="ltr" placeholder="info@gmail.com" required="این فیلد الزامی است">
-                                                    </div>
-                                                    <input name="ownerRecordId" value="@Model.Product.Id" type="hidden">
-                                                    <input name="productSlug" value="@Model.Product.Slug" type="hidden">
-                                                </div>
-                                                <button type="submit">ارسال نظر ارزشمندتان</button>
-                                            </form>
-                                        </div>
+                                                    <button type="submit">ارسال نظر ارزشمندتان</button>
+                                                </form>
+                                            </div>
+                                        }
                                     </div>
                                 </div>
                             </div>

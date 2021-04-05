@@ -1,5 +1,8 @@
 ﻿@page "{id}"
+@using _0_Framework.Application
 @model ServiceHost.Pages.ArticleDetailsModel
+
+
 @{
     ViewData["Title"] = "جزییات مقاله";
 }
@@ -107,7 +110,7 @@
                                             {
                                                 <h5><a href="#comment-@comment.ParentId">در پاسخ به : @comment.ParentName</a></h5>
                                             }
-                                                <span>ارسال شده در تاریخ: @comment.CreationDate</span>
+                                            <span>ارسال شده در تاریخ: @comment.CreationDate</span>
                                         </div>
                                         <p>@Html.Raw(comment.Message)</p>
                                         <div class="comment_reply">
@@ -117,35 +120,40 @@
                                 </div>
                             }
                         </div>
-                        <div class="comments_form" id="postComment">
-                            <h3>با دادن نظر ارزشمندتان ما را در رسیدن بیشتر به ارائه با کیفیت تر مقالات یاری نمایید</h3>
-                            <p>ایمیل شما منتشر نخواهد شد. فیلد های الزامی با * مشخص شده اند</p>
-                            <form method="post">
-                                <div class="row">
-                                    <div class="col-12">
-                                        <label for="review_comment">دیدگاه </label>
-                                        <textarea name="message" id="message" required=""></textarea>
-                                    </div>
-                                    <div class="col-lg-4 col-md-4">
-                                        <label for="name">نام</label>
-                                        <input name="name" id="name" type="text" required="">
+                       
+                            <div class="comments_form" id="postComment">
+                                <h3>با دادن نظر ارزشمندتان ما را در رسیدن بیشتر به ارائه با کیفیت تر مقالات یاری نمایید</h3>
+                                <p>ایمیل شما منتشر نخواهد شد. فیلد های الزامی با * مشخص شده اند</p>
+                                <form method="post">
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <label for="review_comment">دیدگاه </label>
+                                            <textarea name="message" id="message" required oninvalid="this.setCustomValidity('لطفا نظر خود را وارد کنید')"
+                                                      oninput="this.setCustomValidity('')"></textarea>
+                                        </div>
+                                        <div class="col-lg-4 col-md-4">
+                                            <label for="name">نام</label>
+                                            <input name="name" id="name" type="text" required oninvalid="this.setCustomValidity('لطفا نام خود را وارد کنید')"
+                                                   oninput="this.setCustomValidity('')">
 
+                                        </div>
+                                        <div class="col-lg-4 col-md-4">
+                                            <label for="email">ایمیل </label>
+                                            <input name="email" id="email" type="text" dir="ltr" required oninvalid="this.setCustomValidity('لطفا ایمیل را وارد کنید')"
+                                                   oninput="this.setCustomValidity('')">
+                                        </div>
+                                        <div class="col-lg-4 col-md-4">
+                                            <label for="website">وب‌سایت </label>
+                                            <input name="website" id="website" type="text">
+                                        </div>
                                     </div>
-                                    <div class="col-lg-4 col-md-4">
-                                        <label for="email">ایمیل </label>
-                                        <input name="email" id="email" type="text" dir="ltr" required="">
-                                    </div>
-                                    <div class="col-lg-4 col-md-4">
-                                        <label for="website">وب‌سایت </label>
-                                        <input name="website" id="website" type="text">
-                                    </div>
-                                </div>
-                                <input name="ownerRecordId" value="@Model.Article.Id" type="hidden">
-                                <input name="articleSlug" value="@Model.Article.Slug" type="hidden">
-                                <input name="parentId" id="commentParentId" value="" type="hidden">
-                                <button class="button" type="submit">ارسال دیدگاه</button>
-                            </form>
-                        </div>
+                                    <input name="ownerRecordId" value="@Model.Article.Id" type="hidden">
+                                    <input name="articleSlug" value="@Model.Article.Slug" type="hidden">
+                                    <input name="parentId" id="commentParentId" value="" type="hidden">
+                                    <button class="button" type="submit">ارسال دیدگاه</button>
+                                </form>
+                            </div>
+                        
 
                     </div>
                     <!--blog grid area start-->

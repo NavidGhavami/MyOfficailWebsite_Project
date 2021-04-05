@@ -657,7 +657,7 @@
 
 	/*---Newsletter Popup activation---*/
 
-	/*
+	
 	setTimeout(function () {
 		if ($.cookie('shownewsletter') == 1) $('.newletter-popup').hide();
 		$('#subscribe_pemail').keypress(function (e) {
@@ -684,7 +684,7 @@
 			}
 		});
 	}, 2500);
-	*/
+	
 
 	/*---search box slideToggle---*/
 	$(".search_box > a").on("click", function () {

@@ -1789,6 +1789,7 @@
     <Content Include="wwwroot\SiteTheme\assets\img\blog\comment2.png.jpg" />
     <Content Include="wwwroot\SiteTheme\assets\img\blog\comment3.png.jpg" />
     <Content Include="wwwroot\SiteTheme\assets\img\favicon.ico" />
+    <Content Include="wwwroot\SiteTheme\assets\img\favicon2.ico" />
     <Content Include="wwwroot\SiteTheme\assets\img\icon\BankLogo.png" />
     <Content Include="wwwroot\SiteTheme\assets\img\icon\bkg_grid.png" />
     <Content Include="wwwroot\SiteTheme\assets\img\icon\bkg_grid4.png" />

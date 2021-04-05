@@ -23,8 +23,8 @@
     <!--contact map start-->
     <div class="contact_map">
         <div class="map-area">
-            <div class="about_thumb">
-                <img src="~/SiteTheme/assets/img/about/contactMap.jpg" alt="نقشه شرکت بر روی گوگل مپ">
+            <div id="googleMap">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1603.2703211841606!2d46.20586797588475!3d36.51694915061874!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzbCsDMxJzAxLjAiTiA0NsKwMTInMjUuMSJF!5e0!3m2!1sen!2s!4v1617617317968!5m2!1sen!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
             </div>
         </div>
     </div>
@@ -50,11 +50,13 @@
                         <form id="contact-form" method="POST">
                             <p>
                                 <label> نام شما (الزامی)</label>
-                                <input name="name" placeholder="نام *" type="text" required="">
+                                <input name="name" placeholder="نام *" type="text" required oninvalid="this.setCustomValidity('لطفا نام خود را وارد کنید')"
+                                       oninput="this.setCustomValidity('')">
                             </p>
                             <p>
                                 <label> ایمیل شما (الزامی)</label>
-                                <input name="email" placeholder="* ایمیل" type="email" dir="ltr" required="">
+                                <input name="email" placeholder="* ایمیل" type="email" dir="ltr" required oninvalid="this.setCustomValidity('لطفا ایمیل خود را وارد کنید')"
+                                       oninput="this.setCustomValidity('')">
                             </p>
                             <p>
                                 <label> موضوع</label>
@@ -62,9 +64,10 @@
                             </p>
                             <div class="contact_textarea">
                                 <label> پیام شما</label>
-                                <textarea name="message" placeholder="پیام *" class="form-control2" required=""></textarea>
+                                <textarea name="message" placeholder="پیام *" class="form-control2" required oninvalid="this.setCustomValidity('لطفا پیام خود را وارد کنید')"
+                                       oninput="this.setCustomValidity('')"></textarea>
                             </div>
-                            <br/>
+                            <br />
                             <button type="submit">ارسال</button>
                             <p class="form-messege"></p>
                         </form>
