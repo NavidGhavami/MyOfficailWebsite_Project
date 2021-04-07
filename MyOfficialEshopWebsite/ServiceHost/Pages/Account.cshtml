@@ -26,69 +26,61 @@
                 <div class="col-lg-6 col-md-6">
                     <div class="account_form login">
                         <h2>ورود</h2>
-                        @if (Model.LoginMessage != null)
-                        {
-                            <div class="alert alert-danger">@Model.LoginMessage</div>
-                        }
                         <form method="post" asp-page-handler="Login">
                             <p>
-                                <label>نام کاربری <span>*</span></label>
+                                <label>نام کاربری <span class="text text-danger">*</span></label>
                                 <input type="text" name="username" dir="ltr" required oninvalid="this.setCustomValidity('لطفا نام کاربری را وارد کنید')"
-                                       oninput="this.setCustomValidity('')"/>
+                                       oninput="this.setCustomValidity('')" />
                             </p>
                             <p>
-                                <label>رمز عبور <span>*</span></label>
+                                <label>رمز عبور <span class="text text-danger">*</span></label>
                                 <input type="password" name="password" dir="ltr" required oninvalid="this.setCustomValidity('لطفا کلمه عبور را وارد کنید')"
-                                       oninput="this.setCustomValidity('')"/>
+                                       oninput="this.setCustomValidity('')" />
                             </p>
                             <div class="login_submit">
                                 <a href="#">رمز عبور خود را فراموش کرده اید؟</a>
                                 <label for="remember">
                                     <input id="remember" type="checkbox">
-                                    به خاطر سپاری
+                                    مرا به خاطر بسپار
                                 </label>
                                 <button type="submit">ورود</button>
                             </div>
                         </form>
                     </div>
                 </div>
-                <!--login area start-->
+                <!--login area end-->
                 <!--register area start-->
                 <div class="col-lg-6 col-md-6">
                     <div class="account_form register">
                         <h2>ثبت نام</h2>
-                        @if (Model.LoginMessage != null)
-                        {
-                            <div class="alert alert-danger">@Model.RegisterMessage</div>
-                        }
                         <form method="post" asp-page-handler="Register">
                             <p>
-                                <label>نام و نام خانوادگی<span>*</span></label>
+                                <label>نام و نام خانوادگی<span class="text text-danger">*</span></label>
                                 <input type="text" name="fullname" dir="ltr" required oninvalid="this.setCustomValidity('لطفا نام و نام خانوادگی خود را وارد کنید')"
                                        oninput="this.setCustomValidity('')">
                             </p>
                             <p>
-                                <label>نام کاربری<span>*</span></label>
+                                <label>نام کاربری<span class="text text-danger">*</span></label>
                                 <input type="text" name="username" required dir="ltr" oninvalid="this.setCustomValidity('لطفا نام کاربری خود را وارد کنید')"
                                        oninput="this.setCustomValidity('')">
                             </p>
                             <p>
-                                <label>موبایل<span>*</span></label>
+                                <label>موبایل<span class="text text-danger">*</span></label>
                                 <input type="text" name="mobile" required dir="ltr" oninvalid="this.setCustomValidity('لطفا موبایل خود را وارد کنید')"
                                        oninput="this.setCustomValidity('')">
                             </p>
                             <p>
-                                <label>آدرس ایمیل <span>*</span></label>
+                                <label>آدرس ایمیل <span class="text text-danger">*</span></label>
                                 <input type="email" name="email" required dir="ltr" oninvalid="this.setCustomValidity('لطفا ایمیل خود را وارد کنید')"
                                        oninput="this.setCustomValidity('')">
                             </p>
                             <p>
-                                <label>رمز عبور <span>*</span></label>
+                                <label>رمز عبور <span class="text text-danger">*</span></label>
                                 <input type="password" name="password" required dir="ltr" oninvalid="this.setCustomValidity('لطفا کلمه عبور خود را وارد کنید')"
                                        oninput="this.setCustomValidity('')">
                             </p>
                             <p>
-                                <label>تکرار رمز عبور<span>*</span></label>
+                                <label>تکرار رمز عبور<span class="text text-danger">*</span></label>
                                 <input type="password" name="repassword" required dir="ltr" oninvalid="this.setCustomValidity('لطفا تکرار کلمه عبور خود را وارد کنید')"
                                        oninput="this.setCustomValidity('')">
                             </p>

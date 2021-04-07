@@ -8196,6 +8196,12 @@ textarea:-ms-input-placeholder {
 }
 .single_gallery_section {
 	background: #ffffff;
+    
+}
+.single_gallery_section_team {
+	background: #ffffff;
+	padding-top: 34px;
+	padding-bottom: 34px;
 }
 @media only screen and (max-width: 767px) {
 	.single_gallery_section {
@@ -8511,8 +8517,8 @@ textarea:-ms-input-placeholder {
 	text-align: center;
 }
 .blog_header h1 {
-	font-size: 32px;
-	margin-bottom: 0;
+	font-size: 50px;
+	margin-bottom: 50px;
 	font-weight: 500;
 }
 @media only screen and (max-width: 767px) {
@@ -9340,7 +9346,7 @@ textarea:-ms-input-placeholder {
 }
 .related_posts h3 {
 	font-size: 14px;
-	margin: 0 0 20px;
+	margin: 0 0 5px;
 	font-weight: 500;
 }
 .related_thumb {

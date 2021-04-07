@@ -81,7 +81,7 @@ namespace _01_Query.Query
             return products.OrderByDescending(x => x.Id).Take(20).ToList();
         }
 
-        public List<ProductQueryModel> getProductsByMaximumViewList()
+        public List<ProductQueryModel> GetProductsByMaximumViewList()
         {
             var inventory = _inventoryContext.Inventories
                 .Select(x => new { x.ProductId, x.UnitPrice });
@@ -197,21 +197,26 @@ namespace _01_Query.Query
                 .Select(product => new ProductQueryModel()
                 {
                     Id = product.Id,
+                    Name = product.Name,
+                    Code = product.Code,
+                    Slug = product.Slug,
+                    Seller = product.Seller,
+                    PictureAlt = product.PictureAlt,
                     Category = product.Category.Name,
+                    PictureTitle = product.PictureTitle,
                     PrimaryPicture = product.PrimaryPicture,
                     SecondaryPicture = product.SecondaryPicture,
-                    PictureAlt = product.PictureAlt,
-                    PictureTitle = product.PictureTitle,
                     ShortDescription = product.ShortDescription,
-                    Slug = product.Slug,
-                    Name = product.Name,
+                    
+                    
 
                 }).AsNoTracking();
 
             if (!string.IsNullOrWhiteSpace(value))
             {
-                query = query.Where(x => x.Name.Contains(value) || x.ShortDescription.Contains(value));
+                query = query.Where(x => x.Name.Contains(value) || x.Code.Contains(value) || x.Seller.Contains(value));
             }
+            
 
             var products = query.OrderByDescending(x => x.Id).ToList();
 

@@ -92,11 +92,13 @@
                                     <div class="row">
                                         <div class="col-lg-6 mb-20">
                                             <label>نام <span>*</span></label>
-                                            <input type="text" name="name" id="name" required>
+                                            <input type="text" name="name" id="name" required oninvalid="this.setCustomValidity('لطفا نام خود را وارد کنید')"
+                                                   oninput="this.setCustomValidity('')">
                                         </div>
                                         <div class="col-lg-6 mb-20">
                                             <label>نام خانوادگی <span>*</span></label>
-                                            <input type="text" name="family" id="family" required>
+                                            <input type="text" name="family" id="family" required oninvalid="this.setCustomValidity('لطفا نام خانوادگی خود را وارد کنید')"
+                                                   oninput="this.setCustomValidity('')">
                                         </div>
                                         <div class="col-12 mb-20">
                                             <label>نام فروشگاه یا شرکت</label>
@@ -104,35 +106,43 @@
                                         </div>
                                         <div class="col-lg-4 mb-20">
                                             <label>کشور <span>*</span></label>
-                                            <input placeholder="مثلا : ایران" type="text" name="country" id="country" required>
+                                            <input placeholder="مثلا : ایران" type="text" name="country" id="country" required oninvalid="this.setCustomValidity('لطفا کشور خود را وارد کنید')"
+                                                   oninput="this.setCustomValidity('')">
                                         </div>
                                         <div class="col-lg-4 mb-20">
                                             <label>استان <span>*</span></label>
-                                            <input placeholder="مثلا : تهران" type="text" name="state" id="state" required>
+                                            <input placeholder="مثلا : تهران" type="text" name="state" id="state" required oninvalid="this.setCustomValidity('لطفا استان خود را وارد کنید')"
+                                                   oninput="this.setCustomValidity('')">
                                         </div>
                                         <div class="col-lg-4 mb-20">
                                             <label>شهر / شهرستان <span>*</span></label>
-                                            <input placeholder="مثلا : تهران" type="text" name="city" id="city" required>
+                                            <input placeholder="مثلا : تهران" type="text" name="city" id="city" required oninvalid="this.setCustomValidity('لطفا شهر یا شهرستان خود را وارد کنید')"
+                                                   oninput="this.setCustomValidity('')">
                                         </div>
                                         <div class="col-lg-12 mb-20">
                                             <label>خیابان <span>*</span></label>
-                                            <input placeholder="نام خیابان و نام کوچه و ..." type="text" name="street" id="street" required>
+                                            <input placeholder="نام خیابان و نام کوچه و ..." type="text" name="street" id="street" required oninvalid="this.setCustomValidity('لطفا آدرس خیابان خود را وارد کنید')"
+                                                   oninput="this.setCustomValidity('')">
                                         </div>
                                         <div class="col-lg-4 mb-20">
                                             <label>کد پستی <span>*</span></label>
-                                            <input type="text" name="postalCode" id="postalCode" required>
+                                            <input type="text" name="postalCode" id="postalCode" required oninvalid="this.setCustomValidity('لطفا کد پستی آدرس خود را وارد کنید')"
+                                                   oninput="this.setCustomValidity('')">
                                         </div>
                                         <div class="col-lg-4 mb-20">
                                             <label>شماره پلاک <span>*</span></label>
-                                            <input type="text" name="plaqueNo" id="plaqueNo" required>
+                                            <input type="text" name="plaqueNo" id="plaqueNo" required oninvalid="this.setCustomValidity('لطفا شماره پلاک آدرس خود را وارد کنید')"
+                                                   oninput="this.setCustomValidity('')">
                                         </div>
                                         <div class="col-lg-4 mb-20">
                                             <label>تلفن همراه <span>*</span></label>
-                                            <input type="text" dir="ltr" name="mobile" id="mobile" required>
+                                            <input type="text" dir="ltr" name="mobile" id="mobile" required oninvalid="this.setCustomValidity('لطفا تلفن همراه خود را وارد کنید')"
+                                                   oninput="this.setCustomValidity('')">
                                         </div>
                                         <div class="col-lg-12 mb-20">
                                             <label>آدرس ایمیل <span>*</span></label>
-                                            <input placeholder="مثلا : info@gmail.com" type="email" dir="rtl" name="email" id="email" required>
+                                            <input placeholder="مثلا : info@gmail.com" type="email" dir="rtl" name="email" id="email" required oninvalid="this.setCustomValidity('لطفا ایمیل خود را وارد کنید')"
+                                                   oninput="this.setCustomValidity('')">
                                         </div>
                                         <div class="order-notes col-lg-12 mb-20">
                                             <label>توضیحات سفارش</label>

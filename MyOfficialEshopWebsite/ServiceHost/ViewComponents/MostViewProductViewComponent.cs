@@ -14,7 +14,7 @@ namespace ServiceHost.ViewComponents
 
         public IViewComponentResult Invoke()
         {
-            var product = _productQuery.getProductsByMaximumViewList();
+            var product = _productQuery.GetProductsByMaximumViewList();
             return View(product);
         }
     }

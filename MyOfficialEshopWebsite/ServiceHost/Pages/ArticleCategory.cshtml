@@ -1,7 +1,9 @@
 ﻿@page "{id}"
 @model ServiceHost.Pages.ArticleCategoryModel
 @{
-    ViewData["Title"] = "گروه مقالات";
+    ViewData["Title"] = Model.ArticleCategory.Name;
+    ViewData["keywords"] = Model.ArticleCategory.Keywords;
+    ViewData["metaDescription"] = Model.ArticleCategory.MetaDescription;
 }
 <div class="breadcrumbs_area">
     <div class="container">
@@ -38,7 +40,7 @@
                                         </a>
                                     </div>
                                     <figcaption class="blog_content">
-                                        <h4 class="post_title"><a asp-page="/ArticleDetails" asp-route-id="@article.Slug">@article.Title</a></h4>
+                                        <h2 class="post_title"><a asp-page="/ArticleDetails" asp-route-id="@article.Slug">@article.Title</a></h2>
                                         <div class="blog_meta">
                                             <span class="author">ارسال توسط : <a href="#">مدیر وب سایت</a> / </span>
                                             <span class="meta_date">ارسال شده در تاریخ :  <a href="#">@article.PublishDate</a></span>

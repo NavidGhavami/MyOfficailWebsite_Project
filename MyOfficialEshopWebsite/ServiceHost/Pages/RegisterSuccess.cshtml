@@ -7,14 +7,29 @@
     <div class="container">
         <div class="error_section">
             <div class="row">
-                <div class="col-12">
-                    <div class="error_form">
-                        <h1>تبریک!</h1>
-                        <h2>با تشکر از ثبت نام شما در سایت ما</h2>
-                        <p>لطفا از طریق لینک زیر وارد سایت شوید</p>
-                        <a asp-page="/Account">ورود به سایت</a>
+                @if (!Model.Result.IsSuccedded)
+                {
+                    <div class="col-12">
+                        <div class="error_form">
+                            <h1>متاسفم!</h1>
+                            <h2>نام کاربری یا رمز عبور اشتباه است</h2>
+                            <p>لطفا از طریق لینک زیر دوباره امتحان کنید</p>
+                            <a asp-page="/Account">ورود به سایت</a>
+                        </div>
                     </div>
-                </div>
+                }
+                else
+                {
+                    <div class="col-12">
+                        <div class="error_form">
+                            <h1>تبریک!</h1>
+                            <h2>با تشکر از ثبت نام شما در سایت ما</h2>
+                            <p>لطفا از طریق لینک زیر وارد سایت شوید</p>
+                            <a asp-page="/Account">ورود به سایت</a>
+                        </div>
+                    </div>
+                }
+               
             </div>
         </div>
     </div>

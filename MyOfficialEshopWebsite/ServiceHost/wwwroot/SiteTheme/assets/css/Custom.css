@@ -8,3 +8,6 @@
     padding-bottom: 80px;
     position: relative;
 }
+.ProductCategoryBanner img {
+    width: 100%;
+}

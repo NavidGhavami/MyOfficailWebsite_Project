@@ -1728,6 +1728,10 @@
     <Content Include="wwwroot\SiteTheme\assets\fonts\yekan-400.ttf" />
     <Content Include="wwwroot\SiteTheme\assets\fonts\yekan-400.woff" />
     <Content Include="wwwroot\SiteTheme\assets\fonts\yekan-400.woff2" />
+    <Content Include="wwwroot\SiteTheme\assets\img\about\about-amin.png" />
+    <Content Include="wwwroot\SiteTheme\assets\img\about\about-mahsa.png" />
+    <Content Include="wwwroot\SiteTheme\assets\img\about\about-navid.png" />
+    <Content Include="wwwroot\SiteTheme\assets\img\about\about-sahar.png" />
     <Content Include="wwwroot\SiteTheme\assets\img\about\about-us-policy-bg.jpg" />
     <Content Include="wwwroot\SiteTheme\assets\img\about\about-us-signature.png" />
     <Content Include="wwwroot\SiteTheme\assets\img\about\about1.jpg" />
@@ -1735,9 +1739,6 @@
     <Content Include="wwwroot\SiteTheme\assets\img\about\about3.jpg" />
     <Content Include="wwwroot\SiteTheme\assets\img\about\about4.jpg" />
     <Content Include="wwwroot\SiteTheme\assets\img\about\about5.jpg" />
-    <Content Include="wwwroot\SiteTheme\assets\img\about\about6.jpg" />
-    <Content Include="wwwroot\SiteTheme\assets\img\about\about7.jpg" />
-    <Content Include="wwwroot\SiteTheme\assets\img\about\about8.jpg" />
     <Content Include="wwwroot\SiteTheme\assets\img\about\About_icon1.png" />
     <Content Include="wwwroot\SiteTheme\assets\img\about\About_icon2.png" />
     <Content Include="wwwroot\SiteTheme\assets\img\about\About_icon3.png" />
