@@ -35,6 +35,7 @@
                                 <li> <a href="#orders" data-toggle="tab" class="nav-link"> سفارشات من</a></li>
                                 <li><a href="#address" data-toggle="tab" class="nav-link">آدرس های من</a></li>
                                 <li><a href="#changePassword" data-toggle="tab" class="nav-link">تغییر کلمه عبور</a></li>
+                                <li><a href="#wishlist" data-toggle="tab" class="nav-link">علاقه مندی ها</a></li>
                                 <li><a asp-page="/Account" asp-page-handler="Logout" class="nav-link">خروج</a></li>
                             </ul>
                         </div>
@@ -228,31 +229,43 @@
                                 </div>
                             </div>
 
-                            <div class="tab-pane" id="changePassword">
-                                <h3>تغییر کلمه عبور </h3>
-                                <div class="login">
-                                    <div class="login_form_container">
-                                        <div class="account_login_form">
-                                            <form method="post">
+                        <div class="tab-pane" id="changePassword">
+                            <h3>تغییر کلمه عبور </h3>
+                            <div class="login">
+                                <div class="login_form_container">
+                                    <div class="account_login_form">
+                                        <form method="post">
 
-                                                <br>
-                                                <label> کلمه عبور فعلی</label>
-                                                <input type="text" disabled="" placeholder="********************" required="">
-                                                <label> کلمه عبور جدید</label>
-                                                <input type="text" name="password" required="">
-                                                <label>تکرار کلمه عبور جدید</label>
-                                                <input type="text" name="repassword" required="">
-                                                <input type="hidden" name="id" value="@Model.AccountInfo.Id">
-                                                <br>
+                                            <br>
+                                            <label> کلمه عبور فعلی</label>
+                                            <input type="text" disabled="" placeholder="********************" required="">
+                                            <label> کلمه عبور جدید</label>
+                                            <input type="text" name="password" required="">
+                                            <label>تکرار کلمه عبور جدید</label>
+                                            <input type="text" name="repassword" required="">
+                                            <input type="hidden" name="id" value="@Model.AccountInfo.Id">
+                                            <br>
 
-                                                <div class="save_button primary_btn default_button">
-                                                    <button asp-page-handler="ChangePassword" type="submit"> ذخیره اطلاعات</button>
-                                                </div>
-                                            </form>
+                                            <div class="save_button primary_btn default_button">
+                                                <button asp-page-handler="ChangePassword" type="submit"> ذخیره اطلاعات</button>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane" id="wishlist">
+                            <h4>در این بخش شما می توانید لیست علاقه مندی های خود را مشاهده نمایید. این لیست تا 60 روز به صورت خودکار ذخیره می گردد.</h4>
+                            <div class="login">
+                                <div class="login_form_container">
+                                    <div class="account_login_form">
+                                        <div class=" checkout_btn pull-left">
+                                            <a asp-page="Wishlist"> مشاهده علاقه مندی ها</a>
                                         </div>
                                     </div>
                                 </div>
                             </div>
+                        </div>
                         </div>
                     </div>
                 </div>

@@ -49,26 +49,26 @@
                                     {
                                         <table>
                                             <thead>
-                                            <tr>
-                                                <th class="product_thumb">تصویر</th>
-                                                <th class="product_name">محصول</th>
-                                                <th class="product-price">قیمت</th>
-                                                <th class="product_quantity">وضعیت انبار</th>
-                                                <th class="product_remove">حذف</th>
-                                            </tr>
+                                                <tr>
+                                                    <th class="product_thumb">تصویر</th>
+                                                    <th class="product_name">محصول</th>
+                                                    <th class="product-price">قیمت</th>
+                                                    <th class="product_quantity">وضعیت انبار</th>
+                                                    <th class="product_remove">حذف</th>
+                                                </tr>
                                             </thead>
                                             <tbody>
                                            @foreach (var item in Model.WishlistItems)
                                            {
-                                               <tr>
+                                                <tr>
 
-                                                   <td class="product_thumb"><a href="#"><img src="~/Pictures/@item.Picture" alt="@item.Name" title="@item.Name"></a></td>
-                                                   <td class="product_name"><a href="#">@item.Name</a></td>
-                                                   <td class="product-price">@item.UnitPrice.ToMoney() تومان</td>
-                                                   <td class="product_quantity">در انبار موجود می باشد</td>
-                                                   <td class="product_remove"><a onclick="removeFromWishlist('@item.Id')"><i class="fa fa-trash-o"></i></a></td>
+                                                    <td class="product_thumb"><a href="#"><img src="~/Pictures/@item.Picture" alt="@item.Name" title="@item.Name"></a></td>
+                                                    <td class="product_name"><a href="#">@item.Name</a></td>
+                                                    <td class="product-price">@item.UnitPrice.ToMoney() تومان</td>
+                                                    <td class="product_quantity">در انبار موجود می باشد</td>
+                                                    <td class="product_remove"><a onclick="removeFromWishlist('@item.Id')"><i class="fa fa-trash-o"></i></a></td>
 
-                                               </tr>
+                                                </tr>
                                            }
                                             </tbody>
                                         </table>
